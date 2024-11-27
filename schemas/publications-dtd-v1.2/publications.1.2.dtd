@@ -1,0 +1,345 @@
+<!--
+    "-//Atypon//DTD Literatum Publications DTD v1.2 20111208//EN"
+    Delivered as file "publications.1.2.dtd"
+-->
+
+<!-- NOTE: the following content is copied from http://www.w3.org/TR/xhtml1/dtds.html#a_dtd_XHTML-1.0-Strict in order to PARTIALLY support the XHTML inline model -->
+<!--================== Imported Names ====================================-->
+
+<!ENTITY % URI "CDATA">
+    <!-- a Uniform Resource Identifier, see [RFC2396] -->
+
+<!--=================== Text Elements ====================================-->
+
+<!ENTITY % fontstyle
+    "tt | i | b | big | small"
+>
+
+<!ENTITY % inline
+    "a | %fontstyle;"
+>
+
+<!-- %Inline; covers inline or "text-level" elements -->
+<!ENTITY % Inline
+    "(#PCDATA | %inline;)*"
+>
+
+<!--================== Content models for exclusions =====================-->
+
+<!ENTITY % a.content
+    "(#PCDATA | %fontstyle;)*"
+>
+
+<!--================== The Anchor Element ================================-->
+
+<!-- content is %Inline; except that anchors shouldn't be nested -->
+
+<!ELEMENT a %a.content;>
+<!ATTLIST a
+    href %URI; #IMPLIED
+>
+
+<!--===================== Inline Elements ================================-->
+
+<!ELEMENT tt %Inline;>   <!-- fixed pitch font -->
+
+<!ELEMENT i %Inline;>   <!-- italic font -->
+
+<!ELEMENT b %Inline;>   <!-- bold font -->
+
+<!ELEMENT big %Inline;>   <!-- bigger font -->
+
+<!ELEMENT small %Inline;>   <!-- smaller font -->
+<!--================== End of inline model ===============================-->
+
+<!-- ============================================================= -->
+<!--  Common attributes and models                                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % childpubatts
+    "parent-doi CDATA #REQUIRED"
+>
+
+<!ENTITY % mediatypeatts
+    "media-type (text-xml|text-html|text-plain) #REQUIRED"
+>
+
+<!ENTITY % sourceatts
+    "source (content|admin|auto|external) #IMPLIED"
+>
+
+<!ENTITY % langatts
+    "xml:lang CDATA #IMPLIED"
+>
+
+<!ENTITY % xhtmlinlinemodel
+    "%Inline;"
+> <!-- TODO: Switch to use the real XHTML inline model -->
+
+<!ENTITY % tagsetatts
+    "tag-set-code CDATA #REQUIRED"
+>
+
+<!ENTITY % questionatts "
+    id ID #REQUIRED
+    multiple-answers-permitted (false|true) 'false'
+    answer-required (false|true) 'true'
+">
+
+<!-- ============================================================= -->
+<!--  Publication model                                            -->
+<!-- ============================================================= -->
+
+<!ELEMENT publications (publication+)>
+
+<!ELEMENT publication (pub-id*, pub-title*, pub-date*, pub-count*, pub-string*, publisher*, related-pub*, (discussion-pub|comment-pub|poll-pub)?)>
+<!ATTLIST publication
+    pub-type (category|journal|book-series|issue|book|article|chapter|discussion|comment|poll) #REQUIRED
+    doi CDATA #REQUIRED
+    area (staging|production) #IMPLIED
+>
+
+<!--
+USAGE NOTES:
+
+Category, journal, and book series DOIs are not registered with CrossRef and they are never displayed to end-users. They are used as internal identifiers only.
+
+For categories, journals, and book series, the contents of @area must be "production".
+-->
+
+<!-- ============================================================= -->
+<!--  Publication identifiers                                      -->
+<!-- ============================================================= -->
+
+<!ELEMENT pub-id (#PCDATA)>
+<!ATTLIST pub-id
+    id-type (archive|art-access-id|coden|doaj|doi|index|manuscript|medline|other
+            |pii|pmid|publisher-id|sici|jstor-stable|ads|bsl|cas|ccc
+            |cme|code|isbn|isi|issn|jvp|lccn|oclc|origdoi|partnumber
+            |rights-link-pub-code
+            |s1journalcode|scifinder|url|urn-label|invalid-isbn) #REQUIRED
+    id-subtype (none|epub|ppub|epub-ppub|epreprin|ppreprint|ecorrected|pcorrected|eretracted
+            |pretracted|society-url|epub-alias|ppub-alias|epub-ppub-alias|jstor
+            |homepage|utdol.com|primary|alternate|legacy|external|external-podcast
+            |external-video|external-cme|external-cme-label|abstract|fulltext
+            |summary|any|html|pdf|external-fulltext-any) "none"
+    %sourceatts;
+>
+
+<!--
+USAGE NOTES:
+
+For the code (required for journals and book series):
+
+<pub-id pub-id-type="code">auk</pub-id>
+
+For print and electronic ISSNs:
+
+<pub-id pub-id-type="issn" pub-id-subtype="ppub">0004-8038</pub-id>
+<pub-id pub-id-type="issn" pub-id-subtype="epub">1938-4254</pub-id>
+
+For a home page outside of the delivery system (e.g., on the publisher's corporate website):
+
+<pub-id pub-id-type="url" pub-id-subtype="homepage">http://www.ucpressjournals.com/journal.asp?j=auk</pub-id>
+
+For a journal's home page on JSTOR:
+
+<pub-id pub-id-type="url" pub-id-subtype="jstor">http://www.jstor.org/action/showPublication?journalCode=auk</pub-id>
+-->
+
+<!-- ============================================================= -->
+<!--  Publication titles                                           -->
+<!-- ============================================================= -->
+
+<!ELEMENT pub-title %a.content;>
+<!ATTLIST pub-title
+    title-type (primary|subtitle|edition|volume|reviewed-title|issue-title|toc-heading-title|pub-type-title) #REQUIRED
+    title-length (standard|full|short|abbreviated) "standard"
+    title-usage (default|sort|heading) "default"
+    translit-method (none|generic-romanization) "none"
+    is-translated (false|true) "false"
+    %mediatypeatts;
+    %sourceatts;
+    %langatts;
+>
+
+<!-- Contents of @xml:lang must conform to ISO 639-1 -->
+
+<!--
+USAGE NOTES:
+
+For the title (required for categories, journals, and book series):
+
+<pub-title title-type="primary" media-type="text-xml">The Journal of Physical Chemistry A</pub-title>
+
+For a subtitle (example given is for The New England Quarterly, published by MIT Press):
+
+<pub-title title-type="subtitle" media-type="text-xml">A Historical Review of New England Life and Letters</pub-title>
+
+For an abbreviated title:
+
+<pub-title title-type="primary" title-length="abbreviated" media-type="text-xml">J. Phys. Chem. A</pub-title>
+
+For a sorting title:
+
+<pub-title title-type="primary" title-usage="sort" media-type="text-xml">Journal of Physical Chemistry A</pub-title>
+-->
+
+<!-- ============================================================= -->
+<!--  Publication dates                                            -->
+<!-- ============================================================= -->
+
+<!ELEMENT pub-date (day, month, year, string-date?)>
+<!ATTLIST pub-date
+    date-type (epub|ppub|epub-ppub|e-preprint|p-preprint|e-corrected|p-corrected|e-retracted|p-retracted
+            |accepted|created|received|revised-received|revised-request|updated|aop|ja|started|ended
+            |first-live|xml-last-updated
+            |release|ref-ppub|ref-epub|ref-epub-ppub|coverage|open|close) #REQUIRED
+    date-subtype (none|normal-add|normal-only|moving_wall-add|moving_wall-only|cil-add
+            |cil-only|non-fulltext|fulltext|fulltext-aop|fulltext-ja) "none"
+    %sourceatts;
+>
+
+<!--
+USAGE NOTES:
+
+@pub-date-type="started" is the date on which the journal began publication under this title; @pub-date-type="ended" is the date on which the journal ceased publication under this title. One or both is required if this journal has a relationship with other journals.
+-->
+
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT string-date (#PCDATA)>
+
+<!-- ============================================================= -->
+<!--  Publication counts                                           -->
+<!-- ============================================================= -->
+
+<!ENTITY % pubcount.1.0.ent PUBLIC "-//Atypon//DTD Literatum Publication Count Element Classes v1.0 20091209//EN" "pubcount.1.0.ent">
+%pubcount.1.0.ent;
+
+<!-- ============================================================= -->
+<!--  Publication string properties                                -->
+<!-- ============================================================= -->
+
+<!ELEMENT pub-string (property-name, property-value, property-order?)>
+<!ATTLIST pub-string
+    %mediatypeatts;
+    %sourceatts;
+    %langatts;
+>
+
+<!ELEMENT property-name (#PCDATA)>
+<!ELEMENT property-value (#PCDATA)>
+<!ELEMENT property-order (#PCDATA)>
+
+<!-- ============================================================= -->
+<!--  Publishers                                                   -->
+<!-- ============================================================= -->
+
+<!ELEMENT publisher (#PCDATA)>
+<!ATTLIST publisher
+    code CDATA #REQUIRED
+>
+
+<!--
+USAGE NOTES:
+
+The publisher should be omitted for categories. At least one publisher is required for journals and book series.
+-->
+
+<!-- ============================================================= -->
+<!--  Related publications                                         -->
+<!-- ============================================================= -->
+
+<!ELEMENT related-pub (#PCDATA)>
+<!ATTLIST related-pub
+    related-pub-type (member-of) #REQUIRED
+>
+
+<!-- Contents of <related-pub> must be a category DOI -->
+
+<!-- ============================================================= -->
+<!--  Discussion publication metadata                              -->
+<!-- ============================================================= -->
+
+<!ELEMENT discussion-pub (comment-ratings, discussion-question*)>
+<!ATTLIST discussion-pub
+    %childpubatts;
+>
+
+<!ELEMENT comment-ratings EMPTY>
+<!ATTLIST comment-ratings
+    %tagsetatts;
+>
+
+<!ELEMENT discussion-question (validator*, question-content, allowed-answers?)>
+<!ATTLIST discussion-question
+    %questionatts;
+>
+
+<!ELEMENT question-content %xhtmlinlinemodel;>
+
+<!ELEMENT allowed-answers EMPTY>
+<!ATTLIST allowed-answers
+    %tagsetatts;
+>
+
+<!-- ============================================================= -->
+<!--  Comment publication                                          -->
+<!-- ============================================================= -->
+
+<!ELEMENT comment-pub (commenter-identity, commenter-region?, comment-content, moderator-notes?, moderator-content?, comment-tag?)>
+<!ATTLIST comment-pub
+    %childpubatts;
+>
+
+<!ELEMENT commenter-identity (#PCDATA)>
+<!ELEMENT commenter-region (#PCDATA)>
+
+<!ELEMENT comment-content %xhtmlinlinemodel;>
+<!ELEMENT moderator-notes %xhtmlinlinemodel;>
+<!ELEMENT moderator-content %xhtmlinlinemodel;>
+
+<!ELEMENT comment-tag EMPTY>
+<!ATTLIST comment-tag
+    tag-code CDATA #REQUIRED
+>
+
+<!-- ============================================================= -->
+<!--  Poll publication                                             -->
+<!-- ============================================================= -->
+
+<!ELEMENT poll-pub (poll-question+)>
+<!ATTLIST poll-pub
+    %childpubatts;
+>
+
+<!ELEMENT poll-question (question-content, explanation-content, poll-answer+)>
+<!ATTLIST poll-question
+    %questionatts;
+>
+
+<!ELEMENT explanation-content %xhtmlinlinemodel;>
+
+<!ELEMENT poll-answer (answer-content)>
+<!ATTLIST poll-answer
+    id ID #REQUIRED
+    correct-answer (false|true) #IMPLIED
+>
+
+<!ELEMENT answer-content %xhtmlinlinemodel;>
+
+<!-- ============================================================= -->
+<!--  Tag validator                                                -->
+<!-- ============================================================= -->
+
+<!ELEMENT validator (validator-param*)>
+<!ATTLIST validator
+    type CDATA #REQUIRED
+>
+
+<!ELEMENT validator-param (#PCDATA)>
+<!ATTLIST validator-param
+    name CDATA #REQUIRED
+>

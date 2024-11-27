@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd"> -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uriSuffix uriSuffix="crossref4.3.1.xsd" uri="crossref4.3.1.xsd"/>
+    <uriSuffix uriSuffix="common4.3.1.xsd" uri="common4.3.1.xsd"/>
+    <uri name="http://www.crossref.org/fundref.xsd" uri="fundref.xsd"/>
+</catalog>

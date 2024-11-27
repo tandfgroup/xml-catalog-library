@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd"> -->
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "catalog.dtd"> -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <!-- TFJA DTD -->
+    <!-- preferred -->
+    <public publicId="-//Taylor and Francis//Journal Article//EN" uri="tfja.dtd"/>
+    <system systemId="http://cats.informa.com/tfja/dtd/TFJA.dtd" uri="tfja.dtd"/>
+    <!-- alternate and old -->
+    <system systemId="http://public.metapress.com/dtd/TAFXML/TFJA.dtd" uri="tfja.dtd"/>
+    <system systemId="http://cats.tfinforma.com/dtd/tfja/dtd/TFJA.dtd" uri="tfja.dtd"/>
+    <system systemId="http://cats.informa.com/dtd/tfja/dtd/TFJA.dtd" uri="tfja.dtd"/>
+    <systemSuffix systemIdSuffix="tfja.dtd" uri="tfja.dtd"/>
+    <systemSuffix systemIdSuffix="TFJA.dtd" uri="tfja.dtd"/>
+    
+    <!-- TF JATS 1.0 -->
+    <public publicId="-//TF//DTD JATS (Z39.96) v1.0 Taylor and Francis Journal Content v1.0//EN" uri="tfjats1.dtd"/>
+    <system systemId="http://cats.informa.com/tfjats/1.0/dtd/tfjats1.dtd" uri="tfjats1.dtd"/>
+    <system systemId="http://cats.informa.com/tfjats/1.0/dtd/tf-characters1.ent" uri="tf-characters1.ent"/>
+    
+    <!-- Atypon Journal DTD Suite v3.0.5 Issue -->
+    <public publicId="-//Atypon//DTD Atypon Systems Archival NLM DTD Suite Issue XML DTD v3.0.5 20110520//EN" uri="atypon-nlm-v3.0.5-issue.dtd"/>
+    <systemSuffix systemIdSuffix="issuexml.dtd" uri="atypon-nlm-v3.0.5-issue.dtd"/>
+    
+    <!-- Atypon Journal DTD Suite v3.0.5 Article -->
+    <public publicId="-//Atypon//DTD Atypon Systems Journal Archiving and Interchange NLM DTD v3.0.5 20110520//EN" uri="atypon-nlm-v3.0.5-article.dtd"/>
+    <systemSuffix systemIdSuffix="atypon-archivearticle3.dtd" uri="atypon-nlm-v3.0.5-article.dtd"/>
+    
+    <!-- NLM 3.0 Archiving and Interchange with OASIS tables -->
+    <public publicId="-//NLM//DTD Journal Archiving with OASIS Tables v3.0 20080202//EN" uri="nlm-v3.0-archive-oasis-article.dtd"/>
+    <system systemId="http://dtd.nlm.nih.gov/archiving/3.0/archive-oasis-article3.dtd" uri="nlm-v3.0-archive-oasis-article.dtd"/>
+    <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archive-oasis-article3.dtd" uri="nlm-v3.0-archive-oasis-article.dtd"/>
+    <systemSuffix systemIdSuffix="archive-oasis-article3.dtd" uri="nlm-v3.0-archive-oasis-article.dtd"/>
+    
+    <!-- NLM 3.0 Archiving and Interchange without OASIS tables -->
+    <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" uri="nlm-v3.0-archive-article.dtd"/>
+    <system systemId="http://dtd.nlm.nih.gov/archiving/3.0/archivearticle3.dtd" uri="nlm-v3.0-archive-article.dtd"/>
+    <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archivearticle3.dtd" uri="nlm-v3.0-archive-article.dtd"/>
+    <systemSuffix systemIdSuffix="archivearticle3.dtd" uri="nlm-v3.0-archive-article.dtd"/>
+    
+    <!-- Atypon JATS v1.1 Issue -->
+    <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.1 20160222//EN" uri="atypon-jats-v1.1-issue.dtd"/>
+    <systemSuffix systemIdSuffix="Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
+    <system systemId="http://cats.informa.com/tfjats/1.2/dtd/atypon-jats-v1.1-issue.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
+    
+    <!-- Atypon JATS v1.1 Article -->
+    <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.1 20151215//EN" uri="atypon-jats-v1.1-article-mathml3.dtd"/>
+    <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-mathml3.dtd" uri="atypon-jats-v1.1-article-mathml3.dtd"/>
+    
+    <!-- NISO JATS 1.2 Archiving and Interchange with OASIS tables and MathML 3 -->
+    <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.2 20190208//EN" 
+        uri="JATS-archive-oasis-article1-mathml3-v1.2.dtd"/>
+    <system systemId="https://jats.nlm.nih.gov/archiving/1.2/JATS-archive-oasis-article1-mathml3.dtd" 
+        uri="JATS-archive-oasis-article1-mathml3-v1.2.dtd"/>
+    <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-mathml3-v1.2.dtd" uri="JATS-archive-oasis-article1-mathml3-v1.2.dtd"/>
+    
+    <!-- NISO JATS 1.3 Archiving and Interchange with OASIS tables and MathML 3 -->
+    <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.3 20210610//EN" 
+        uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
+    <system systemId="https://jats.nlm.nih.gov/archiving/1.3/JATS-archive-oasis-article1-3-mathml3.dtd" 
+        uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
+    <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-3-mathml3.dtd" 
+        uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
+    
+    <!-- Atypon JATS v1.1 Issue XML DTD -->
+    <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.1 20160222//EN" uri="atypon-jats-v1.1-issue.dtd"/>
+    <system systemId="http://cats.informa.com/tfjats/1.2/dtd/atypon-jats-v1.1-issue.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
+    
+    <!-- Atypon Manifest DTD -->
+    <public publicId="-//Atypon//DTD Literatum Content Submission Manifest DTD v4.2 20140519//EN" 
+        uri="atypon-manifest.4.2.dtd"/>
+    
+    <!-- Atypon API DTD -->
+    <nextCatalog catalog="publications-dtd-v1.2/catalog.xml"/>
+    
+    <!-- Crossref -->
+    <nextCatalog catalog="crossref-4.3.1/catalog.xml"/>
+    
+    <!-- ScholarOne DTD -->
+    <systemSuffix systemIdSuffix="s1.dtd" uri="s1.dtd"/>
+    
+    <!-- JATS DTD (general) used by Editorial Manager -->
+    <systemSuffix systemIdSuffix="JATS-archivearticle1.dtd" uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
+    
+</catalog>

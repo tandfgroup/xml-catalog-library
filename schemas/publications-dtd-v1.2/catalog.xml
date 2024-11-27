@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd"> -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <group>
+        <systemSuffix systemIdSuffix="publications.1.2.dtd" uri="publications.1.2.dtd"/>
+        <public publicId="-//Atypon//DTD Literatum Publications DTD v1.2 20111208//EN" uri="publications.1.2.dtd"/>
+    </group>
+    
+</catalog>

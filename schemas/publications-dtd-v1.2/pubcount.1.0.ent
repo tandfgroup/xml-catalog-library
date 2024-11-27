@@ -1,0 +1,14 @@
+<!-- This file was created by deriving element definitions from sample XML files to satisfy this requirement in publications.1.2.dtd:
+
+<!ENTITY % pubcount.1.0.ent PUBLIC "-//Atypon//DTD Literatum Publication Count Element Classes v1.0 20091209//EN" "pubcount.1.0.ent">
+%pubcount.1.0.ent;
+
+-->
+
+<!ELEMENT pub-count (#PCDATA) >
+<!ATTLIST pub-count
+    count-type CDATA #IMPLIED
+    count-subtype CDATA #IMPLIED
+    source CDATA #IMPLIED
+>
+

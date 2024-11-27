@@ -1,0 +1,3700 @@
+<!-- ========================= -->
+<!-- ELEMENT DECLARATIONS HERE -->
+<!-- ========================= -->
+
+<!ELEMENT license-p (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|address|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|citation-alternatives|element-citation|mixed-citation|nlm-citation|award-id|funding-source|open-access|def-list|list|ack|disp-quote|speech|statement|verse-group|price)* >
+<!ATTLIST license-p
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT def ((p)+) >
+<!ATTLIST def
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT year (#PCDATA) >
+<!ATTLIST year
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		calendar		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		iso-8601-date		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT fig ((object-id)*,label?,(caption)*,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(disp-formula|disp-formula-group|chem-struct-wrap|disp-quote|speech|statement|verse-group|table-wrap|p|def-list|list|alternatives|array|code|graphic|media|preformat)*,(attrib|permissions)*) >
+<!ATTLIST fig
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		orientation		(portrait|landscape)			'portrait'
+		fig-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT underline (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST underline
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		underline-style		CDATA		#IMPLIED >
+
+
+<!ELEMENT counts (count*,fig-count?,table-count?,equation-count?,ref-count?,page-count?,word-count?) >
+<!ATTLIST counts
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT conf-date (#PCDATA|day|era|month|season|year|x)* >
+<!ATTLIST conf-date
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		calendar		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		iso-8601-date		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT kwd-group (label?,title?,((kwd|compound-kwd|nested-kwd|x)+|(unstructured-kwd-group)*)) >
+<!ATTLIST kwd-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		kwd-group-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT trans-issue-subject (p*,subject,p*) >
+<!ATTLIST trans-issue-subject
+		xml:lang		NMTOKEN		#IMPLIED >
+
+
+<!ELEMENT conf-num (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST conf-num
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT conf-theme (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST conf-theme
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT cover (graphic*|caption) >
+
+
+<!ELEMENT issn-l (#PCDATA|x)* >
+<!ATTLIST issn-l
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT state (#PCDATA)* >
+<!ATTLIST state
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT trans-abstract ((object-id)*,(sec-meta?,label?,title?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(sec)*,(notes|fn-group|glossary|ref-list)*)) >
+<!ATTLIST trans-abstract
+		id		ID		#IMPLIED
+		abstract-type		CDATA		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT verse-line (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST verse-line
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT fpage (#PCDATA) >
+<!ATTLIST fpage
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		seq		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT citation-alternatives (element-citation|mixed-citation|nlm-citation)+ >
+<!ATTLIST citation-alternatives
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT contrib (contrib-id|anonymous|collab|collab-alternatives|name|name-alternatives|string-name|degrees|address|aff|aff-alternatives|author-comment|bio|email|etal|ext-link|fn|on-behalf-of|role|uri|xref|x)* >
+<!ATTLIST contrib
+		deceased		(no|yes)		#IMPLIED
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		equal-contrib		(no|yes)		#IMPLIED
+		corresp		(no|yes)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		contrib-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT inline-supplementary-material (#PCDATA|alt-text|long-desc|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST inline-supplementary-material
+		mime-subtype		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT rb (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST rb
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT size (#PCDATA|x)* >
+<!ATTLIST size
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		units		CDATA		#REQUIRED >
+
+
+<!ELEMENT abbrev-journal-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST abbrev-journal-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		abbrev-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT ali:license_ref (#PCDATA) >
+<!ATTLIST ali:license_ref
+		id		ID		#IMPLIED
+		start_date		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xmlns:ali		CDATA		#FIXED	'http://www.niso.org/schemas/ali/1.0/'
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT alternatives (array|chem-struct|code|graphic|inline-graphic|inline-supplementary-material|media|preformat|private-char|supplementary-material|table|oasis:table|textual-form|tex-math|mml:math)+ >
+<!ATTLIST alternatives
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT glyph-ref EMPTY >
+<!ATTLIST glyph-ref
+		id		ID		#IMPLIED
+		glyph-data		IDREF		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT trans-subtitle (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST trans-subtitle
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT rp (#PCDATA) >
+<!ATTLIST rp
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT sub (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST sub
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		arrange		(stack|stagger)		#IMPLIED >
+
+
+<!ELEMENT rt (#PCDATA)* >
+<!ATTLIST rt
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT role (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST role
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT conference (conf-date|conf-name|conf-num|conf-loc|conf-sponsor|conf-theme|conf-acronym|string-conf|x)* >
+<!ATTLIST conference
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT conf-loc (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|addr-line|city|country|fax|institution|institution-wrap|phone|postal-code|state)* >
+<!ATTLIST conf-loc
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT ext-link (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST ext-link
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		assigning-authority		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		ext-link-type		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT disp-quote (label?,title?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(attrib|permissions)*) >
+<!ATTLIST disp-quote
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT sup (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST sup
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		arrange		(stack|stagger)		#IMPLIED >
+
+
+<!ELEMENT sc (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST sc
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT string-conf (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|conf-date|conf-name|conf-num|conf-loc|conf-sponsor|conf-theme|conf-acronym|string-conf)* >
+<!ATTLIST string-conf
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT toc-graphic (alt-text|long-desc|abstract|email|ext-link|uri|caption|object-id|kwd-group|label|attrib|permissions)* >
+<!ATTLIST toc-graphic
+		mime-subtype		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		xlink:href		CDATA		#REQUIRED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait'
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT term (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|disp-formula|disp-formula-group|chem-struct-wrap|array|code|graphic|media|preformat)* >
+<!ATTLIST term
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT nested-kwd ((kwd|compound-kwd)+,nested-kwd*) >
+<!ATTLIST nested-kwd
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT volume-issue-group (volume*,volume-id*,volume-series?,issue*,issue-id*,issue-title*,issue-sponsor*,issue-part?) >
+<!ATTLIST volume-issue-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT graphic (alt-text|long-desc|abstract|email|ext-link|uri|caption|object-id|kwd-group|label|attrib|permissions)* >
+<!ATTLIST graphic
+		mime-subtype		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		xlink:href		CDATA		#REQUIRED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait'
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT email (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST email
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT def-item (label?,term*,(def|x)*) >
+<!ATTLIST def-item
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT chem-struct-wrap ((object-id)*,label?,(caption)?,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(alternatives|chem-struct|code|graphic|media|preformat|textual-form)+,(attrib|permissions)*) >
+<!ATTLIST chem-struct-wrap
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT address (addr-line|city|country|fax|institution|institution-wrap|phone|postal-code|state|email|ext-link|uri|label|x)* >
+<!ATTLIST address
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT compound-kwd (compound-kwd-part+) >
+<!ATTLIST compound-kwd
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT conf-sponsor (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|institution|institution-wrap)* >
+<!ATTLIST conf-sponsor
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT disp-formula (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|abstract|alt-text|long-desc|break|attrib|permissions|kwd-group|label|array|code|graphic|media|preformat)* >
+<!ATTLIST disp-formula
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT p (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|address|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|citation-alternatives|element-citation|mixed-citation|nlm-citation|award-id|funding-source|open-access|def-list|list|ack|disp-quote|speech|statement|verse-group)* >
+<!ATTLIST p
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT publisher-name (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|institution|institution-wrap)* >
+<!ATTLIST publisher-name
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT speech (speaker,(p)+) >
+<!ATTLIST speech
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT x (#PCDATA|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|named-content|styled-content|sub|sup|x)* >
+<!ATTLIST x
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		xml:space		(default|preserve)		#FIXED	'preserve'
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT kwd (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST kwd
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT country (#PCDATA|x)* >
+<!ATTLIST country
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		country		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT notes (sec-meta?,label?,title?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(sec)*,(notes|fn-group|glossary|ref-list)*) >
+<!ATTLIST notes
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		notes-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT article-id (#PCDATA) >
+<!ATTLIST article-id
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		pub-id-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT ack (sec-meta?,label?,title?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(sec)*,(notes|fn-group|glossary|ref-list)*) >
+<!ATTLIST ack
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT underline-start EMPTY >
+<!ATTLIST underline-start
+		id		ID		#REQUIRED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT element-citation (inline-supplementary-material|related-article|related-object|hr|string-date|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|label|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|annotation|article-title|chapter-title|collab|collab-alternatives|comment|conf-acronym|conf-date|conf-loc|conf-name|conf-sponsor|data-title|date|date-in-citation|day|edition|email|elocation-id|etal|ext-link|fpage|gov|institution|institution-wrap|isbn|issn|issn-l|issue|issue-id|issue-part|issue-title|lpage|month|name|name-alternatives|object-id|page-range|part-title|patent|person-group|pub-id|publisher-loc|publisher-name|role|season|series|size|source|std|string-name|supplement|trans-source|trans-title|uri|version|volume|volume-id|volume-series|year|fn|target|xref|sub|sup|x)+ >
+<!ATTLIST element-citation
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		publication-format		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		publisher-type		CDATA		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		publication-type		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT trans-title-group (trans-title,trans-subtitle*) >
+<!ATTLIST trans-title-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT institution (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST institution
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT milestone-start EMPTY >
+<!ATTLIST milestone-start
+		rid		IDREF		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		rationale		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT fig-group (label?,(caption)?,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(fig|alternatives|graphic|media)*) >
+<!ATTLIST fig-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT table-wrap-group (label?,caption?,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(table-wrap)+) >
+<!ATTLIST table-wrap-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT chem-struct (#PCDATA|alt-text|long-desc|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|object-id|label|def-list|list|array|code|graphic|media|preformat)* >
+<!ATTLIST chem-struct
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT aff-alternatives (aff+) >
+<!ATTLIST aff-alternatives
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT monospace (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST monospace
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT list-item (label?,title?,(p|def-list|list)+) >
+<!ATTLIST list-item
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT count EMPTY >
+<!ATTLIST count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED
+		count-type		CDATA		#REQUIRED >
+
+
+<!ELEMENT meta-value (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST meta-value
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT contrib-group (contrib|address|aff|aff-alternatives|author-comment|bio|email|etal|ext-link|fn|on-behalf-of|role|uri|xref|x)+ >
+<!ATTLIST contrib-group
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT bold (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST bold
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT term-head (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST term-head
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT list (label?,title?,(list-item|x)+) >
+<!ATTLIST list
+		prefix-word		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		list-type		CDATA		#IMPLIED
+		list-content		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		continued-from		IDREF		#IMPLIED >
+
+
+<!ELEMENT elocation-id (#PCDATA) >
+<!ATTLIST elocation-id
+		id		ID		#IMPLIED
+		seq		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT volume (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST volume
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		seq		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT ali:free_to_read EMPTY >
+<!ATTLIST ali:free_to_read
+		id		ID		#IMPLIED
+		end_date		CDATA		#IMPLIED
+		start_date		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xmlns:ali		CDATA		#FIXED	'http://www.niso.org/schemas/ali/1.0/'
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT journal-id (#PCDATA) >
+<!ATTLIST journal-id
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		journal-id-type		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT month (#PCDATA) >
+<!ATTLIST month
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT name (((surname,given-names?)|given-names),prefix?,suffix?) >
+<!ATTLIST name
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		name-style		(western|eastern|islensk|given-only)			'western'
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT corresp (#PCDATA|addr-line|city|country|fax|institution|institution-wrap|phone|postal-code|state|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|label)* >
+<!ATTLIST corresp
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT page-count EMPTY >
+<!ATTLIST page-count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED >
+
+
+<!ELEMENT tex-math (#PCDATA) >
+<!ATTLIST tex-math
+		notation		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		version		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT disp-formula-group (label?,(caption)?,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(disp-formula|disp-formula-group)*) >
+<!ATTLIST disp-formula-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT alt-text (#PCDATA) >
+<!ATTLIST alt-text
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT isbn (#PCDATA|x)* >
+<!ATTLIST isbn
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		publication-format		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT fn (label?,(p)+) >
+<!ATTLIST fn
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		fn-type		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		symbol		CDATA		#IMPLIED >
+
+
+<!ELEMENT title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|citation-alternatives|element-citation|mixed-citation|nlm-citation)* >
+<!ATTLIST title
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT sig (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|graphic|media)* >
+<!ATTLIST sig
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT meta-name (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST meta-name
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT attrib (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST attrib
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT string-date (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|day|era|month|season|year)* >
+<!ATTLIST string-date
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		calendar		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		iso-8601-date		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT statement (label?,title?,(abstract)*,(kwd-group)*,(p|statement)+,(attrib|permissions)*) >
+<!ATTLIST statement
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT institution-id (#PCDATA) >
+<!ATTLIST institution-id
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		institution-id-type		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT lpage (#PCDATA) >
+<!ATTLIST lpage
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT compound-kwd-part (#PCDATA|break|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST compound-kwd-part
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT aff (#PCDATA|addr-line|city|country|fax|institution|institution-wrap|phone|postal-code|state|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|label)* >
+<!ATTLIST aff
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT def-list (label?,title?,term-head?,def-head?,(def-item|x)*,(def-list)*) >
+<!ATTLIST def-list
+		prefix-word		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		list-type		CDATA		#IMPLIED
+		list-content		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		continued-from		IDREF		#IMPLIED >
+
+
+<!ELEMENT compound-subject-part (#PCDATA|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|named-content|styled-content|sub|sup)* >
+<!ATTLIST compound-subject-part
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT article-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST article-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT label (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST label
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		alt		CDATA		#IMPLIED >
+
+
+<!ELEMENT fixed-case (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST fixed-case
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT target (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST target
+		target-type		CDATA		#IMPLIED
+		id		ID		#REQUIRED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT boxed-text ((object-id)*,sec-meta?,label?,caption?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(sec)*,(notes|fn-group|glossary|ref-list)*,(attrib|permissions)*) >
+<!ATTLIST boxed-text
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT conf-acronym (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST conf-acronym
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT word-count EMPTY >
+<!ATTLIST word-count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED >
+
+
+<!ELEMENT prefix (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST prefix
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT bio (sec-meta?,label?,title?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(sec)*,(notes|fn-group|glossary|ref-list)*) >
+<!ATTLIST bio
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT caption (title?,(p)*) >
+<!ATTLIST caption
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		style		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT hr EMPTY >
+<!ATTLIST hr
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT styled-content (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|address|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|ack|disp-quote|speech|statement|verse-group)* >
+<!ATTLIST styled-content
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		style		CDATA		#IMPLIED
+		style-type		CDATA		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		alt		CDATA		#IMPLIED >
+
+
+<!ELEMENT degrees (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST degrees
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT permissions (copyright-statement*,copyright-year*,copyright-holder*,(ali:free_to_read|license)*) >
+<!ATTLIST permissions
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT price (#PCDATA|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby)* >
+<!ATTLIST price
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		currency		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT named-content (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|address|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|ack|disp-quote|speech|statement|verse-group)* >
+<!ATTLIST named-content
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		alt		CDATA		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#REQUIRED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT season (#PCDATA) >
+<!ATTLIST season
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT fax (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST fax
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT table-wrap-foot (label?,title?,(p|fn-group|fn|attrib|permissions|x)+) >
+<!ATTLIST table-wrap-foot
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT mixed-citation (#PCDATA|inline-supplementary-material|related-article|related-object|hr|string-date|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|label|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|annotation|article-title|chapter-title|collab|collab-alternatives|comment|conf-acronym|conf-date|conf-loc|conf-name|conf-sponsor|data-title|date|date-in-citation|day|edition|email|elocation-id|etal|ext-link|fpage|gov|institution|institution-wrap|isbn|issn|issn-l|issue|issue-id|issue-part|issue-title|lpage|month|name|name-alternatives|object-id|page-range|part-title|patent|person-group|pub-id|publisher-loc|publisher-name|role|season|series|size|source|std|string-name|supplement|trans-source|trans-title|uri|version|volume|volume-id|volume-series|year|fn|target|xref|sub|sup|x)* >
+<!ATTLIST mixed-citation
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		publication-format		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		publisher-type		CDATA		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		publication-type		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT glyph-data (#PCDATA) >
+<!ATTLIST glyph-data
+		resolution		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		x-size		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		xml:space		(preserve)		#FIXED	'preserve'
+		fontname		CDATA		#IMPLIED
+		format		NMTOKEN		#IMPLIED
+		fontchar		CDATA		#IMPLIED
+		y-size		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-part (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST issue-part
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT xref (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST xref
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		alt		CDATA		#IMPLIED
+		ref-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST issue
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		seq		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT ref-count EMPTY >
+<!ATTLIST ref-count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED >
+
+
+<!ELEMENT issue-id (#PCDATA) >
+<!ATTLIST issue-id
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED
+		pub-id-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT def-head (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST def-head
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT preformat (#PCDATA|alt-text|long-desc|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|attrib|permissions)* >
+<!ATTLIST preformat
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		preformat-type		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		xml:space		(default|preserve)		#FIXED	'preserve'
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT collab (#PCDATA|inline-supplementary-material|related-article|related-object|addr-line|city|country|fax|institution|institution-wrap|phone|postal-code|state|hr|break|contrib-group|address|aff|aff-alternatives|author-comment|bio|email|etal|ext-link|fn|on-behalf-of|role|uri|xref|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|sub|sup|x)* >
+<!ATTLIST collab
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		symbol		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		collab-type		CDATA		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT issn (#PCDATA|x)* >
+<!ATTLIST issn
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		publication-format		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		pub-type		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT etal (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST etal
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT phone (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST phone
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT supplement (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|contrib-group|title)* >
+<!ATTLIST supplement
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		supplement-type		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT subtitle (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST subtitle
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-subject-title (p*,subject,p*,trans-issue-subject*) >
+
+
+<!ELEMENT trans-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST trans-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-meta (contrib-group*,author-notes?,pub-date*,series-title*,series-text?,volume*,volume-id*,volume-series?,issue*,issue-id*,issue-title*,issue-sponsor*,issue-part?,volume-issue-group*,isbn*,supplement?,fpage?,lpage?,page-range?,supplementary-material*,history?,copyright-statement?,copyright-year?,permissions?,self-uri*,related-object*,kwd-group*,funding-group*,conference*,counts?,custom-meta-group?) >
+<!ATTLIST issue-meta
+		issue-type		(normal|ahead-of-print|just-accepted|forthcoming|news|part|volume-suppl|special|errata|letters|proofing|virtual|submitted)			'normal' >
+
+
+<!ELEMENT city (#PCDATA)* >
+<!ATTLIST city
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT toc (cover?,(issue-subject-group|p|issue-article-meta)*) >
+<!ATTLIST toc
+		xml:lang		NMTOKEN		#IMPLIED
+		toc-type		(page-order|subject-heading-order|page-latin-numeric-order|page-numeric-latin-order)		#IMPLIED >
+
+
+<!ELEMENT journal-title-group (journal-title*,journal-subtitle*,trans-title-group*,abbrev-journal-title*) >
+<!ATTLIST journal-title-group
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT era (#PCDATA) >
+<!ATTLIST era
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT conf-name (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST conf-name
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT surname (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST surname
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		initials		CDATA		#IMPLIED >
+
+
+<!ELEMENT addr-line (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|city|country|fax|institution|institution-wrap|phone|postal-code|state)* >
+<!ATTLIST addr-line
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT related-article (#PCDATA|inline-supplementary-material|related-article|related-object|hr|break|string-date|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|journal-id|label|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|annotation|article-title|chapter-title|collab|collab-alternatives|comment|conf-acronym|conf-date|conf-loc|conf-name|conf-sponsor|data-title|date|date-in-citation|day|edition|email|elocation-id|etal|ext-link|fpage|gov|institution|institution-wrap|isbn|issn|issn-l|issue|issue-id|issue-part|issue-title|lpage|month|name|name-alternatives|object-id|page-range|part-title|patent|person-group|pub-id|publisher-loc|publisher-name|role|season|series|size|source|std|string-name|supplement|trans-source|trans-title|uri|version|volume|volume-id|volume-series|year|fn|target|xref|sub|sup|x)* >
+<!ATTLIST related-article
+		id		ID		#IMPLIED
+		issue		CDATA		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		journal-id-type		CDATA		#IMPLIED
+		related-article-type		CDATA		#REQUIRED
+		xml:base		CDATA		#IMPLIED
+		ext-link-type		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		elocation-id		CDATA		#IMPLIED
+		journal-id		CDATA		#IMPLIED
+		page		CDATA		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		vol		CDATA		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT object-id (#PCDATA) >
+<!ATTLIST object-id
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		pub-id-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT overline (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST overline
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-sponsor (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST issue-sponsor
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT product (#PCDATA|inline-supplementary-material|related-article|related-object|hr|break|string-date|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|label|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|price|annotation|article-title|chapter-title|collab|collab-alternatives|comment|conf-acronym|conf-date|conf-loc|conf-name|conf-sponsor|data-title|date|date-in-citation|day|edition|email|elocation-id|etal|ext-link|fpage|gov|institution|institution-wrap|isbn|issn|issn-l|issue|issue-id|issue-part|issue-title|lpage|month|name|name-alternatives|object-id|page-range|part-title|patent|person-group|pub-id|publisher-loc|publisher-name|role|season|series|size|source|std|string-name|supplement|trans-source|trans-title|uri|version|volume|volume-id|volume-series|year|fn|target|xref|sub|sup|x)* >
+<!ATTLIST product
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		product-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT verse-group (label?,title?,subtitle?,(verse-line|verse-group)+,(attrib|permissions)*) >
+<!ATTLIST verse-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT journal-meta (journal-id*,journal-title-group*,(contrib-group|aff|aff-alternatives)*,issn*,issn-l?,isbn*,publisher?,notes*,self-uri*,custom-meta-group?) >
+<!ATTLIST journal-meta
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT break EMPTY >
+<!ATTLIST break
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT volume-series (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST volume-series
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT strike (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST strike
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT inline-graphic ((alt-text)?) >
+<!ATTLIST inline-graphic
+		mime-subtype		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		baseline-shift		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#REQUIRED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT compound-subject (compound-subject-part+) >
+<!ATTLIST compound-subject
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT contrib-id (#PCDATA) >
+<!ATTLIST contrib-id
+		authenticated		(true|false)			'false'
+		id		ID		#IMPLIED
+		contrib-id-type		CDATA		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT subj-group ((subject|compound-subject)+,subj-group*) >
+<!ATTLIST subj-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		subj-group-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT abstract ((object-id)*,(sec-meta?,label?,title?,(address|alternatives|array|boxed-text|chem-struct-wrap|code|fig|fig-group|graphic|media|preformat|supplementary-material|table-wrap|table-wrap-group|disp-formula|disp-formula-group|def-list|list|tex-math|mml:math|p|related-article|related-object|ack|disp-quote|speech|statement|verse-group|x)*,(sec)*,(notes|fn-group|glossary|ref-list)*)) >
+<!ATTLIST abstract
+		id		ID		#IMPLIED
+		abstract-type		CDATA		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT overline-start EMPTY >
+<!ATTLIST overline-start
+		id		ID		#REQUIRED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT publisher-loc (#PCDATA|addr-line|city|country|fax|institution|institution-wrap|phone|postal-code|state|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST publisher-loc
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT uri (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST uri
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT copyright-year (#PCDATA) >
+<!ATTLIST copyright-year
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT postal-code (#PCDATA)* >
+<!ATTLIST postal-code
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT anonymous (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST anonymous
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT textual-form (#PCDATA|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|inline-graphic|private-char|label|tex-math|mml:math|named-content|styled-content|sub|sup)* >
+<!ATTLIST textual-form
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT table-wrap ((object-id)*,label?,(caption)?,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(disp-quote|speech|statement|verse-group|def-list|list|alternatives|chem-struct-wrap|code|graphic|media|preformat|table|oasis:table)*,(table-wrap-foot|attrib|permissions)*) >
+<!ATTLIST table-wrap
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT copyright-holder (#PCDATA|institution|institution-wrap|sub|sup|x)* >
+<!ATTLIST copyright-holder
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT date (((day?,month?)|season)?,year?,era?,string-date?) >
+<!ATTLIST date
+		id		ID		#IMPLIED
+		calendar		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		publication-format		CDATA		#IMPLIED
+		iso-8601-date		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		date-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT given-names (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST given-names
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		initials		CDATA		#IMPLIED >
+
+
+<!ELEMENT journal-subtitle (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST journal-subtitle
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT private-char ((glyph-data|glyph-ref)|inline-graphic*) >
+<!ATTLIST private-char
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		name		CDATA		#IMPLIED
+		description		CDATA		#IMPLIED >
+
+
+<!ELEMENT subject (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST subject
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT roman (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST roman
+		id		ID		#IMPLIED
+		toggle		(yes|no)			'no'
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT title-group (article-title,subtitle*,trans-title-group*,alt-title*,fn-group?) >
+<!ATTLIST title-group
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT volume-id (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST volume-id
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED
+		pub-id-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT suffix (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST suffix
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT sig-block (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|contrib|graphic|media|aff|aff-alternatives|etal|role|sig)* >
+<!ATTLIST sig-block
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT italic (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST italic
+		id		ID		#IMPLIED
+		toggle		(yes|no)			'yes'
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT series-text (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST series-text
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT self-uri (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST self-uri
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT long-desc (#PCDATA|x)* >
+<!ATTLIST long-desc
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT day (#PCDATA) >
+<!ATTLIST day
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT underline-end EMPTY >
+<!ATTLIST underline-end
+		rid		IDREF		#REQUIRED
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT unstructured-kwd-group (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST unstructured-kwd-group
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		kwd-group-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT custom-meta (meta-name,meta-value) >
+<!ATTLIST custom-meta
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT alt-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST alt-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		alt-title-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT history (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break|date|string-date)* >
+<!ATTLIST history
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT sans-serif (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST sans-serif
+		id		ID		#IMPLIED
+		toggle		(yes|no)		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-subject-group (issue-subject-title,(issue-article-meta|p|issue-subject-group)*) >
+<!ATTLIST issue-subject-group
+		format		CDATA		#IMPLIED >
+
+
+<!ELEMENT license ((ali:license_ref|license-p)+) >
+<!ATTLIST license
+		id		ID		#IMPLIED
+		license-type		CDATA		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT fig-count EMPTY >
+<!ATTLIST fig-count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED >
+
+
+<!ELEMENT speaker (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|degrees|given-names|prefix|surname|suffix)* >
+<!ATTLIST speaker
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT publisher ((publisher-name,publisher-loc?)+) >
+<!ATTLIST publisher
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT abbrev (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|def)* >
+<!ATTLIST abbrev
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		alt		CDATA		#IMPLIED
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT table-count EMPTY >
+<!ATTLIST table-count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED >
+
+
+<!ELEMENT article-meta (article-id*,article-categories?,title-group?,(contrib-group|aff|aff-alternatives|x)*,author-notes?,pub-date*,volume*,volume-id*,volume-series?,issue*,issue-id*,issue-title*,issue-sponsor*,issue-part?,volume-issue-group*,isbn*,supplement?,(((fpage,lpage?)?,page-range?)|elocation-id)?,(email|ext-link|uri|product|supplementary-material)*,history?,permissions?,self-uri*,(related-article|related-object)*,(abstract)*,trans-abstract*,(kwd-group)*,funding-group*,conference*,counts?,custom-meta-group?) >
+<!ATTLIST article-meta
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|break)* >
+<!ATTLIST issue-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT author-comment (title?,(p)+) >
+<!ATTLIST author-comment
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT page-range (#PCDATA) >
+<!ATTLIST page-range
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT code (#PCDATA|email|ext-link|uri|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup)* >
+<!ATTLIST code
+		code-type		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		executable		(yes|no)		#IMPLIED
+		xml:space		(default|preserve)		#FIXED	'preserve'
+		specific-use		CDATA		#IMPLIED
+		language		CDATA		#IMPLIED
+		platforms		CDATA		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		orientation		(portrait|landscape)			'portrait'
+		code-version		CDATA		#IMPLIED
+		language-version		CDATA		#IMPLIED >
+
+
+<!ELEMENT equation-count EMPTY >
+<!ATTLIST equation-count
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		count		NMTOKEN		#REQUIRED >
+
+
+<!ELEMENT issue-article-meta (article-id+,title-group?,(contrib-group|aff|x)*,author-notes?,((fpage?,lpage?,page-range?)|elocation-id)?,(email|ext-link|uri|product|supplementary-material)*,history?,self-uri*,related-article*,abstract*,trans-abstract*,toc-graphic*,counts?) >
+<!ATTLIST issue-article-meta
+		format		CDATA		#IMPLIED >
+
+
+<!ELEMENT media (alt-text|long-desc|abstract|email|ext-link|uri|caption|object-id|kwd-group|label|attrib|permissions)* >
+<!ATTLIST media
+		mime-subtype		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		xlink:href		CDATA		#REQUIRED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait'
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT on-behalf-of (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|institution|institution-wrap)* >
+<!ATTLIST on-behalf-of
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT article-categories (subj-group*,series-title*,series-text*) >
+<!ATTLIST article-categories
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT copyright-statement (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST copyright-statement
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT supplementary-material ((object-id)*,label?,(caption)*,(abstract)*,(kwd-group)*,(alt-text|long-desc|email|ext-link|uri)*,(disp-formula|disp-formula-group|chem-struct-wrap|disp-quote|speech|statement|verse-group|table-wrap|p|def-list|list|alternatives|array|code|graphic|media|preformat)*,(attrib|permissions)*) >
+<!ATTLIST supplementary-material
+		mime-subtype		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		xlink:show		(embed|new|none|other|replace)		#IMPLIED
+		xlink:title		CDATA		#IMPLIED
+		xlink:actuate		(none|onLoad|onRequest|other)		#IMPLIED
+		position		(anchor|background|float|margin)			'float'
+		xlink:href		CDATA		#IMPLIED
+		xlink:type		(simple)		#IMPLIED
+		xmlns:xlink		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait'
+		xlink:role		CDATA		#IMPLIED >
+
+
+<!ELEMENT issue-xml (journal-meta?,issue-meta,toc*) >
+<!ATTLIST issue-xml
+		order		NMTOKEN		#IMPLIED
+		xml:lang		NMTOKEN			'en'
+		intended-date		CDATA		#IMPLIED
+		xmlns:xlink		CDATA		#FIXED	'http://www.w3.org/1999/xlink' >
+
+
+<!ELEMENT custom-meta-group (custom-meta+) >
+<!ATTLIST custom-meta-group
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT array (label?,(alt-text|long-desc|email|ext-link|uri)*,((alternatives|graphic|media)*|tbody|oasis:tbody),(attrib|permissions)*) >
+<!ATTLIST array
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED
+		orientation		(portrait|landscape)			'portrait' >
+
+
+<!ELEMENT pub-date (day|era|month|season|year|string-date|x)* >
+<!ATTLIST pub-date
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		calendar		CDATA		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		publication-format		CDATA		#IMPLIED
+		iso-8601-date		CDATA		#IMPLIED
+		date-type		CDATA		#IMPLIED
+		pub-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT author-notes (label?,title?,(corresp|fn|p|x)+) >
+<!ATTLIST author-notes
+		rid		IDREFS		#IMPLIED
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT collab-alternatives (collab)+ >
+<!ATTLIST collab-alternatives
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT series-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST series-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT ruby (rb,(rt|(rp,rt,rp))) >
+<!ATTLIST ruby
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT string-name (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x|degrees|given-names|prefix|surname|suffix)* >
+<!ATTLIST string-name
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		name-style		(western|eastern|islensk|given-only)			'western'
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT milestone-end EMPTY >
+<!ATTLIST milestone-end
+		rid		IDREF		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		rationale		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT inline-formula (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST inline-formula
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT journal-title (#PCDATA|email|ext-link|uri|inline-supplementary-material|related-article|related-object|hr|bold|fixed-case|italic|monospace|overline|overline-start|overline-end|roman|sans-serif|sc|strike|underline|underline-start|underline-end|ruby|alternatives|inline-graphic|private-char|chem-struct|inline-formula|tex-math|mml:math|abbrev|milestone-end|milestone-start|named-content|styled-content|fn|target|xref|sub|sup|x)* >
+<!ATTLIST journal-title
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED
+		content-type		CDATA		#IMPLIED >
+
+
+<!ELEMENT institution-wrap (institution|institution-id)* >
+<!ATTLIST institution-wrap
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!ELEMENT overline-end EMPTY >
+<!ATTLIST overline-end
+		rid		IDREF		#REQUIRED
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED
+		specific-use		CDATA		#IMPLIED >
+
+
+<!ELEMENT name-alternatives ((name|string-name)+) >
+<!ATTLIST name-alternatives
+		id		ID		#IMPLIED
+		xml:base		CDATA		#IMPLIED >
+
+
+<!-- ========================= -->
+<!-- ENTITY DECLARATIONS HERE -->
+<!-- ========================= -->
+
+<!ENTITY glE "&#x2A92;" >
+<!ENTITY nvrtrie "&#x22B5;&#x20D2;" >
+<!ENTITY Vdash "&#x22A9;" >
+<!ENTITY half "&#xBD;" >
+<!ENTITY boxvH "&#x256A;" >
+<!ENTITY llhard "&#x296B;" >
+<!ENTITY rdquor "&#x201D;" >
+<!ENTITY roang "&#x3019;" >
+<!ENTITY theta "&#x3B8;" >
+<!ENTITY boxuR "&#x2558;" >
+<!ENTITY conint "&#x222E;" >
+<!ENTITY nges "&#x2A7E;&#x338;" >
+<!ENTITY boxuL "&#x255B;" >
+<!ENTITY uacgr "&#x3CD;" >
+<!ENTITY gla "&#x2AA5;" >
+<!ENTITY Jcirc "&#x134;" >
+<!ENTITY xlarr "&#x27F5;" >
+<!ENTITY boxvh "&#x253C;" >
+<!ENTITY glj "&#x2AA4;" >
+<!ENTITY rsqb "&#x5D;" >
+<!ENTITY nsmid "&#x2224;" >
+<!ENTITY ijlig "&#x133;" >
+<!ENTITY boxur "&#x2514;" >
+<!ENTITY boxvL "&#x2561;" >
+<!ENTITY boxul "&#x2518;" >
+<!ENTITY boxvR "&#x255E;" >
+<!ENTITY gnE "&#x2269;" >
+<!ENTITY Racute "&#x154;" >
+<!ENTITY tfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x31;&#x3B;" >
+<!ENTITY raquo "&#xBB;" >
+<!ENTITY Rcy "&#x420;" >
+<!ENTITY triminus "&#x2A3A;" >
+<!ENTITY szlig "&#xDF;" >
+<!ENTITY nwarhk "&#x2923;" >
+<!ENTITY angzarr "&#x237C;" >
+<!ENTITY bumpE "&#x2AAE;" >
+<!ENTITY plusb "&#x229E;" >
+<!ENTITY pluse "&#x2A72;" >
+<!ENTITY boxvl "&#x2524;" >
+<!ENTITY boxvr "&#x251C;" >
+<!ENTITY tgr "&#x3C4;" >
+<!ENTITY nrarr "&#x219B;" >
+<!ENTITY gne "&#x2A88;" >
+<!ENTITY tdot "&#x20DB;" >
+<!ENTITY veeeq "&#x225A;" >
+<!ENTITY ltcir "&#x2A79;" >
+<!ENTITY Rang "&#x300B;" >
+<!ENTITY gimel "&#x2137;" >
+<!ENTITY cfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x30;&#x3B;" >
+<!ENTITY ldquo "&#x201C;" >
+<!ENTITY bumpe "&#x224F;" >
+<!ENTITY Acy "&#x410;" >
+<!ENTITY mumap "&#x22B8;" >
+<!ENTITY empty "&#x2205;" >
+<!ENTITY Qopf "&#x211A;" >
+<!ENTITY lvnE "&#x2268;&#xFE00;" >
+<!ENTITY hcirc "&#x125;" >
+<!ENTITY ncap "&#x2A43;" >
+<!ENTITY erDot "&#x2253;" >
+<!ENTITY prurel "&#x22B0;" >
+<!ENTITY sqcaps "&#x2293;&#xFE00;" >
+<!ENTITY Rfr "&#x211C;" >
+<!ENTITY ccaron "&#x10D;" >
+<!ENTITY par "&#x2225;" >
+<!ENTITY chi "&#x3C7;" >
+<!ENTITY kappav "&#x3F0;" >
+<!ENTITY check "&#x2713;" >
+<!ENTITY wcirc "&#x175;" >
+<!ENTITY congdot "&#x2A6D;" >
+<!ENTITY Lcaron "&#x13D;" >
+<!ENTITY YUcy "&#x42E;" >
+<!ENTITY Rgr "&#x3A1;" >
+<!ENTITY b.sigma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x34;&#x3B;" >
+<!ENTITY Fopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x44;&#x3B;" >
+<!ENTITY sigmav "&#x3C2;" >
+<!ENTITY dstrok "&#x111;" >
+<!ENTITY harr "&#x2194;" >
+<!ENTITY midast "&#x2A;" >
+<!ENTITY Afr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x34;&#x3B;" >
+<!ENTITY cir "&#x25CB;" >
+<!ENTITY Ecaron "&#x11A;" >
+<!ENTITY cupcup "&#x2A4A;" >
+<!ENTITY iinfin "&#x29DC;" >
+<!ENTITY gtdot "&#x22D7;" >
+<!ENTITY Cscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x39;&#x45;&#x3B;" >
+<!ENTITY pcy "&#x43F;" >
+<!ENTITY Dashv "&#x2AE4;" >
+<!ENTITY Rarr "&#x21A0;" >
+<!ENTITY lesges "&#x2A93;" >
+<!ENTITY Vdashl "&#x2AE6;" >
+<!ENTITY Auml "&#xC4;" >
+<!ENTITY Agr "&#x391;" >
+<!ENTITY Yacute "&#xDD;" >
+<!ENTITY permil "&#x2030;" >
+<!ENTITY sext "&#x2736;" >
+<!ENTITY lnap "&#x2A89;" >
+<!ENTITY Yscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x34;&#x3B;" >
+<!ENTITY drcrop "&#x230C;" >
+<!ENTITY notinva "&#x2209;" >
+<!ENTITY rarrap "&#x2975;" >
+<!ENTITY Otilde "&#xD5;" >
+<!ENTITY notinvc "&#x22F6;" >
+<!ENTITY notinvb "&#x22F7;" >
+<!ENTITY dscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x39;&#x3B;" >
+<!ENTITY triplus "&#x2A39;" >
+<!ENTITY Wcirc "&#x174;" >
+<!ENTITY ultri "&#x25F8;" >
+<!ENTITY ntgl "&#x2279;" >
+<!ENTITY bump "&#x224E;" >
+<!ENTITY block "&#x2588;" >
+<!ENTITY bemptyv "&#x29B0;" >
+<!ENTITY order "&#x2134;" >
+<!ENTITY utri "&#x25B5;" >
+<!ENTITY period "&#x2E;" >
+<!ENTITY emsp "&#x2003;" >
+<!ENTITY mcomma "&#x2A29;" >
+<!ENTITY Nscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x39;&#x3B;" >
+<!ENTITY Verbar "&#x2016;" >
+<!ENTITY lrarr "&#x21C6;" >
+<!ENTITY bull "&#x2022;" >
+<!ENTITY pfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x44;&#x3B;" >
+<!ENTITY andd "&#x2A5C;" >
+<!ENTITY npar "&#x2226;" >
+<!ENTITY olcross "&#x29BB;" >
+<!ENTITY Ncy "&#x41D;" >
+<!ENTITY cedil "&#xB8;" >
+<!ENTITY zscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x46;&#x3B;" >
+<!ENTITY andv "&#x2A5A;" >
+<!ENTITY top "&#x22A4;" >
+<!ENTITY twixt "&#x226C;" >
+<!ENTITY pgr "&#x3C0;" >
+<!ENTITY Omacr "&#x14C;" >
+<!ENTITY Gbreve "&#x11E;" >
+<!ENTITY uuarr "&#x21C8;" >
+<!ENTITY hyphen "&#x2010;" >
+<!ENTITY oscr "&#x2134;" >
+<!ENTITY dscy "&#x455;" >
+<!ENTITY thinsp "&#x2009;" >
+<!ENTITY ubreve "&#x16D;" >
+<!ENTITY phi "&#x3D5;" >
+<!ENTITY Ccedil "&#xC7;" >
+<!ENTITY Hcirc "&#x124;" >
+<!ENTITY roarr "&#x21FE;" >
+<!ENTITY boxhu "&#x2534;" >
+<!ENTITY prap "&#x2AB7;" >
+<!ENTITY Iacute "&#xCD;" >
+<!ENTITY ucirc "&#xFB;" >
+<!ENTITY uArr "&#x21D1;" >
+<!ENTITY lap "&#x2A85;" >
+<!ENTITY Nfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x31;&#x3B;" >
+<!ENTITY piv "&#x3D6;" >
+<!ENTITY boxhd "&#x252C;" >
+<!ENTITY lat "&#x2AAB;" >
+<!ENTITY sqsupe "&#x2292;" >
+<!ENTITY nsime "&#x2244;" >
+<!ENTITY eegr "&#x3B7;" >
+<!ENTITY Colone "&#x2A74;" >
+<!ENTITY rarrfs "&#x291E;" >
+<!ENTITY zcaron "&#x17E;" >
+<!ENTITY ccupssm "&#x2A50;" >
+<!ENTITY udblac "&#x171;" >
+<!ENTITY bsolb "&#x29C5;" >
+<!ENTITY And "&#x2A53;" >
+<!ENTITY lmoust "&#x23B0;" >
+<!ENTITY Ngr "&#x39D;" >
+<!ENTITY lesg "&#x22DA;&#xFE00;" >
+<!ENTITY lsquo "&#x2018;" >
+<!ENTITY b.upsi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x36;&#x3B;" >
+<!ENTITY b.thetav "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x44;&#x3B;" >
+<!ENTITY imof "&#x22B7;" >
+<!ENTITY prsim "&#x227E;" >
+<!ENTITY b.thetas "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x39;&#x3B;" >
+<!ENTITY curren "&#xA4;" >
+<!ENTITY Omega "&#x3A9;" >
+<!ENTITY times "&#xD7;" >
+<!ENTITY rsquor "&#x2019;" >
+<!ENTITY lang "&#x2329;" >
+<!ENTITY xmap "&#x27FC;" >
+<!ENTITY Hstrok "&#x126;" >
+<!ENTITY lcy "&#x43B;" >
+<!ENTITY Ycirc "&#x176;" >
+<!ENTITY rarrhk "&#x21AA;" >
+<!ENTITY ange "&#x29A4;" >
+<!ENTITY ntlg "&#x2278;" >
+<!ENTITY scaron "&#x161;" >
+<!ENTITY cirfnint "&#x2A10;" >
+<!ENTITY upsi "&#x3C5;" >
+<!ENTITY PSgr "&#x3A8;" >
+<!ENTITY b.beta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x33;&#x3B;" >
+<!ENTITY lltri "&#x25FA;" >
+<!ENTITY leg "&#x22DA;" >
+<!ENTITY Uopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x43;&#x3B;" >
+<!ENTITY Tstrok "&#x166;" >
+<!ENTITY les "&#x2A7D;" >
+<!ENTITY caret "&#x2041;" >
+<!ENTITY vnsup "&#x2283;&#x20D2;" >
+<!ENTITY lgE "&#x2A91;" >
+<!ENTITY rppolint "&#x2A12;" >
+<!ENTITY Ucirc "&#xDB;" >
+<!ENTITY igrave "&#xEC;" >
+<!ENTITY ssetmn "&#x2216;" >
+<!ENTITY Aring "&#xC5;" >
+<!ENTITY Jopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x31;&#x3B;" >
+<!ENTITY lfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x39;&#x3B;" >
+<!ENTITY b.sigmav "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x33;&#x3B;" >
+<!ENTITY vnsub "&#x2282;&#x20D2;" >
+<!ENTITY gtcc "&#x2AA7;" >
+<!ENTITY cup "&#x222A;" >
+<!ENTITY Jcy "&#x419;" >
+<!ENTITY ljcy "&#x459;" >
+<!ENTITY larr "&#x2190;" >
+<!ENTITY sfgr "&#x3C2;" >
+<!ENTITY capdot "&#x2A40;" >
+<!ENTITY Euml "&#xCB;" >
+<!ENTITY lgr "&#x3BB;" >
+<!ENTITY Gscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x32;&#x3B;" >
+<!ENTITY rrarr "&#x21C9;" >
+<!ENTITY lparlt "&#x2993;" >
+<!ENTITY andslope "&#x2A58;" >
+<!ENTITY barvee "&#x22BD;" >
+<!ENTITY rarrlp "&#x21AC;" >
+<!ENTITY awint "&#x2A11;" >
+<!ENTITY b.Theta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x41;&#x46;&#x3B;" >
+<!ENTITY rfloor "&#x230B;" >
+<!ENTITY prE "&#x2AB3;" >
+<!ENTITY dsol "&#x29F6;" >
+<!ENTITY jcirc "&#x135;" >
+<!ENTITY intlarhk "&#x2A17;" >
+<!ENTITY hscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x44;&#x3B;" >
+<!ENTITY ctdot "&#x22EF;" >
+<!ENTITY late "&#x2AAD;" >
+<!ENTITY rsquo "&#x2019;" >
+<!ENTITY Jfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x44;&#x3B;" >
+<!ENTITY latail "&#x2919;" >
+<!ENTITY pre "&#x2AAF;" >
+<!ENTITY iecy "&#x435;" >
+<!ENTITY uwangle "&#x29A7;" >
+<!ENTITY ycy "&#x44B;" >
+<!ENTITY Theta "&#x398;" >
+<!ENTITY verbar "&#x7C;" >
+<!ENTITY KHcy "&#x425;" >
+<!ENTITY Not "&#x2AEC;" >
+<!ENTITY ohacgr "&#x3CE;" >
+<!ENTITY Rscr "&#x211B;" >
+<!ENTITY Uacgr "&#x38E;" >
+<!ENTITY iprod "&#x2A3C;" >
+<!ENTITY lHar "&#x2962;" >
+<!ENTITY Edot "&#x116;" >
+<!ENTITY becaus "&#x2235;" >
+<!ENTITY perp "&#x22A5;" >
+<!ENTITY psi "&#x3C8;" >
+<!ENTITY bprime "&#x2035;" >
+<!ENTITY tint "&#x222D;" >
+<!ENTITY subsup "&#x2AD3;" >
+<!ENTITY rpar "&#x29;" >
+<!ENTITY subsub "&#x2AD5;" >
+<!ENTITY starf "&#x2605;" >
+<!ENTITY nles "&#x2A7D;&#x338;" >
+<!ENTITY swnwar "&#x292A;" >
+<!ENTITY yen "&#xA5;" >
+<!ENTITY osol "&#x2298;" >
+<!ENTITY otimesas "&#x2A36;" >
+<!ENTITY mnplus "&#x2213;" >
+<!ENTITY sscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x38;&#x3B;" >
+<!ENTITY lbbrk "&#x3014;" >
+<!ENTITY nldr "&#x2025;" >
+<!ENTITY rarrpl "&#x2945;" >
+<!ENTITY nsupe "&#x2289;" >
+<!ENTITY lnE "&#x2268;" >
+<!ENTITY yfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x36;&#x3B;" >
+<!ENTITY nltrie "&#x22EC;" >
+<!ENTITY b.Pi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x37;&#x3B;" >
+<!ENTITY odsold "&#x29BC;" >
+<!ENTITY Gammad "&#x3DC;" >
+<!ENTITY TScy "&#x426;" >
+<!ENTITY neArr "&#x21D7;" >
+<!ENTITY Acirc "&#xC2;" >
+<!ENTITY bernou "&#x212C;" >
+<!ENTITY Vvdash "&#x22AA;" >
+<!ENTITY lne "&#x2A87;" >
+<!ENTITY ncup "&#x2A42;" >
+<!ENTITY sqsube "&#x2291;" >
+<!ENTITY Scirc "&#x15C;" >
+<!ENTITY KHgr "&#x3A7;" >
+<!ENTITY prnE "&#x2AB5;" >
+<!ENTITY gesles "&#x2A94;" >
+<!ENTITY omega "&#x3C9;" >
+<!ENTITY lAtail "&#x291B;" >
+<!ENTITY udhar "&#x296E;" >
+<!ENTITY hfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x35;&#x3B;" >
+<!ENTITY Scedil "&#x15E;" >
+<!ENTITY timesbar "&#x2A31;" >
+<!ENTITY quot "&#x22;" >
+<!ENTITY Fcy "&#x424;" >
+<!ENTITY cupcap "&#x2A46;" >
+<!ENTITY idiagr "&#x390;" >
+<!ENTITY npre "&#x2AAF;&#x338;" >
+<!ENTITY Lcedil "&#x13B;" >
+<!ENTITY dfisht "&#x297F;" >
+<!ENTITY cwint "&#x2231;" >
+<!ENTITY plussim "&#x2A26;" >
+<!ENTITY loz "&#x25CA;" >
+<!ENTITY prop "&#x221D;" >
+<!ENTITY nprcue "&#x22E0;" >
+<!ENTITY lBarr "&#x290E;" >
+<!ENTITY xutri "&#x25B3;" >
+<!ENTITY nsupE "&#x2AC6;&#x338;" >
+<!ENTITY Wfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x41;&#x3B;" >
+<!ENTITY kcedil "&#x137;" >
+<!ENTITY fltns "&#x25B1;" >
+<!ENTITY prod "&#x220F;" >
+<!ENTITY rarrtl "&#x21A3;" >
+<!ENTITY gacute "&#x1F5;" >
+<!ENTITY b.delta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x35;&#x3B;" >
+<!ENTITY disin "&#x22F2;" >
+<!ENTITY Yopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x30;&#x3B;" >
+<!ENTITY Aacgr "&#x386;" >
+<!ENTITY Ffr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x39;&#x3B;" >
+<!ENTITY puncsp "&#x2008;" >
+<!ENTITY pointint "&#x2A15;" >
+<!ENTITY b.Omega "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x30;&#x3B;" >
+<!ENTITY rcedil "&#x157;" >
+<!ENTITY Ncaron "&#x147;" >
+<!ENTITY Copf "&#x2102;" >
+<!ENTITY vdash "&#x22A2;" >
+<!ENTITY raemptyv "&#x29B3;" >
+<!ENTITY ucy "&#x443;" >
+<!ENTITY nacute "&#x144;" >
+<!ENTITY b.epsiv "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x43;&#x3B;" >
+<!ENTITY YIcy "&#x407;" >
+<!ENTITY square "&#x25A1;" >
+<!ENTITY squarf "&#x25AA;" >
+<!ENTITY Nopf "&#x2115;" >
+<!ENTITY otilde "&#xF5;" >
+<!ENTITY chcy "&#x447;" >
+<!ENTITY xharr "&#x27F7;" >
+<!ENTITY omacr "&#x14D;" >
+<!ENTITY Darr "&#x21A1;" >
+<!ENTITY rfisht "&#x297D;" >
+<!ENTITY lsh "&#x21B0;" >
+<!ENTITY uacute "&#xFA;" >
+<!ENTITY eparsl "&#x29E3;" >
+<!ENTITY ycirc "&#x177;" >
+<!ENTITY part "&#x2202;" >
+<!ENTITY Iuml "&#xCF;" >
+<!ENTITY rtri "&#x25B9;" >
+<!ENTITY para "&#xB6;" >
+<!ENTITY Kscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x36;&#x3B;" >
+<!ENTITY Vbar "&#x2AEB;" >
+<!ENTITY tridot "&#x25EC;" >
+<!ENTITY bbrktbrk "&#x23B6;" >
+<!ENTITY colone "&#x2254;" >
+<!ENTITY dcy "&#x434;" >
+<!ENTITY dlcrop "&#x230D;" >
+<!ENTITY Conint "&#x222F;" >
+<!ENTITY ufr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x32;&#x3B;" >
+<!ENTITY lscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x31;&#x3B;" >
+<!ENTITY deg "&#xB0;" >
+<!ENTITY Scy "&#x421;" >
+<!ENTITY uuml "&#xFC;" >
+<!ENTITY rbrkslu "&#x2990;" >
+<!ENTITY ascr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x36;&#x3B;" >
+<!ENTITY nsccue "&#x22E1;" >
+<!ENTITY ZHcy "&#x416;" >
+<!ENTITY cuwed "&#x22CF;" >
+<!ENTITY intcal "&#x22BA;" >
+<!ENTITY trpezium "&#xFFFD;" >
+<!ENTITY b.rho "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x32;&#x3B;" >
+<!ENTITY rbrksld "&#x298E;" >
+<!ENTITY ecolon "&#x2255;" >
+<!ENTITY esdot "&#x2250;" >
+<!ENTITY prime "&#x2032;" >
+<!ENTITY ugr "&#x3C5;" >
+<!ENTITY boxVH "&#x256C;" >
+<!ENTITY ubrcy "&#x45E;" >
+<!ENTITY Vscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x31;&#x3B;" >
+<!ENTITY b.omega "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x41;&#x3B;" >
+<!ENTITY xvee "&#x22C1;" >
+<!ENTITY Nacute "&#x143;" >
+<!ENTITY trie "&#x225C;" >
+<!ENTITY drcorn "&#x231F;" >
+<!ENTITY b.Xi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x35;&#x3B;" >
+<!ENTITY boxUR "&#x255A;" >
+<!ENTITY dfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x31;&#x3B;" >
+<!ENTITY rBarr "&#x290F;" >
+<!ENTITY Bcy "&#x411;" >
+<!ENTITY boxUL "&#x255D;" >
+<!ENTITY SOFTcy "&#x42C;" >
+<!ENTITY IOcy "&#x401;" >
+<!ENTITY Idot "&#x130;" >
+<!ENTITY boxVh "&#x256B;" >
+<!ENTITY rcub "&#x7D;" >
+<!ENTITY searr "&#x2198;" >
+<!ENTITY dgr "&#x3B4;" >
+<!ENTITY boxUr "&#x2559;" >
+<!ENTITY AElig "&#xC6;" >
+<!ENTITY boxVL "&#x2563;" >
+<!ENTITY umacr "&#x16B;" >
+<!ENTITY boxUl "&#x255C;" >
+<!ENTITY boxVR "&#x2560;" >
+<!ENTITY Sfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x36;&#x3B;" >
+<!ENTITY ccaps "&#x2A4D;" >
+<!ENTITY rlhar "&#x21CC;" >
+<!ENTITY planck "&#x210F;" >
+<!ENTITY inodot "&#x131;" >
+<!ENTITY sacute "&#x15B;" >
+<!ENTITY boxVl "&#x2562;" >
+<!ENTITY cylcty "&#x232D;" >
+<!ENTITY nhArr "&#x21CE;" >
+<!ENTITY jmath "&#x6A;" >
+<!ENTITY wscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x43;&#x3B;" >
+<!ENTITY boxVr "&#x255F;" >
+<!ENTITY Sgr "&#x3A3;" >
+<!ENTITY ffllig "&#xFB04;" >
+<!ENTITY die "&#xA8;" >
+<!ENTITY ltimes "&#x22C9;" >
+<!ENTITY iukcy "&#x456;" >
+<!ENTITY easter "&#x2A6E;" >
+<!ENTITY b.Gammad "&#x3DC;" >
+<!ENTITY rAtail "&#x291C;" >
+<!ENTITY OElig "&#x152;" >
+<!ENTITY Bfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x35;&#x3B;" >
+<!ENTITY imped "&#x1B5;" >
+<!ENTITY lates "&#x2AAD;&#xFE00;" >
+<!ENTITY Dstrok "&#x110;" >
+<!ENTITY OHgr "&#x3A9;" >
+<!ENTITY csube "&#x2AD1;" >
+<!ENTITY ncongdot "&#x2A6D;&#x338;" >
+<!ENTITY softcy "&#x44C;" >
+<!ENTITY yucy "&#x44E;" >
+<!ENTITY Bgr "&#x392;" >
+<!ENTITY utrif "&#x25B4;" >
+<!ENTITY sfrown "&#x2322;" >
+<!ENTITY nsqsupe "&#x22E3;" >
+<!ENTITY rArr "&#x21D2;" >
+<!ENTITY b.Phi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x44;&#x3B;" >
+<!ENTITY blank "&#x2423;" >
+<!ENTITY napid "&#x224B;&#x338;" >
+<!ENTITY gammad "&#x3DD;" >
+<!ENTITY pound "&#xA3;" >
+<!ENTITY uml "&#xA8;" >
+<!ENTITY alpha "&#x3B1;" >
+<!ENTITY lsim "&#x2272;" >
+<!ENTITY incare "&#x2105;" >
+<!ENTITY Gopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x45;&#x3B;" >
+<!ENTITY abreve "&#x103;" >
+<!ENTITY solb "&#x29C4;" >
+<!ENTITY ensp "&#x2002;" >
+<!ENTITY divonx "&#x22C7;" >
+<!ENTITY ccedil "&#xE7;" >
+<!ENTITY qfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x45;&#x3B;" >
+<!ENTITY Ocy "&#x41E;" >
+<!ENTITY uogon "&#x173;" >
+<!ENTITY kgreen "&#x138;" >
+<!ENTITY ltlarr "&#x2976;" >
+<!ENTITY eacute "&#xE9;" >
+<!ENTITY telrec "&#x2315;" >
+<!ENTITY olarr "&#x21BA;" >
+<!ENTITY rdquo "&#x201D;" >
+<!ENTITY Igrave "&#xCC;" >
+<!ENTITY macr "&#xAF;" >
+<!ENTITY Ropf "&#x211D;" >
+<!ENTITY nsubE "&#x2AC5;&#x338;" >
+<!ENTITY infin "&#x221E;" >
+<!ENTITY strns "&#xAF;" >
+<!ENTITY natur "&#x266E;" >
+<!ENTITY dot "&#x2D9;" >
+<!ENTITY orslope "&#x2A57;" >
+<!ENTITY itilde "&#x129;" >
+<!ENTITY b.rhov "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x45;&#x30;&#x3B;" >
+<!ENTITY lceil "&#x2308;" >
+<!ENTITY shchcy "&#x449;" >
+<!ENTITY efDot "&#x2252;" >
+<!ENTITY Oscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x41;&#x3B;" >
+<!ENTITY YAcy "&#x42F;" >
+<!ENTITY Ofr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x32;&#x3B;" >
+<!ENTITY map "&#x21A6;" >
+<!ENTITY gtcir "&#x2A7A;" >
+<!ENTITY Hmacr "&#x48;&#x304;" >
+<!ENTITY angrtvbd "&#x299D;" >
+<!ENTITY yacute "&#xFD;" >
+<!ENTITY nltri "&#x22EA;" >
+<!ENTITY Iukcy "&#x406;" >
+<!ENTITY rthree "&#x22CC;" >
+<!ENTITY Ogr "&#x39F;" >
+<!ENTITY acirc "&#xE2;" >
+<!ENTITY xuplus "&#x2A04;" >
+<!ENTITY Dscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x39;&#x46;&#x3B;" >
+<!ENTITY boxHU "&#x2569;" >
+<!ENTITY yuml "&#xFF;" >
+<!ENTITY ogon "&#x2DB;" >
+<!ENTITY b.Delta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x41;&#x42;&#x3B;" >
+<!ENTITY nlArr "&#x21CD;" >
+<!ENTITY prnap "&#x2AB9;" >
+<!ENTITY pscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x35;&#x3B;" >
+<!ENTITY smile "&#x2323;" >
+<!ENTITY notindot "&#x22F5;&#x338;" >
+<!ENTITY supplus "&#x2AC0;" >
+<!ENTITY radic "&#x221A;" >
+<!ENTITY nwArr "&#x21D6;" >
+<!ENTITY boxHD "&#x2566;" >
+<!ENTITY boxHu "&#x2567;" >
+<!ENTITY mcy "&#x43C;" >
+<!ENTITY egsdot "&#x2A98;" >
+<!ENTITY Zscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x35;&#x3B;" >
+<!ENTITY cularrp "&#x293D;" >
+<!ENTITY sdote "&#x2A66;" >
+<!ENTITY SHcy "&#x428;" >
+<!ENTITY rotimes "&#x2A35;" >
+<!ENTITY sdotb "&#x22A1;" >
+<!ENTITY boxbox "&#x29C9;" >
+<!ENTITY operp "&#x29B9;" >
+<!ENTITY escr "&#x212F;" >
+<!ENTITY lrhard "&#x296D;" >
+<!ENTITY b.lambda "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x43;&#x3B;" >
+<!ENTITY b.Upsi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x43;&#x3B;" >
+<!ENTITY nvinfin "&#x29DE;" >
+<!ENTITY boxHd "&#x2564;" >
+<!ENTITY gcaron "&#x1E7;" >
+<!ENTITY tilde "&#x2DC;" >
+<!ENTITY ocir "&#x229A;" >
+<!ENTITY subdot "&#x2ABD;" >
+<!ENTITY ohbar "&#x29B5;" >
+<!ENTITY nsube "&#x2288;" >
+<!ENTITY beth "&#x2136;" >
+<!ENTITY cups "&#x222A;&#xFE00;" >
+<!ENTITY beta "&#x3B2;" >
+<!ENTITY plustwo "&#x2A27;" >
+<!ENTITY duhar "&#x296F;" >
+<!ENTITY ntilde "&#xF1;" >
+<!ENTITY opar "&#x29B7;" >
+<!ENTITY lsqb "&#x5B;" >
+<!ENTITY aacgr "&#x3AC;" >
+<!ENTITY qint "&#x2A0C;" >
+<!ENTITY hybull "&#x2043;" >
+<!ENTITY quatint "&#x2A16;" >
+<!ENTITY idigr "&#x3CA;" >
+<!ENTITY nGg "&#x22D9;&#x338;" >
+<!ENTITY middot "&#xB7;" >
+<!ENTITY mfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x41;&#x3B;" >
+<!ENTITY napos "&#x149;" >
+<!ENTITY nGt "&#x226B;&#x20D2;" >
+<!ENTITY boxdr "&#x250C;" >
+<!ENTITY Kcy "&#x41A;" >
+<!ENTITY rceil "&#x2309;" >
+<!ENTITY boxdl "&#x2510;" >
+<!ENTITY supne "&#x228B;" >
+<!ENTITY lopar "&#x2985;" >
+<!ENTITY mgr "&#x3BC;" >
+<!ENTITY psgr "&#x3C8;" >
+<!ENTITY b.Sigma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x41;&#x3B;" >
+<!ENTITY hellip "&#x2026;" >
+<!ENTITY gbreve "&#x11F;" >
+<!ENTITY tritime "&#x2A3B;" >
+<!ENTITY Sub "&#x22D0;" >
+<!ENTITY rdca "&#x2937;" >
+<!ENTITY numsp "&#x2007;" >
+<!ENTITY cdot "&#x10B;" >
+<!ENTITY vsupne "&#x228B;&#xFE00;" >
+<!ENTITY Lang "&#x300A;" >
+<!ENTITY lfisht "&#x297C;" >
+<!ENTITY lcaron "&#x13E;" >
+<!ENTITY malt "&#x2720;" >
+<!ENTITY Sup "&#x22D1;" >
+<!ENTITY Gcedil "&#x122;" >
+<!ENTITY mho "&#x2127;" >
+<!ENTITY lbrke "&#x298B;" >
+<!ENTITY Umacr "&#x16A;" >
+<!ENTITY vArr "&#x21D5;" >
+<!ENTITY male "&#x2642;" >
+<!ENTITY thetav "&#x3D1;" >
+<!ENTITY Ubrcy "&#x40E;" >
+<!ENTITY emptyv "&#x2205;" >
+<!ENTITY vsupnE "&#x2ACC;&#xFE00;" >
+<!ENTITY mid "&#x2223;" >
+<!ENTITY scap "&#x2AB8;" >
+<!ENTITY simne "&#x2246;" >
+<!ENTITY demptyv "&#x29B1;" >
+<!ENTITY angsph "&#x2222;" >
+<!ENTITY Kfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x45;&#x3B;" >
+<!ENTITY Kopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x32;&#x3B;" >
+<!ENTITY Rcedil "&#x156;" >
+<!ENTITY aelig "&#xE6;" >
+<!ENTITY boxhU "&#x2568;" >
+<!ENTITY b.Psi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x46;&#x3B;" >
+<!ENTITY star "&#x2606;" >
+<!ENTITY lthree "&#x22CB;" >
+<!ENTITY zcy "&#x437;" >
+<!ENTITY Kgr "&#x39A;" >
+<!ENTITY minusdu "&#x2A2A;" >
+<!ENTITY Upsi "&#x3D2;" >
+<!ENTITY nvlArr "&#x2902;" >
+<!ENTITY esim "&#x2242;" >
+<!ENTITY boxhD "&#x2565;" >
+<!ENTITY gamma "&#x3B3;" >
+<!ENTITY ratio "&#x2236;" >
+<!ENTITY Lmidot "&#x13F;" >
+<!ENTITY coprod "&#x2210;" >
+<!ENTITY dcaron "&#x10F;" >
+<!ENTITY eDot "&#x2251;" >
+<!ENTITY dashv "&#x22A3;" >
+<!ENTITY nLl "&#x22D8;&#x338;" >
+<!ENTITY diams "&#x2666;" >
+<!ENTITY smeparsl "&#x29E4;" >
+<!ENTITY RBarr "&#x2910;" >
+<!ENTITY nLt "&#x226A;&#x20D2;" >
+<!ENTITY nhpar "&#x2AF2;" >
+<!ENTITY xnis "&#x22FB;" >
+<!ENTITY b.mu "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x44;&#x3B;" >
+<!ENTITY icy "&#x438;" >
+<!ENTITY ovbar "&#x233D;" >
+<!ENTITY lowbar "&#x5F;" >
+<!ENTITY khcy "&#x445;" >
+<!ENTITY Vopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x44;&#x3B;" >
+<!ENTITY rhov "&#x3F1;" >
+<!ENTITY Agrave "&#xC0;" >
+<!ENTITY Cconint "&#x2230;" >
+<!ENTITY Larr "&#x219E;" >
+<!ENTITY gsime "&#x2A8E;" >
+<!ENTITY laemptyv "&#x29B4;" >
+<!ENTITY eplus "&#x2A71;" >
+<!ENTITY lotimes "&#x2A34;" >
+<!ENTITY xwedge "&#x22C0;" >
+<!ENTITY gsiml "&#x2A90;" >
+<!ENTITY phmmat "&#x2133;" >
+<!ENTITY Prime "&#x2033;" >
+<!ENTITY vBarv "&#x2AE9;" >
+<!ENTITY zfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x37;&#x3B;" >
+<!ENTITY Atilde "&#xC3;" >
+<!ENTITY SHCHcy "&#x429;" >
+<!ENTITY luruhar "&#x2966;" >
+<!ENTITY Sscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x45;&#x3B;" >
+<!ENTITY odash "&#x229D;" >
+<!ENTITY vellip "&#x22EE;" >
+<!ENTITY gesdotol "&#x2A84;" >
+<!ENTITY supdot "&#x2ABE;" >
+<!ENTITY tprime "&#x2034;" >
+<!ENTITY boxdR "&#x2552;" >
+<!ENTITY zgr "&#x3B6;" >
+<!ENTITY dtri "&#x25BF;" >
+<!ENTITY iff "&#x21D4;" >
+<!ENTITY boxdL "&#x2555;" >
+<!ENTITY supnE "&#x2ACC;" >
+<!ENTITY ifr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x36;&#x3B;" >
+<!ENTITY simlE "&#x2A9F;" >
+<!ENTITY cwconint "&#x2232;" >
+<!ENTITY nspar "&#x2226;" >
+<!ENTITY Hscr "&#x210B;" >
+<!ENTITY ominus "&#x2296;" >
+<!ENTITY Gcy "&#x413;" >
+<!ENTITY lAarr "&#x21DA;" >
+<!ENTITY b.nu "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x45;&#x3B;" >
+<!ENTITY Rarrtl "&#x2916;" >
+<!ENTITY commat "&#x40;" >
+<!ENTITY Scaron "&#x160;" >
+<!ENTITY tscy "&#x446;" >
+<!ENTITY rtimes "&#x22CA;" >
+<!ENTITY csupe "&#x2AD2;" >
+<!ENTITY igr "&#x3B9;" >
+<!ENTITY OHacgr "&#x38F;" >
+<!ENTITY THORN "&#xDE;" >
+<!ENTITY NJcy "&#x40A;" >
+<!ENTITY tscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x39;&#x3B;" >
+<!ENTITY bnot "&#x2310;" >
+<!ENTITY Xfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x42;&#x3B;" >
+<!ENTITY b.pi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x31;&#x3B;" >
+<!ENTITY rarrbfs "&#x2920;" >
+<!ENTITY iscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x45;&#x3B;" >
+<!ENTITY nmid "&#x2224;" >
+<!ENTITY lbarr "&#x290C;" >
+<!ENTITY larrbfs "&#x291F;" >
+<!ENTITY khgr "&#x3C7;" >
+<!ENTITY eeacgr "&#x3AE;" >
+<!ENTITY rarrsim "&#x2974;" >
+<!ENTITY Xgr "&#x39E;" >
+<!ENTITY curarrm "&#x293C;" >
+<!ENTITY urtri "&#x25F9;" >
+<!ENTITY uhblk "&#x2580;" >
+<!ENTITY gnsim "&#x22E7;" >
+<!ENTITY erarr "&#x2971;" >
+<!ENTITY mdash "&#x2014;" >
+<!ENTITY Gfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x41;&#x3B;" >
+<!ENTITY capcup "&#x2A47;" >
+<!ENTITY pluscir "&#x2A22;" >
+<!ENTITY sccue "&#x227D;" >
+<!ENTITY larrsim "&#x2973;" >
+<!ENTITY andand "&#x2A55;" >
+<!ENTITY tcedil "&#x163;" >
+<!ENTITY plankv "&#x210F;" >
+<!ENTITY Uogon "&#x172;" >
+<!ENTITY vcy "&#x432;" >
+<!ENTITY comma "&#x2C;" >
+<!ENTITY Ggr "&#x393;" >
+<!ENTITY dArr "&#x21D3;" >
+<!ENTITY ulcorn "&#x231C;" >
+<!ENTITY isins "&#x22F4;" >
+<!ENTITY isinv "&#x2208;" >
+<!ENTITY spar "&#x2225;" >
+<!ENTITY b.eta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x38;&#x3B;" >
+<!ENTITY supedot "&#x2AC4;" >
+<!ENTITY topfork "&#x2ADA;" >
+<!ENTITY daleth "&#x2138;" >
+<!ENTITY vBar "&#x2AE8;" >
+<!ENTITY Gamma "&#x393;" >
+<!ENTITY ecy "&#x44D;" >
+<!ENTITY ldrushar "&#x294B;" >
+<!ENTITY aring "&#xE5;" >
+<!ENTITY qprime "&#x2057;" >
+<!ENTITY rbbrk "&#x3015;" >
+<!ENTITY swarhk "&#x2926;" >
+<!ENTITY dagger "&#x2020;" >
+<!ENTITY trisb "&#x29CD;" >
+<!ENTITY tstrok "&#x167;" >
+<!ENTITY bottom "&#x22A5;" >
+<!ENTITY rcaron "&#x159;" >
+<!ENTITY isinE "&#x22F9;" >
+<!ENTITY DZcy "&#x40F;" >
+<!ENTITY angmsdae "&#x29AC;" >
+<!ENTITY angmsdaf "&#x29AD;" >
+<!ENTITY gdot "&#x121;" >
+<!ENTITY angmsdag "&#x29AE;" >
+<!ENTITY Cap "&#x22D2;" >
+<!ENTITY angmsdah "&#x29AF;" >
+<!ENTITY Ograve "&#xD2;" >
+<!ENTITY Utilde "&#x168;" >
+<!ENTITY angmsdaa "&#x29A8;" >
+<!ENTITY angmsdab "&#x29A9;" >
+<!ENTITY yicy "&#x457;" >
+<!ENTITY angmsdac "&#x29AA;" >
+<!ENTITY angmsdad "&#x29AB;" >
+<!ENTITY isinsv "&#x22F3;" >
+<!ENTITY Dopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x42;&#x3B;" >
+<!ENTITY vfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x33;&#x3B;" >
+<!ENTITY nvap "&#x224D;&#x20D2;" >
+<!ENTITY dtrif "&#x25BE;" >
+<!ENTITY otimes "&#x2297;" >
+<!ENTITY Tcy "&#x422;" >
+<!ENTITY nvltrie "&#x22B4;&#x20D2;" >
+<!ENTITY b.xi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x46;&#x3B;" >
+<!ENTITY scnE "&#x2AB6;" >
+<!ENTITY Oopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x36;&#x3B;" >
+<!ENTITY clubs "&#x2663;" >
+<!ENTITY ltcc "&#x2AA6;" >
+<!ENTITY Oslash "&#xD8;" >
+<!ENTITY lozf "&#x29EB;" >
+<!ENTITY grave "&#x60;" >
+<!ENTITY asymp "&#x2248;" >
+<!ENTITY int "&#x222B;" >
+<!ENTITY slarr "&#x2190;" >
+<!ENTITY efr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x32;&#x3B;" >
+<!ENTITY swarr "&#x2199;" >
+<!ENTITY trade "&#x2122;" >
+<!ENTITY xrarr "&#x27F6;" >
+<!ENTITY isin "&#x2208;" >
+<!ENTITY xlArr "&#x27F8;" >
+<!ENTITY cupbrcap "&#x2A48;" >
+<!ENTITY iiota "&#x2129;" >
+<!ENTITY fflig "&#xFB00;" >
+<!ENTITY egs "&#x2A96;" >
+<!ENTITY egr "&#x3B5;" >
+<!ENTITY aogon "&#x105;" >
+<!ENTITY nlsim "&#x2274;" >
+<!ENTITY zhcy "&#x436;" >
+<!ENTITY horbar "&#x2015;" >
+<!ENTITY Tfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x37;&#x3B;" >
+<!ENTITY Zopf "&#x2124;" >
+<!ENTITY gcirc "&#x11D;" >
+<!ENTITY Tcaron "&#x164;" >
+<!ENTITY iocy "&#x451;" >
+<!ENTITY lowast "&#x2217;" >
+<!ENTITY rdsh "&#x21B3;" >
+<!ENTITY wedbar "&#x2A5F;" >
+<!ENTITY HARDcy "&#x42A;" >
+<!ENTITY lstrok "&#x142;" >
+<!ENTITY Cacute "&#x106;" >
+<!ENTITY Ugrave "&#xD9;" >
+<!ENTITY xodot "&#x2A00;" >
+<!ENTITY parsim "&#x2AF3;" >
+<!ENTITY Tgr "&#x3A4;" >
+<!ENTITY lrtri "&#x22BF;" >
+<!ENTITY Wscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x32;&#x3B;" >
+<!ENTITY rbarr "&#x290D;" >
+<!ENTITY lhblk "&#x2584;" >
+<!ENTITY uharl "&#x21BF;" >
+<!ENTITY bsime "&#x22CD;" >
+<!ENTITY cuvee "&#x22CE;" >
+<!ENTITY Cfr "&#x212D;" >
+<!ENTITY dollar "&#x24;" >
+<!ENTITY uharr "&#x21BE;" >
+<!ENTITY ddarr "&#x21CA;" >
+<!ENTITY infintie "&#x29DD;" >
+<!ENTITY Ascr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x39;&#x43;&#x3B;" >
+<!ENTITY ncedil "&#x146;" >
+<!ENTITY ulcrop "&#x230F;" >
+<!ENTITY acE "&#x223E;&#x333;" >
+<!ENTITY Ntilde "&#xD1;" >
+<!ENTITY Iacgr "&#x38A;" >
+<!ENTITY forall "&#x2200;" >
+<!ENTITY rcy "&#x440;" >
+<!ENTITY Lscr "&#x2112;" >
+<!ENTITY excl "&#x21;" >
+<!ENTITY awconint "&#x2233;" >
+<!ENTITY Delta "&#x394;" >
+<!ENTITY Uuml "&#xDC;" >
+<!ENTITY amalg "&#x2A3F;" >
+<!ENTITY acd "&#x223F;" >
+<!ENTITY nvgt "&#x3E;&#x20D2;" >
+<!ENTITY lpar "&#x28;" >
+<!ENTITY mstpos "&#x223E;" >
+<!ENTITY xscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x44;&#x3B;" >
+<!ENTITY reg "&#xAE;" >
+<!ENTITY EEacgr "&#x389;" >
+<!ENTITY nvge "&#x2265;&#x20D2;" >
+<!ENTITY acy "&#x430;" >
+<!ENTITY female "&#x2640;" >
+<!ENTITY lagran "&#x2112;" >
+<!ENTITY ell "&#x2113;" >
+<!ENTITY mscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x32;&#x3B;" >
+<!ENTITY plusacir "&#x2A23;" >
+<!ENTITY els "&#x2A95;" >
+<!ENTITY ltrie "&#x22B4;" >
+<!ENTITY bscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x37;&#x3B;" >
+<!ENTITY ltrif "&#x25C2;" >
+<!ENTITY fnof "&#x192;" >
+<!ENTITY Barwed "&#x2306;" >
+<!ENTITY ohgr "&#x3C9;" >
+<!ENTITY ssmile "&#x2323;" >
+<!ENTITY ufisht "&#x297E;" >
+<!ENTITY suplarr "&#x297B;" >
+<!ENTITY GJcy "&#x403;" >
+<!ENTITY harrcir "&#x2948;" >
+<!ENTITY capcap "&#x2A4B;" >
+<!ENTITY rfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x46;&#x3B;" >
+<!ENTITY PHgr "&#x3A6;" >
+<!ENTITY Pcy "&#x41F;" >
+<!ENTITY Icirc "&#xCE;" >
+<!ENTITY lesdotor "&#x2A83;" >
+<!ENTITY cirE "&#x29C3;" >
+<!ENTITY oplus "&#x2295;" >
+<!ENTITY rgr "&#x3C1;" >
+<!ENTITY Lambda "&#x39B;" >
+<!ENTITY eng "&#x14B;" >
+<!ENTITY hArr "&#x21D4;" >
+<!ENTITY utdot "&#x22F0;" >
+<!ENTITY afr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x45;&#x3B;" >
+<!ENTITY micro "&#xB5;" >
+<!ENTITY dlcorn "&#x231E;" >
+<!ENTITY icirc "&#xEE;" >
+<!ENTITY rnmid "&#x2AEE;" >
+<!ENTITY rho "&#x3C1;" >
+<!ENTITY b.alpha "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x32;&#x3B;" >
+<!ENTITY rpargt "&#x2994;" >
+<!ENTITY nabla "&#x2207;" >
+<!ENTITY Gg "&#x22D9;" >
+<!ENTITY zigrarr "&#x21DD;" >
+<!ENTITY cudarrl "&#x2938;" >
+<!ENTITY sstarf "&#x22C6;" >
+<!ENTITY agr "&#x3B1;" >
+<!ENTITY Gt "&#x226B;" >
+<!ENTITY supmult "&#x2AC2;" >
+<!ENTITY tbrk "&#x23B4;" >
+<!ENTITY pertenk "&#x2031;" >
+<!ENTITY bsim "&#x223D;" >
+<!ENTITY nap "&#x2249;" >
+<!ENTITY Pfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x33;&#x3B;" >
+<!ENTITY Odblac "&#x150;" >
+<!ENTITY supsim "&#x2AC8;" >
+<!ENTITY Zacute "&#x179;" >
+<!ENTITY lurdshar "&#x294A;" >
+<!ENTITY Emacr "&#x112;" >
+<!ENTITY cire "&#x2257;" >
+<!ENTITY circ "&#x2C6;" >
+<!ENTITY Pgr "&#x3A0;" >
+<!ENTITY DotDot "&#x20DC;" >
+<!ENTITY lfloor "&#x230A;" >
+<!ENTITY cudarrr "&#x2935;" >
+<!ENTITY nesear "&#x2928;" >
+<!ENTITY yacy "&#x44F;" >
+<!ENTITY Phi "&#x3A6;" >
+<!ENTITY simgE "&#x2AA0;" >
+<!ENTITY Sopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x41;&#x3B;" >
+<!ENTITY gtlPar "&#x2995;" >
+<!ENTITY nvlt "&#x26;&#x23;&#x78;&#x30;&#x30;&#x30;&#x33;&#x43;&#x3B;&#x20D2;" >
+<!ENTITY ncy "&#x43D;" >
+<!ENTITY tshcy "&#x45B;" >
+<!ENTITY amacr "&#x101;" >
+<!ENTITY sharp "&#x266F;" >
+<!ENTITY nvle "&#x2264;&#x20D2;" >
+<!ENTITY lrhar "&#x21CB;" >
+<!ENTITY ccups "&#x2A4C;" >
+<!ENTITY notin "&#x2209;" >
+<!ENTITY spades "&#x2660;" >
+<!ENTITY cemptyv "&#x29B2;" >
+<!ENTITY nisd "&#x22FA;" >
+<!ENTITY Hopf "&#x210D;" >
+<!ENTITY iacgr "&#x3AF;" >
+<!ENTITY vltri "&#x22B2;" >
+<!ENTITY cent "&#xA2;" >
+<!ENTITY aacute "&#xE1;" >
+<!ENTITY notni "&#x220C;" >
+<!ENTITY ltri "&#x25C3;" >
+<!ENTITY eta "&#x3B7;" >
+<!ENTITY brvbar "&#xA6;" >
+<!ENTITY epsiv "&#x3B5;" >
+<!ENTITY eth "&#xF0;" >
+<!ENTITY ffilig "&#xFB03;" >
+<!ENTITY Escr "&#x2130;" >
+<!ENTITY Ll "&#x22D8;" >
+<!ENTITY hardcy "&#x44A;" >
+<!ENTITY nVdash "&#x22AE;" >
+<!ENTITY apid "&#x224B;" >
+<!ENTITY Lt "&#x226A;" >
+<!ENTITY sqcup "&#x2294;" >
+<!ENTITY real "&#x211C;" >
+<!ENTITY ngE "&#x2267;&#x338;" >
+<!ENTITY iexcl "&#xA1;" >
+<!ENTITY nfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x42;&#x3B;" >
+<!ENTITY homtht "&#x223B;" >
+<!ENTITY shcy "&#x448;" >
+<!ENTITY bsol "&#x5C;" >
+<!ENTITY Lcy "&#x41B;" >
+<!ENTITY amp "&#x26;&#x23;&#x33;&#x38;&#x3B;" >
+<!ENTITY Gcirc "&#x11C;" >
+<!ENTITY jsercy "&#x458;" >
+<!ENTITY fscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x42;&#x3B;" >
+<!ENTITY nge "&#x2271;" >
+<!ENTITY rect "&#x25AD;" >
+<!ENTITY uHar "&#x2963;" >
+<!ENTITY and "&#x2227;" >
+<!ENTITY ngr "&#x3BD;" >
+<!ENTITY ofcir "&#x29BF;" >
+<!ENTITY urcorn "&#x231D;" >
+<!ENTITY oacute "&#xF3;" >
+<!ENTITY ngt "&#x226F;" >
+<!ENTITY ang "&#x2220;" >
+<!ENTITY lescc "&#x2AA8;" >
+<!ENTITY eDDot "&#x2A77;" >
+<!ENTITY nGtv "&#x226B;&#x338;" >
+<!ENTITY b.iota "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x41;&#x3B;" >
+<!ENTITY Yuml "&#x178;" >
+<!ENTITY odiv "&#x2A38;" >
+<!ENTITY Pscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x42;&#x3B;" >
+<!ENTITY apE "&#x2A70;" >
+<!ENTITY uarr "&#x2191;" >
+<!ENTITY plusmn "&#xB1;" >
+<!ENTITY dblac "&#x2DD;" >
+<!ENTITY boxDR "&#x2554;" >
+<!ENTITY Or "&#x2A54;" >
+<!ENTITY scsim "&#x227F;" >
+<!ENTITY ring "&#x2DA;" >
+<!ENTITY Jsercy "&#x408;" >
+<!ENTITY xoplus "&#x2A01;" >
+<!ENTITY minusb "&#x229F;" >
+<!ENTITY boxDL "&#x2557;" >
+<!ENTITY notinE "&#x22F9;&#x338;" >
+<!ENTITY minusd "&#x2238;" >
+<!ENTITY sube "&#x2286;" >
+<!ENTITY lcedil "&#x13C;" >
+<!ENTITY blk34 "&#x2593;" >
+<!ENTITY ape "&#x224A;" >
+<!ENTITY suphsol "&#x2283;&#x2F;" >
+<!ENTITY nis "&#x22FC;" >
+<!ENTITY Pi "&#x3A0;" >
+<!ENTITY Lfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x46;&#x3B;" >
+<!ENTITY niv "&#x220B;" >
+<!ENTITY scnsim "&#x22E9;" >
+<!ENTITY Cup "&#x22D3;" >
+<!ENTITY boxDr "&#x2553;" >
+<!ENTITY models "&#x22A7;" >
+<!ENTITY iota "&#x3B9;" >
+<!ENTITY Pr "&#x2ABB;" >
+<!ENTITY rtriltri "&#x29CE;" >
+<!ENTITY qscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x36;&#x3B;" >
+<!ENTITY langd "&#x2991;" >
+<!ENTITY boxDl "&#x2556;" >
+<!ENTITY Rcaron "&#x158;" >
+<!ENTITY timesb "&#x22A0;" >
+<!ENTITY ouml "&#xF6;" >
+<!ENTITY timesd "&#x2A30;" >
+<!ENTITY epar "&#x22D5;" >
+<!ENTITY subE "&#x2AC5;" >
+<!ENTITY KJcy "&#x40C;" >
+<!ENTITY Lgr "&#x39B;" >
+<!ENTITY utilde "&#x169;" >
+<!ENTITY Cdot "&#x10A;" >
+<!ENTITY Dagger "&#x2021;" >
+<!ENTITY sqcap "&#x2293;" >
+<!ENTITY simplus "&#x2A24;" >
+<!ENTITY subrarr "&#x2979;" >
+<!ENTITY numero "&#x2116;" >
+<!ENTITY rsh "&#x21B1;" >
+<!ENTITY nlE "&#x2266;&#x338;" >
+<!ENTITY lbrksld "&#x298F;" >
+<!ENTITY odot "&#x2299;" >
+<!ENTITY Lacute "&#x139;" >
+<!ENTITY Esim "&#x2A73;" >
+<!ENTITY bbrk "&#x23B5;" >
+<!ENTITY odblac "&#x151;" >
+<!ENTITY nearhk "&#x2924;" >
+<!ENTITY Eacute "&#xC9;" >
+<!ENTITY ccirc "&#x109;" >
+<!ENTITY jcy "&#x439;" >
+<!ENTITY gesdoto "&#x2A82;" >
+<!ENTITY nle "&#x2270;" >
+<!ENTITY lArr "&#x21D0;" >
+<!ENTITY ecir "&#x2256;" >
+<!ENTITY cuesc "&#x22DF;" >
+<!ENTITY Sc "&#x2ABC;" >
+<!ENTITY midcir "&#x2AF0;" >
+<!ENTITY cularr "&#x21B6;" >
+<!ENTITY lcub "&#x7B;" >
+<!ENTITY nlt "&#x226E;" >
+<!ENTITY THgr "&#x398;" >
+<!ENTITY lbrkslu "&#x298D;" >
+<!ENTITY larrtl "&#x21A2;" >
+<!ENTITY apos "&#x27;" >
+<!ENTITY ldquor "&#x201E;" >
+<!ENTITY ast "&#x2A;" >
+<!ENTITY Ycy "&#x42B;" >
+<!ENTITY profline "&#x2312;" >
+<!ENTITY eqvparsl "&#x29E5;" >
+<!ENTITY lesdoto "&#x2A81;" >
+<!ENTITY nang "&#x2220;&#x20D2;" >
+<!ENTITY vsubne "&#x228A;&#xFE00;" >
+<!ENTITY Psi "&#x3A8;" >
+<!ENTITY dwangle "&#x29A6;" >
+<!ENTITY prcue "&#x227C;" >
+<!ENTITY ltrPar "&#x2996;" >
+<!ENTITY zdot "&#x17C;" >
+<!ENTITY jfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x37;&#x3B;" >
+<!ENTITY oelig "&#x153;" >
+<!ENTITY hairsp "&#x200A;" >
+<!ENTITY llarr "&#x21C7;" >
+<!ENTITY b.phiv "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x46;&#x3B;" >
+<!ENTITY vsubnE "&#x2ACB;&#xFE00;" >
+<!ENTITY Wopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x45;&#x3B;" >
+<!ENTITY simrarr "&#x2972;" >
+<!ENTITY caps "&#x2229;&#xFE00;" >
+<!ENTITY not "&#xAC;" >
+<!ENTITY Aacute "&#xC1;" >
+<!ENTITY blk14 "&#x2591;" >
+<!ENTITY blk12 "&#x2592;" >
+<!ENTITY Aopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x38;&#x3B;" >
+<!ENTITY cuepr "&#x22DE;" >
+<!ENTITY race "&#x29DA;" >
+<!ENTITY Yfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x43;&#x3B;" >
+<!ENTITY dharl "&#x21C3;" >
+<!ENTITY larrpl "&#x2939;" >
+<!ENTITY xsqcup "&#x2A06;" >
+<!ENTITY nsqsube "&#x22E2;" >
+<!ENTITY frown "&#x2322;" >
+<!ENTITY ratail "&#x291A;" >
+<!ENTITY dharr "&#x21C2;" >
+<!ENTITY target "&#x2316;" >
+<!ENTITY npr "&#x2280;" >
+<!ENTITY Sacute "&#x15A;" >
+<!ENTITY bnequiv "&#x2261;&#x20E5;" >
+<!ENTITY gvnE "&#x2269;&#xFE00;" >
+<!ENTITY colon "&#x3A;" >
+<!ENTITY egrave "&#xE8;" >
+<!ENTITY napE "&#x2A70;&#x338;" >
+<!ENTITY Barv "&#x2AE7;" >
+<!ENTITY Lopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x33;&#x3B;" >
+<!ENTITY lesdot "&#x2A7F;" >
+<!ENTITY Oacute "&#xD3;" >
+<!ENTITY njcy "&#x45A;" >
+<!ENTITY nwnear "&#x2927;" >
+<!ENTITY bowtie "&#x22C8;" >
+<!ENTITY dtdot "&#x22F1;" >
+<!ENTITY Xi "&#x39E;" >
+<!ENTITY bcong "&#x224C;" >
+<!ENTITY Hfr "&#x210C;" >
+<!ENTITY Iscr "&#x2110;" >
+<!ENTITY npart "&#x2202;&#x338;" >
+<!ENTITY nrtri "&#x22EB;" >
+<!ENTITY compfn "&#x2218;" >
+<!ENTITY tcaron "&#x165;" >
+<!ENTITY phone "&#x260E;" >
+<!ENTITY nvdash "&#x22AC;" >
+<!ENTITY Lstrok "&#x141;" >
+<!ENTITY lmidot "&#x140;" >
+<!ENTITY ropar "&#x2986;" >
+<!ENTITY rmoust "&#x23B1;" >
+<!ENTITY nsc "&#x2281;" >
+<!ENTITY ecirc "&#xEA;" >
+<!ENTITY Dcaron "&#x10E;" >
+<!ENTITY xcirc "&#x25EF;" >
+<!ENTITY jscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x46;&#x3B;" >
+<!ENTITY bsemi "&#x204F;" >
+<!ENTITY omid "&#x29B6;" >
+<!ENTITY capbrcup "&#x2A49;" >
+<!ENTITY kappa "&#x3BA;" >
+<!ENTITY DJcy "&#x402;" >
+<!ENTITY fcy "&#x444;" >
+<!ENTITY diam "&#x22C4;" >
+<!ENTITY b.gamma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x34;&#x3B;" >
+<!ENTITY gnap "&#x2A8A;" >
+<!ENTITY emsp14 "&#x2005;" >
+<!ENTITY emsp13 "&#x2004;" >
+<!ENTITY rbrke "&#x298C;" >
+<!ENTITY Tscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x46;&#x3B;" >
+<!ENTITY larrlp "&#x21AB;" >
+<!ENTITY gEl "&#x2A8C;" >
+<!ENTITY nearr "&#x2197;" >
+<!ENTITY subplus "&#x2ABF;" >
+<!ENTITY harrw "&#x21AD;" >
+<!ENTITY supE "&#x2AC6;" >
+<!ENTITY iquest "&#xBF;" >
+<!ENTITY wfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x34;&#x3B;" >
+<!ENTITY Gdot "&#x120;" >
+<!ENTITY num "&#x23;" >
+<!ENTITY gesl "&#x22DB;&#xFE00;" >
+<!ENTITY Itilde "&#x128;" >
+<!ENTITY Ucy "&#x423;" >
+<!ENTITY atilde "&#xE3;" >
+<!ENTITY sup2 "&#xB2;" >
+<!ENTITY sup3 "&#xB3;" >
+<!ENTITY sup1 "&#xB9;" >
+<!ENTITY rAarr "&#x21DB;" >
+<!ENTITY xhArr "&#x27FA;" >
+<!ENTITY lobrk "&#x301A;" >
+<!ENTITY hamilt "&#x210B;" >
+<!ENTITY dzcy "&#x45F;" >
+<!ENTITY veebar "&#x22BB;" >
+<!ENTITY sung "&#x266A;" >
+<!ENTITY ffr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x33;&#x3B;" >
+<!ENTITY marker "&#x25AE;" >
+<!ENTITY Dcy "&#x414;" >
+<!ENTITY uscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x41;&#x3B;" >
+<!ENTITY isindot "&#x22F5;" >
+<!ENTITY b.epsi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x36;&#x3B;" >
+<!ENTITY nrArr "&#x21CF;" >
+<!ENTITY acute "&#xB4;" >
+<!ENTITY sdot "&#x22C5;" >
+<!ENTITY boxV "&#x2551;" >
+<!ENTITY supdsub "&#x2AD8;" >
+<!ENTITY Idigr "&#x3AA;" >
+<!ENTITY eacgr "&#x3AD;" >
+<!ENTITY percnt "&#x25;" >
+<!ENTITY orarr "&#x21BB;" >
+<!ENTITY boxh "&#x2500;" >
+<!ENTITY copysr "&#x2117;" >
+<!ENTITY larrfs "&#x291D;" >
+<!ENTITY lsquor "&#x201A;" >
+<!ENTITY Ufr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x38;&#x3B;" >
+<!ENTITY supe "&#x2287;" >
+<!ENTITY ldca "&#x2936;" >
+<!ENTITY udarr "&#x21C5;" >
+<!ENTITY larrhk "&#x21A9;" >
+<!ENTITY boxH "&#x2550;" >
+<!ENTITY scE "&#x2AB4;" >
+<!ENTITY vangrt "&#x299C;" >
+<!ENTITY Ugr "&#x3A5;" >
+<!ENTITY Ccirc "&#x108;" >
+<!ENTITY b.kappa "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x42;&#x3B;" >
+<!ENTITY frac12 "&#xBD;" >
+<!ENTITY frac15 "&#x2155;" >
+<!ENTITY topbot "&#x2336;" >
+<!ENTITY frac16 "&#x2159;" >
+<!ENTITY Dfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x37;&#x3B;" >
+<!ENTITY frac13 "&#x2153;" >
+<!ENTITY frac14 "&#xBC;" >
+<!ENTITY notniva "&#x220C;" >
+<!ENTITY sce "&#x2AB0;" >
+<!ENTITY angrt "&#x221F;" >
+<!ENTITY elinters "&#xFFFD;" >
+<!ENTITY notnivc "&#x22FD;" >
+<!ENTITY frac18 "&#x215B;" >
+<!ENTITY notnivb "&#x22FE;" >
+<!ENTITY rang "&#x232A;" >
+<!ENTITY ac "&#x223E;" >
+<!ENTITY boxv "&#x2502;" >
+<!ENTITY scy "&#x441;" >
+<!ENTITY npolint "&#x2A14;" >
+<!ENTITY seArr "&#x21D8;" >
+<!ENTITY frac23 "&#x2154;" >
+<!ENTITY Dgr "&#x394;" >
+<!ENTITY ap "&#x2248;" >
+<!ENTITY angst "&#x212B;" >
+<!ENTITY frac25 "&#x2156;" >
+<!ENTITY lharul "&#x296A;" >
+<!ENTITY origof "&#x22B6;" >
+<!ENTITY nvrArr "&#x2903;" >
+<!ENTITY profalar "&#x232E;" >
+<!ENTITY nvsim "&#x223C;&#x20D2;" >
+<!ENTITY subsim "&#x2AC7;" >
+<!ENTITY ocirc "&#xF4;" >
+<!ENTITY b.Gamma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x41;&#x41;&#x3B;" >
+<!ENTITY frac34 "&#xBE;" >
+<!ENTITY scpolint "&#x2A13;" >
+<!ENTITY ncaron "&#x148;" >
+<!ENTITY frac38 "&#x215C;" >
+<!ENTITY frac35 "&#x2157;" >
+<!ENTITY dzigrarr "&#x27FF;" >
+<!ENTITY franc "&#x20A3;" >
+<!ENTITY bcy "&#x431;" >
+<!ENTITY nharr "&#x21AE;" >
+<!ENTITY iogon "&#x12F;" >
+<!ENTITY ruluhar "&#x2968;" >
+<!ENTITY gesdot "&#x2A80;" >
+<!ENTITY Eopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x43;&#x3B;" >
+<!ENTITY xcap "&#x22C2;" >
+<!ENTITY b.chi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x38;&#x3B;" >
+<!ENTITY rdldhar "&#x2969;" >
+<!ENTITY hstrok "&#x127;" >
+<!ENTITY frac45 "&#x2158;" >
+<!ENTITY epsi "&#x3F5;" >
+<!ENTITY Popf "&#x2119;" >
+<!ENTITY thkap "&#x2248;" >
+<!ENTITY sfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x30;&#x3B;" >
+<!ENTITY smashp "&#x2A33;" >
+<!ENTITY lacute "&#x13A;" >
+<!ENTITY Mscr "&#x2133;" >
+<!ENTITY nLtv "&#x226A;&#x338;" >
+<!ENTITY rarr "&#x2192;" >
+<!ENTITY aleph "&#x2135;" >
+<!ENTITY b.phi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x37;&#x3B;" >
+<!ENTITY Jukcy "&#x404;" >
+<!ENTITY sgr "&#x3C3;" >
+<!ENTITY sigma "&#x3C3;" >
+<!ENTITY angmsd "&#x2221;" >
+<!ENTITY image "&#x2111;" >
+<!ENTITY eg "&#x2A9A;" >
+<!ENTITY el "&#x2A99;" >
+<!ENTITY gjcy "&#x453;" >
+<!ENTITY bfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x46;&#x3B;" >
+<!ENTITY urcrop "&#x230E;" >
+<!ENTITY nvHarr "&#x2904;" >
+<!ENTITY udigr "&#x3CB;" >
+<!ENTITY gE "&#x2267;" >
+<!ENTITY ENG "&#x14A;" >
+<!ENTITY Bscr "&#x212C;" >
+<!ENTITY smid "&#x2223;" >
+<!ENTITY robrk "&#x301B;" >
+<!ENTITY shy "&#xAD;" >
+<!ENTITY nscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x33;&#x3B;" >
+<!ENTITY bgr "&#x3B2;" >
+<!ENTITY nsce "&#x2AB0;&#x338;" >
+<!ENTITY sim "&#x223C;" >
+<!ENTITY phgr "&#x3C6;" >
+<!ENTITY divide "&#xF7;" >
+<!ENTITY Colon "&#x2237;" >
+<!ENTITY Qfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x34;&#x3B;" >
+<!ENTITY ge "&#x2265;" >
+<!ENTITY parsl "&#x2AFD;" >
+<!ENTITY Xscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x33;&#x3B;" >
+<!ENTITY seswar "&#x2929;" >
+<!ENTITY gl "&#x2277;" >
+<!ENTITY Uring "&#x16E;" >
+<!ENTITY ltdot "&#x22D6;" >
+<!ENTITY bsolhsub "&#x5C;&#x2282;" >
+<!ENTITY gt "&#x3E;" >
+<!ENTITY wreath "&#x2240;" >
+<!ENTITY cscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x38;&#x3B;" >
+<!ENTITY fork "&#x22D4;" >
+<!ENTITY wedgeq "&#x2259;" >
+<!ENTITY rHar "&#x2964;" >
+<!ENTITY cirscir "&#x29C2;" >
+<!ENTITY weierp "&#x2118;" >
+<!ENTITY Imacr "&#x12A;" >
+<!ENTITY auml "&#xE4;" >
+<!ENTITY nparsl "&#x2AFD;&#x20E5;" >
+<!ENTITY cupor "&#x2A45;" >
+<!ENTITY smtes "&#x2AAC;&#xFE00;" >
+<!ENTITY phiv "&#x3C6;" >
+<!ENTITY caron "&#x2C7;" >
+<!ENTITY imacr "&#x12B;" >
+<!ENTITY gtquest "&#x2A7C;" >
+<!ENTITY b.zeta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x37;&#x3B;" >
+<!ENTITY racute "&#x155;" >
+<!ENTITY agrave "&#xE0;" >
+<!ENTITY ocy "&#x43E;" >
+<!ENTITY Ecirc "&#xCA;" >
+<!ENTITY Dot "&#xA8;" >
+<!ENTITY uplus "&#x228E;" >
+<!ENTITY srarr "&#x2192;" >
+<!ENTITY yscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x45;&#x3B;" >
+<!ENTITY Otimes "&#x2A37;" >
+<!ENTITY Map "&#x2905;" >
+<!ENTITY gtrarr "&#x2978;" >
+<!ENTITY suphsub "&#x2AD7;" >
+<!ENTITY lharu "&#x21BC;" >
+<!ENTITY equest "&#x225F;" >
+<!ENTITY lE "&#x2266;" >
+<!ENTITY squf "&#x25AA;" >
+<!ENTITY smt "&#x2AAA;" >
+<!ENTITY xotime "&#x2A02;" >
+<!ENTITY subnE "&#x2ACB;" >
+<!ENTITY Ocirc "&#xD4;" >
+<!ENTITY thorn "&#xFE;" >
+<!ENTITY DScy "&#x405;" >
+<!ENTITY b.tau "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x35;&#x3B;" >
+<!ENTITY hercon "&#x22B9;" >
+<!ENTITY lhard "&#x21BD;" >
+<!ENTITY equals "&#x3D;" >
+<!ENTITY ETH "&#xD0;" >
+<!ENTITY le "&#x2264;" >
+<!ENTITY ofr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x43;&#x3B;" >
+<!ENTITY lg "&#x2276;" >
+<!ENTITY subne "&#x228A;" >
+<!ENTITY equivDD "&#x2A78;" >
+<!ENTITY Mcy "&#x41C;" >
+<!ENTITY duarr "&#x21F5;" >
+<!ENTITY lt "&#x26;&#x23;&#x36;&#x30;&#x3B;" >
+<!ENTITY there4 "&#x2234;" >
+<!ENTITY scedil "&#x15F;" >
+<!ENTITY frac56 "&#x215A;" >
+<!ENTITY roplus "&#x2A2E;" >
+<!ENTITY ordf "&#xAA;" >
+<!ENTITY sol "&#x2F;" >
+<!ENTITY frac58 "&#x215D;" >
+<!ENTITY ordm "&#xBA;" >
+<!ENTITY bne "&#x3D;&#x20E5;" >
+<!ENTITY nsim "&#x2241;" >
+<!ENTITY angrtvb "&#x22BE;" >
+<!ENTITY ogr "&#x3BF;" >
+<!ENTITY ogt "&#x29C1;" >
+<!ENTITY Uacute "&#xDA;" >
+<!ENTITY Iopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x30;&#x3B;" >
+<!ENTITY oslash "&#xF8;" >
+<!ENTITY nlarr "&#x219A;" >
+<!ENTITY Ccaron "&#x10C;" >
+<!ENTITY mu "&#x3BC;" >
+<!ENTITY EEgr "&#x397;" >
+<!ENTITY Eacgr "&#x388;" >
+<!ENTITY sqsub "&#x228F;" >
+<!ENTITY subedot "&#x2AC3;" >
+<!ENTITY plus "&#x2B;" >
+<!ENTITY cacute "&#x107;" >
+<!ENTITY ohm "&#x2126;" >
+<!ENTITY ne "&#x2260;" >
+<!ENTITY Iogon "&#x12E;" >
+<!ENTITY sqsup "&#x2290;" >
+<!ENTITY ni "&#x220B;" >
+<!ENTITY ograve "&#xF2;" >
+<!ENTITY nwarr "&#x2196;" >
+<!ENTITY Uarr "&#x219F;" >
+<!ENTITY oS "&#x24C8;" >
+<!ENTITY nu "&#x3BD;" >
+<!ENTITY nVDash "&#x22AF;" >
+<!ENTITY frac78 "&#x215E;" >
+<!ENTITY rharul "&#x296C;" >
+<!ENTITY fllig "&#xFB02;" >
+<!ENTITY VDash "&#x22AB;" >
+<!ENTITY squ "&#x25A1;" >
+<!ENTITY ltquest "&#x2A7B;" >
+<!ENTITY Mfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x30;&#x3B;" >
+<!ENTITY Oacgr "&#x38C;" >
+<!ENTITY cupdot "&#x228D;" >
+<!ENTITY or "&#x2228;" >
+<!ENTITY Tcedil "&#x162;" >
+<!ENTITY cross "&#x2717;" >
+<!ENTITY IJlig "&#x132;" >
+<!ENTITY nrtrie "&#x22ED;" >
+<!ENTITY rtrie "&#x22B5;" >
+<!ENTITY rtrif "&#x25B8;" >
+<!ENTITY nequiv "&#x2262;" >
+<!ENTITY equiv "&#x2261;" >
+<!ENTITY xdtri "&#x25BD;" >
+<!ENTITY Topf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x42;&#x3B;" >
+<!ENTITY Mgr "&#x39C;" >
+<!ENTITY pi "&#x3C0;" >
+<!ENTITY ldsh "&#x21B2;" >
+<!ENTITY Ouml "&#xD6;" >
+<!ENTITY pr "&#x227A;" >
+<!ENTITY delta "&#x3B4;" >
+<!ENTITY nedot "&#x2250;&#x338;" >
+<!ENTITY solbar "&#x233F;" >
+<!ENTITY lambda "&#x3BB;" >
+<!ENTITY hoarr "&#x21FF;" >
+<!ENTITY Qscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x43;&#x3B;" >
+<!ENTITY rharu "&#x21C0;" >
+<!ENTITY varr "&#x2195;" >
+<!ENTITY breve "&#x2D8;" >
+<!ENTITY kcy "&#x43A;" >
+<!ENTITY b.kappav "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x45;&#x3B;" >
+<!ENTITY forkv "&#x2AD9;" >
+<!ENTITY kjcy "&#x45C;" >
+<!ENTITY rhard "&#x21C1;" >
+<!ENTITY lEg "&#x2A8B;" >
+<!ENTITY lnsim "&#x22E6;" >
+<!ENTITY nexist "&#x2204;" >
+<!ENTITY olt "&#x29C0;" >
+<!ENTITY bepsi "&#x3F6;" >
+<!ENTITY Fscr "&#x2131;" >
+<!ENTITY b.Lambda "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x32;&#x3B;" >
+<!ENTITY ngsim "&#x2275;" >
+<!ENTITY siml "&#x2A9D;" >
+<!ENTITY b.psi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x39;&#x3B;" >
+<!ENTITY minus "&#x2212;" >
+<!ENTITY sub "&#x2282;" >
+<!ENTITY simg "&#x2A9E;" >
+<!ENTITY rscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x37;&#x3B;" >
+<!ENTITY rx "&#x211E;" >
+<!ENTITY sum "&#x2211;" >
+<!ENTITY udiagr "&#x3B0;" >
+<!ENTITY mDDot "&#x223A;" >
+<!ENTITY scnap "&#x2ABA;" >
+<!ENTITY sup "&#x2283;" >
+<!ENTITY sc "&#x227B;" >
+<!ENTITY Zcy "&#x417;" >
+<!ENTITY LJcy "&#x409;" >
+<!ENTITY sime "&#x2243;" >
+<!ENTITY mldr "&#x2026;" >
+<!ENTITY eogon "&#x119;" >
+<!ENTITY euml "&#xEB;" >
+<!ENTITY thgr "&#x3B8;" >
+<!ENTITY vprop "&#x221D;" >
+<!ENTITY gscr "&#x210A;" >
+<!ENTITY sect "&#xA7;" >
+<!ENTITY b.gammad "&#x3DD;" >
+<!ENTITY kfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x38;&#x3B;" >
+<!ENTITY Icy "&#x418;" >
+<!ENTITY smte "&#x2AAC;" >
+<!ENTITY mlcp "&#x2ADB;" >
+<!ENTITY uring "&#x16F;" >
+<!ENTITY Zdot "&#x17B;" >
+<!ENTITY scirc "&#x15D;" >
+<!ENTITY quest "&#x3F;" >
+<!ENTITY ecaron "&#x11B;" >
+<!ENTITY ldrdhar "&#x2967;" >
+<!ENTITY kgr "&#x3BA;" >
+<!ENTITY barwed "&#x2305;" >
+<!ENTITY apacir "&#x2A6F;" >
+<!ENTITY Zfr "&#x2128;" >
+<!ENTITY profsurf "&#x2313;" >
+<!ENTITY ncong "&#x2247;" >
+<!ENTITY IEcy "&#x415;" >
+<!ENTITY capand "&#x2A44;" >
+<!ENTITY Aogon "&#x104;" >
+<!ENTITY euro "&#x20AC;" >
+<!ENTITY Zgr "&#x396;" >
+<!ENTITY Sigma "&#x3A3;" >
+<!ENTITY csub "&#x2ACF;" >
+<!ENTITY Ifr "&#x2111;" >
+<!ENTITY gap "&#x2A86;" >
+<!ENTITY Udigr "&#x3AB;" >
+<!ENTITY thksim "&#x223C;" >
+<!ENTITY ord "&#x2A5D;" >
+<!ENTITY zeta "&#x3B6;" >
+<!ENTITY plusdo "&#x2214;" >
+<!ENTITY Kcedil "&#x136;" >
+<!ENTITY Ubreve "&#x16C;" >
+<!ENTITY edot "&#x117;" >
+<!ENTITY plusdu "&#x2A25;" >
+<!ENTITY xi "&#x3BE;" >
+<!ENTITY orv "&#x2A5B;" >
+<!ENTITY Igr "&#x399;" >
+<!ENTITY jukcy "&#x454;" >
+<!ENTITY lsimg "&#x2A8F;" >
+<!ENTITY lsime "&#x2A8D;" >
+<!ENTITY xcup "&#x22C3;" >
+<!ENTITY loplus "&#x2A2D;" >
+<!ENTITY Amacr "&#x100;" >
+<!ENTITY setmn "&#x2216;" >
+<!ENTITY cong "&#x2245;" >
+<!ENTITY imath "&#x131;" >
+<!ENTITY cirmid "&#x2AEF;" >
+<!ENTITY nsup "&#x2285;" >
+<!ENTITY topcir "&#x2AF1;" >
+<!ENTITY TSHcy "&#x40B;" >
+<!ENTITY gcy "&#x433;" >
+<!ENTITY Mopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x34;&#x3B;" >
+<!ENTITY gsim "&#x2273;" >
+<!ENTITY nsub "&#x2284;" >
+<!ENTITY comp "&#x2201;" >
+<!ENTITY nbsp "&#xA0;" >
+<!ENTITY csup "&#x2AD0;" >
+<!ENTITY laquo "&#xAB;" >
+<!ENTITY filig "&#xFB01;" >
+<!ENTITY emacr "&#x113;" >
+<!ENTITY simdot "&#x2A6A;" >
+<!ENTITY nvDash "&#x22AD;" >
+<!ENTITY exist "&#x2203;" >
+<!ENTITY oror "&#x2A56;" >
+<!ENTITY prnsim "&#x22E8;" >
+<!ENTITY oacgr "&#x3CC;" >
+<!ENTITY ugrave "&#xF9;" >
+<!ENTITY bNot "&#x2AED;" >
+<!ENTITY Bopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x39;&#x3B;" >
+<!ENTITY ndash "&#x2013;" >
+<!ENTITY xfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x35;&#x3B;" >
+<!ENTITY rangd "&#x2992;" >
+<!ENTITY range "&#x29A5;" >
+<!ENTITY Vcy "&#x412;" >
+<!ENTITY gel "&#x22DB;" >
+<!ENTITY loang "&#x3018;" >
+<!ENTITY darr "&#x2193;" >
+<!ENTITY djcy "&#x452;" >
+<!ENTITY ges "&#x2A7E;" >
+<!ENTITY flat "&#x266D;" >
+<!ENTITY copy "&#xA9;" >
+<!ENTITY semi "&#x3B;" >
+<!ENTITY xgr "&#x3BE;" >
+<!ENTITY Xopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x46;&#x3B;" >
+<!ENTITY Abreve "&#x102;" >
+<!ENTITY b.piv "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x45;&#x31;&#x3B;" >
+<!ENTITY gfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x34;&#x3B;" >
+<!ENTITY Ecy "&#x42D;" >
+<!ENTITY Eogon "&#x118;" >
+<!ENTITY Egrave "&#xC8;" >
+<!ENTITY oast "&#x229B;" >
+<!ENTITY olcir "&#x29BE;" >
+<!ENTITY fpartint "&#x2A0D;" >
+<!ENTITY CHcy "&#x427;" >
+<!ENTITY Uscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x30;&#x3B;" >
+<!ENTITY ggr "&#x3B3;" >
+<!ENTITY elsdot "&#x2A97;" >
+<!ENTITY rlarr "&#x21C4;" >
+<!ENTITY Udblac "&#x170;" >
+<!ENTITY supsup "&#x2AD6;" >
+<!ENTITY Vfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x39;&#x3B;" >
+<!ENTITY tau "&#x3C4;" >
+<!ENTITY DDotrahd "&#x2911;" >
+<!ENTITY Zcaron "&#x17D;" >
+<!ENTITY gescc "&#x2AA9;" >
+<!ENTITY curarr "&#x21B7;" >
+<!ENTITY vDash "&#x22A8;" >
+<!ENTITY vzigzag "&#x299A;" >
+<!ENTITY dHar "&#x2965;" >
+<!ENTITY Jscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x35;&#x3B;" >
+<!ENTITY dash "&#x2010;" >
+<!ENTITY searhk "&#x2925;" >
+<!ENTITY zacute "&#x17A;" >
+<!ENTITY xrArr "&#x27F9;" >
+<!ENTITY iacute "&#xED;" >
+<!ENTITY Int "&#x222C;" >
+<!ENTITY nrarrc "&#x2933;&#x338;" >
+<!ENTITY supsub "&#x2AD4;" >
+<!ENTITY Efr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x38;&#x3B;" >
+<!ENTITY cap "&#x2229;" >
+<!ENTITY nrarrw "&#x219D;&#x338;" >
+<!ENTITY swArr "&#x21D9;" >
+<!ENTITY hearts "&#x2665;" >
+<!ENTITY loarr "&#x21FD;" >
+<!ENTITY submult "&#x2AC1;" >
+<!ENTITY vrtri "&#x22B3;" >
+<!ENTITY vscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x42;&#x3B;" >
+<!ENTITY rarrw "&#x219D;" >
+<!ENTITY rarrc "&#x2933;" >
+<!ENTITY kscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x30;&#x3B;" >
+<!ENTITY Uarrocir "&#x2949;" >
+<!ENTITY Ncedil "&#x145;" >
+<!ENTITY tcy "&#x442;" >
+<!ENTITY Egr "&#x395;" >
+<!ENTITY sqcups "&#x2294;&#xFE00;" >
+<!ENTITY iuml "&#xEF;" >

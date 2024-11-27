@@ -1,0 +1,4612 @@
+<!-- Taylor & Francis Journal Article DTD (Version 1.10) -->
+<!-- flattened DTD created by DTD Analyzer -->
+
+<!-- ========================= -->
+<!-- ELEMENT DECLARATIONS HERE -->
+<!-- ========================= -->
+
+<!ELEMENT references (title,subtitle?,para*,(ref-govpub|ref-conf|ref-periodic|ref-book|ref-patent|ref-web|footnote)*,(readings|refsection)*) >
+<!ATTLIST references
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		article-association		IDREF		#REQUIRED >
+
+
+<!ELEMENT year (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST year
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT unnummatheqn (mathcompound|equation) >
+<!ATTLIST unnummatheqn
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT fundingsource (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|email|webaddress|acronym)* >
+<!ATTLIST fundingsource
+		sourcetype		(institution|society|government|corporation)		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		country		NMTOKEN		#IMPLIED >
+
+
+<!ELEMENT presentationtitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST presentationtitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT province (#PCDATA) >
+<!ATTLIST province
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT patentowner-ref (etal|(surname,givenname,middlename?,suffix*,query*)) >
+<!ATTLIST patentowner-ref
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT mathcompound (equation,equation+) >
+<!ATTLIST mathcompound
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT famousname (#PCDATA) >
+<!ATTLIST famousname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT givenname (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST givenname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT chemeqn (compound|chemobj) >
+<!ATTLIST chemeqn
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT state (#PCDATA) >
+<!ATTLIST state
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT journaltitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST journaltitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT seealsoie (#PCDATA|sub|sup|b|i)* >
+<!ATTLIST seealsoie
+		linkend		IDREF		#REQUIRED >
+
+
+<!ELEMENT meetingname (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|famousname|companyname|institutionname|citation|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST meetingname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT appendix (title?,section1+) >
+<!ATTLIST appendix
+		type		(appendix|backmatter|supplementary)			'appendix'
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT newpage EMPTY >
+<!ATTLIST newpage
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		pagenumber		CDATA		#REQUIRED >
+
+
+<!ELEMENT refsection (title,para*,(ref-govpub|ref-conf|ref-periodic|ref-book|ref-patent|ref-web|footnote)*) >
+<!ATTLIST refsection
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT bioinfo (biography,photo?) >
+<!ATTLIST bioinfo
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT seeie (#PCDATA|sub|sup|b|i)* >
+<!ATTLIST seeie
+		linkend		IDREF		#REQUIRED >
+
+
+<!ELEMENT patentnum (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST patentnum
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT exam (para?,question-answer+) >
+<!ATTLIST exam
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-book (ref-book-text|(authorfield?,chaptitle?,booktitle,editorfield?,seriesinfo?,publicationfield,pagefield+,doi?,addinfo?,linkset?)) >
+<!ATTLIST ref-book
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		sequence		CDATA		#IMPLIED >
+
+
+<!ELEMENT issuetitle (#PCDATA|trademark|br|inlinematheqn|inlinechemeqn|inlinegraphic|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST issuetitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		partofissue		(yes|no)			'no'
+		issuetype		(normal|special|themed|proceedings)		#IMPLIED >
+
+
+<!ELEMENT seriesinfo (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST seriesinfo
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT fundawardid (#PCDATA) >
+<!ATTLIST fundawardid
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		fundsourceref		IDREF		#IMPLIED >
+
+
+<!ELEMENT meta (journalcode,issn+,coden,sici?,pubitemid?,pubmedabbrev?,author*,affiliations?,fundingdetails?,licensestatement?,relatedarticle*,supplementmaterial*,search?,production-dates,comment*,countriesoforigin?) >
+<!ATTLIST meta
+		productid		CDATA		#REQUIRED
+		pagecount		CDATA		#IMPLIED
+		volumenum		CDATA		#IMPLIED
+		secondaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED
+		pdfpagecount		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		lastpage		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		medlinejrnltitle		CDATA		#IMPLIED
+		pdfunavailable		(retracted|rights|nosource|notproduced|notyetproduced)		#IMPLIED
+		refstyle		(Math|Chem|Med)		#IMPLIED
+		elocation		CDATA		#IMPLIED
+		pdffilesize		CDATA		#IMPLIED
+		seq		CDATA		#REQUIRED
+		partofspecissue		(yes|no)			'no'
+		articleurl		CDATA		#IMPLIED
+		volumeisissue		(yes|no)			'no'
+		colorgraphics		(yes|no)			'no'
+		seriesnum		CDATA		#IMPLIED
+		issuenum		CDATA		#IMPLIED
+		taggingstage		(final|preview|inproduction)			'final'
+		specissuetitle		CDATA		#IMPLIED
+		inpress		(yes|no)		#IMPLIED
+		firstpage		CDATA		#IMPLIED
+		pdffilename		CDATA		#IMPLIED
+		contenttype		CDATA		#IMPLIED
+		articlestatus		CDATA		#IMPLIED
+		primaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED >
+
+
+<!ELEMENT letter (salutation|closing|para)+ >
+<!ATTLIST letter
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT indexentry ((indxname|indxsubj)*,(seeie|seealsoie|indexsubentry)*) >
+<!ATTLIST indexentry
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT deflist (listtitle?,defentry+) >
+<!ATTLIST deflist
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT patentownerfield (patentowner-ref+) >
+<!ATTLIST patentownerfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT sub (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST sub
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT chemobj (structure*,formula?) >
+<!ATTLIST chemobj
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT sup (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST sup
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT doititle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST doititle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT br EMPTY >
+<!ATTLIST br
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT search (category,primarysubcategory,subcategory+,topic*,subtopic*) >
+<!ATTLIST search
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT notesaddedinproof (title,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section2*) >
+<!ATTLIST notesaddedinproof
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT listtitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST listtitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT term (#PCDATA|trademark|footnote|inlinematheqn|inlinechemeqn|inlinegraphic|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST term
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT unarticle (meta,newpage?,journaltitle?,journalsubtitle?,issuetitle?,supertitle?,title?,subtitle?,shortauthors?,shorttitle?,abbrevtitle?,doititle?,logo?,(abstract|keywordset|abbrev-sect|nomen-sect|intro|part|section1|summary|ackno|notesaddedinproof|glossary|appendix|references)+,endnotes?,translation*) >
+<!ATTLIST unarticle
+		tagger		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		publisherimprint		CDATA		#IMPLIED
+		copyrighttf		(yes|no)			'yes'
+		article-association		CDATA		#IMPLIED
+		articlenumber		CDATA		#IMPLIED
+		productfree		(yes|openaccess|no)			'no'
+		articleid		CDATA		#REQUIRED
+		copyrightowner		CDATA		#IMPLIED
+		coverdate		CDATA		#IMPLIED
+		numcolorpages		CDATA		#IMPLIED
+		yearofpub		CDATA		#IMPLIED
+		documenttype		(Abstracts|Announcement|Calendar|BookReview|Commentary|Eulogy|Editorial|Erratum|Preface|LetterToEditor|Advertisement|Miscellaneous)		#REQUIRED >
+
+
+<!ELEMENT graphic EMPTY >
+<!ATTLIST graphic
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		height		CDATA		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		rights		(full|electronic|print)		#IMPLIED
+		url		CDATA		#IMPLIED
+		width		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED
+		color		(bw|4-color|halftone|greyscale)		#IMPLIED >
+
+
+<!ELEMENT email (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|famousname|companyname|institutionname|citation)* >
+<!ATTLIST email
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#REQUIRED >
+
+
+<!ELEMENT institutionname (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST institutionname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT b (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST b
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT address (usa|internat) >
+<!ATTLIST address
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT address-text (#PCDATA|addline|city|province|state|zip|postalcode|country|phone|fax|email|webaddress|br)* >
+<!ATTLIST address-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT photo EMPTY >
+<!ATTLIST photo
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		height		CDATA		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		rights		(full|electronic|print)		#IMPLIED
+		url		CDATA		#IMPLIED
+		width		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED
+		color		(bw|4-color|halftone|greyscale)		#IMPLIED >
+
+
+<!ELEMENT i (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST i
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT biography (para|address-text|name|position|affiliation|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|comment)* >
+<!ATTLIST biography
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT tfoot (row+) >
+<!ATTLIST tfoot
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		valign		(top|middle|bottom)			'top' >
+
+
+<!ELEMENT figureref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST figureref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT answer (para+) >
+<!ATTLIST answer
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT u (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST u
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT articletitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST articletitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT tt (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST tt
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT country (#PCDATA) >
+<!ATTLIST country
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT informaltable (table,endnotes?) >
+<!ATTLIST informaltable
+		id		ID		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT editorfield (editor-ref+) >
+<!ATTLIST editorfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT tbody (row+) >
+<!ATTLIST tbody
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		valign		(top|middle|bottom)		#IMPLIED >
+
+
+<!ELEMENT source (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST source
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT inlinematheqn (equation) >
+<!ATTLIST inlinematheqn
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT licensestatement (#PCDATA|email|webaddress|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST licensestatement
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT inlinegraphic EMPTY >
+<!ATTLIST inlinegraphic
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		height		CDATA		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		rights		(full|electronic|print)		#IMPLIED
+		url		CDATA		#IMPLIED
+		width		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED
+		color		(bw|4-color|halftone|greyscale)		#IMPLIED >
+
+
+<!ELEMENT listitem (para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|computertext|letter|address-text|comment)+ >
+<!ATTLIST listitem
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		level		(1|2|3|4|5|6|7|8|9)		#IMPLIED >
+
+
+<!ELEMENT abbrev-sect (title,deflist) >
+<!ATTLIST abbrev-sect
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT authorfield (author-ref+) >
+<!ATTLIST authorfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT matheqnref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST matheqnref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT institution (department*,institutionname,department*) >
+<!ATTLIST institution
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT affiliation (institution,address) >
+<!ATTLIST affiliation
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		seq		CDATA		#IMPLIED >
+
+
+<!ELEMENT contact (position|address) >
+<!ATTLIST contact
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		biocontact		(yes|no)			'no'
+		postpub		(yes|no)			'no'
+		corresponding		(yes|no)			'no' >
+
+
+<!ELEMENT inits (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST inits
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT enunciation (title?,para+) >
+<!ATTLIST enunciation
+		type		(Theorem|Lemma|Corollary|Proposition|Remark|Definition|Proof|Example|Results|Axiom|Step|Case|Problem|Algorithm|Other)		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT suppmatref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST suppmatref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT keyword (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST keyword
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT question-answer (question,answer) >
+<!ATTLIST question-answer
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT tableref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST tableref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT linkset (linkout,inlinegraphic?)+ >
+<!ATTLIST linkset
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT footnoteref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST footnoteref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT query (#PCDATA) >
+<!ATTLIST query
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		directedto		(author|copyeditor|production|typesetter)			'author' >
+
+
+<!ELEMENT degree (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST degree
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		forcedisplay		(yes|no)		#IMPLIED >
+
+
+<!ELEMENT editor-ref-text (#PCDATA|etal|surname|prefix|givenname|middlename|suffix|query)* >
+<!ATTLIST editor-ref-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT collectworktitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST collectworktitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT article (meta,newpage?,journaltitle?,journalsubtitle?,issuetitle?,supertitle?,title,subtitle?,shortauthors?,shorttitle,abbrevtitle?,doititle?,logo?,abstract?,keywordset*,(abbrev-sect|nomen-sect)*,intro,(part+|section1+),summary*,ackno?,notesaddedinproof?,glossary*,(abbrev-sect|nomen-sect)*,appendix*,endnotes?,references?,abstract*,translation*) >
+<!ATTLIST article
+		tagger		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		xml:lang		NMTOKEN		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		publisherimprint		CDATA		#IMPLIED
+		copyrighttf		(yes|no)			'yes'
+		articlenumber		CDATA		#IMPLIED
+		productfree		(yes|openaccess|no)			'no'
+		articleid		CDATA		#REQUIRED
+		copyrightowner		CDATA		#IMPLIED
+		coverdate		CDATA		#IMPLIED
+		numcolorpages		CDATA		#IMPLIED
+		yearofpub		CDATA		#IMPLIED
+		documenttype		(Original|Review|CaseReport|TechnicalNote|BriefNote|Miscellaneous)		#REQUIRED >
+
+
+<!ELEMENT glossary (title?,deflist) >
+<!ATTLIST glossary
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT volume (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST volume
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT countriesoforigin (countryoforigin+) >
+
+
+<!ELEMENT fundingaward (fundingsource,fundawardid*,fundingrecipient*,principalinvestigator*) >
+<!ATTLIST fundingaward
+		awardtype		(grant|gift|contract)		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT extract (title?,(para|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|address-text|comment)+,source?) >
+<!ATTLIST extract
+		type		(block|indent|quote|doublespace|other)		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		sidebox		(no|yes)			'no' >
+
+
+<!ELEMENT month (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST month
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT contactinfo (contact+) >
+<!ATTLIST contactinfo
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT name ((honorific|prefix)*,givenname,inits?,middlename?,surname,(suffix|degree)*,query*) >
+<!ATTLIST name
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT salutation (#PCDATA|sub|sup)* >
+<!ATTLIST salutation
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT subcategory (#PCDATA) >
+<!ATTLIST subcategory
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT inpress (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST inpress
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT firstpage (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST firstpage
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT pagefield (firstpage,lastpage?) >
+<!ATTLIST pagefield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT thead (row+) >
+<!ATTLIST thead
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		valign		(top|middle|bottom)			'bottom' >
+
+
+<!ELEMENT edition (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST edition
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT chemeqnref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST chemeqnref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT indexdiv (title?,(para|indexentry)*) >
+<!ATTLIST indexdiv
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT title (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST title
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT webaddress (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|famousname|companyname|institutionname|citation)* >
+<!ATTLIST webaddress
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#REQUIRED
+		target		(new|main)			'new' >
+
+
+<!ELEMENT relatedarticle (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|comment)* >
+<!ATTLIST relatedarticle
+		id		ID		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		relationtype		(erratum|corrigendum|retraction|commentary|companion|series|addendum|translation|republish)		#REQUIRED
+		url		CDATA		#IMPLIED
+		articleid		CDATA		#IMPLIED >
+
+
+<!ELEMENT ref-periodic-text (#PCDATA|author-ref-text|articletitle|journaltitle|inpress|month|year|volume|issue|firstpage|lastpage|doi|addinfo|linkset)* >
+<!ATTLIST ref-periodic-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT poem ((stanza|poemline)+,source?) >
+<!ATTLIST poem
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT pubnum (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST pubnum
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT terminology (#PCDATA|trademark|footnote|inlinematheqn|inlinechemeqn|inlinegraphic|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST terminology
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT postalcode (#PCDATA) >
+<!ATTLIST postalcode
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-patent-text (#PCDATA|patentowner-ref-text|patenttitle|patentnum|date|doi|addinfo|linkset)* >
+<!ATTLIST ref-patent-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT definition (para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|computertext|letter|comment)+ >
+<!ATTLIST definition
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT trademark (#PCDATA) >
+<!ATTLIST trademark
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT pubfield (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST pubfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT strikethrough (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST strikethrough
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT booktitle (#PCDATA|trademark|edition|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST booktitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT summary (title,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section2*) >
+<!ATTLIST summary
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT figure (title?,caption?,(graphic|chemeqn|matheqn|formula|compound|structure)+,endnotes?) >
+<!ATTLIST figure
+		productid		CDATA		#REQUIRED
+		secondaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED
+		id		ID		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		pgwide		(yes|no)		#IMPLIED
+		fulltextlink		CDATA		#IMPLIED
+		url		CDATA		#IMPLIED
+		colorgraphics		(yes|no)			'no'
+		orient		(port|land)		#IMPLIED
+		issuenum		CDATA		#IMPLIED
+		articleid		CDATA		#REQUIRED
+		yearofpub		CDATA		#IMPLIED
+		primaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED >
+
+
+<!ELEMENT citation (#PCDATA) >
+<!ATTLIST citation
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-periodic (ref-periodic-text|(authorfield,articletitle?,journaltitle,(inpress|(periodicpubfield,pagefield+)),doi?,addinfo?,linkset?)) >
+<!ATTLIST ref-periodic
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		sequence		CDATA		#IMPLIED >
+
+
+<!ELEMENT middlename (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST middlename
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT label (#PCDATA) >
+<!ATTLIST label
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT footnote (para|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|address-text|comment)* >
+<!ATTLIST footnote
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT texstructure (#PCDATA) >
+<!ATTLIST texstructure
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		fileref		CDATA		#IMPLIED >
+
+
+<!ELEMENT pubname (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST pubname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT abbrevtitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST abbrevtitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT translation (title?,subtitle?,shortauthors?,shorttitle?,abbrevtitle?,keywordset?,abstract?) >
+<!ATTLIST translation
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		language		CDATA		#REQUIRED >
+
+
+<!ELEMENT formula (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST formula
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED >
+
+
+<!ELEMENT comment (#PCDATA) >
+
+
+<!ELEMENT itemizedlist (listtitle?,listitem+) >
+<!ATTLIST itemizedlist
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		spacing		(normal|compact)		#IMPLIED
+		listitemlabel		CDATA		#IMPLIED >
+
+
+<!ELEMENT meetingloc (city,state?,country?) >
+<!ATTLIST meetingloc
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT prefix (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST prefix
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		forcedisplay		(yes|no)		#IMPLIED >
+
+
+<!ELEMENT unnumchemeqn (compound|chemobj) >
+<!ATTLIST unnumchemeqn
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT supertitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST supertitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT sici (#PCDATA) >
+<!ATTLIST sici
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT affiltitle (#PCDATA) >
+<!ATTLIST affiltitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT volumenum (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST volumenum
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT caption (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST caption
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT principalinvestigator (name) >
+<!ATTLIST principalinvestigator
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-web-text (#PCDATA|webaddress|doi|addinfo)* >
+<!ATTLIST ref-web-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT journalcode (#PCDATA) >
+<!ATTLIST journalcode
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT pubitemid (#PCDATA) >
+<!ATTLIST pubitemid
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT defentry (term,definition) >
+<!ATTLIST defentry
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT closing (para|signature)* >
+<!ATTLIST closing
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		align		(left|right)			'left' >
+
+
+<!ELEMENT refrange (xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref)+ >
+<!ATTLIST refrange
+		id		ID		#IMPLIED
+		text		CDATA		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		display		(popup|main|dropdown|other)		#IMPLIED >
+
+
+<!ELEMENT editor-ref (etal|(surname,prefix*,givenname,middlename?,suffix*,query*)) >
+<!ATTLIST editor-ref
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT matheqn (mathcompound|equation) >
+<!ATTLIST matheqn
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT fax (#PCDATA) >
+<!ATTLIST fax
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT zip (#PCDATA) >
+<!ATTLIST zip
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT author-ref (corporate|(etal|(surname,prefix*,givenname,middlename?,suffix*,query*))) >
+<!ATTLIST author-ref
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT xref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST xref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT periodicpubfield (month?,year,volume,issue?) >
+<!ATTLIST periodicpubfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT issue (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST issue
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT chemformref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST chemformref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT shorttitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST shorttitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT index (title?,(para|indexentry)*,indexdiv*) >
+<!ATTLIST index
+		type		(author|subject|misc)			'misc'
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT lastpage (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST lastpage
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT meetingfield (meetingname,meetingloc,meetingdate) >
+<!ATTLIST meetingfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT smallcaps (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST smallcaps
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT script (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST script
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT readings (title,subtitle?,(ref-govpub|ref-conf|ref-periodic|ref-book|ref-patent|footnote)+) >
+<!ATTLIST readings
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT issn (#PCDATA) >
+<!ATTLIST issn
+		type		(print|electronic|combo)		#REQUIRED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT phone (#PCDATA) >
+<!ATTLIST phone
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT etal EMPTY >
+<!ATTLIST etal
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT meetingdate (month,day?,year) >
+<!ATTLIST meetingdate
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT companyname (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST companyname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT subtitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST subtitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT stanza (poemline+) >
+<!ATTLIST stanza
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT internat ((addline|city|state|province|postalcode|country)+,phone*,fax*,email*,webaddress*,addnote*,query*) >
+<!ATTLIST internat
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT textref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST textref
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#REQUIRED
+		target		(new|main)			'new' >
+
+
+<!ELEMENT doi (#PCDATA) >
+<!ATTLIST doi
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT indxname (#PCDATA|sub|sup|b|i)* >
+
+
+<!ELEMENT ref-conf-text (#PCDATA|author-ref-text|presentationtitle|collectworktitle|meetingname|city|state|country|month|day|year|editor-ref-text|publicationfield-text|firstpage|lastpage|doi|addinfo|linkset)* >
+<!ATTLIST ref-conf-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT fundingdetails (fundingaward+) >
+<!ATTLIST fundingdetails
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT city (#PCDATA) >
+<!ATTLIST city
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT publicationfield-text (#PCDATA|pubname|pubplace|city|state|country|month|year|volumenum|abstractnum)* >
+<!ATTLIST publicationfield-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT signature (#PCDATA|sub|sup|graphic)* >
+<!ATTLIST signature
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT pubmedabbrev (#PCDATA) >
+<!ATTLIST pubmedabbrev
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT chemstructureref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST chemstructureref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT publicationfield (pubname,pubplace,month?,year,(volumenum|abstractnum)?) >
+<!ATTLIST publicationfield
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT surname (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST surname
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT formaltable (title?,((table,endnotes?)|graphic+)) >
+<!ATTLIST formaltable
+		id		ID		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT tgroup (colspec+,thead?,tfoot?,tbody) >
+<!ATTLIST tgroup
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		charoff		NMTOKEN		#IMPLIED
+		char		CDATA		#IMPLIED
+		align		(left|right|center|justify|char)		#IMPLIED
+		rowsep		NMTOKEN		#IMPLIED
+		cols		NMTOKEN		#REQUIRED
+		colsep		NMTOKEN		#IMPLIED >
+
+
+<!ELEMENT addinfo (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST addinfo
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT overline (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST overline
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT table (tgroup+) >
+<!ATTLIST table
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		pgwide		NMTOKEN		#IMPLIED
+		orient		(port|land)			'port'
+		frame		(top|bottom|topbot|all|sides|none)			'topbot' >
+
+
+<!ELEMENT honorific (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST honorific
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		forcedisplay		(yes|no)		#IMPLIED >
+
+
+<!ELEMENT chaptitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST chaptitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT question (no?,para+) >
+<!ATTLIST question
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT abstractnum (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST abstractnum
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT acronym (#PCDATA) >
+<!ATTLIST acronym
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT endnoteref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST endnoteref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT journalsubtitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST journalsubtitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT abstract (title|para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|computertext|address-text|supplementmaterial|comment)+ >
+<!ATTLIST abstract
+		type		(primary|graphical)		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT section1 (no?,title,shortsectionhead?,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section2*) >
+<!ATTLIST section1
+		productid		CDATA		#IMPLIED
+		pagecount		CDATA		#IMPLIED
+		type		(Material|Theory|CaseStudy|Discussion|Results|Method|Exp|Intro|Procedure|Conclusion)		#IMPLIED
+		secondaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED
+		id		ID		#IMPLIED
+		lastpage		CDATA		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		fulltextlink		CDATA		#IMPLIED
+		colorgraphics		(yes|no)			'no'
+		issuenum		CDATA		#IMPLIED
+		firstpage		CDATA		#IMPLIED
+		articleid		CDATA		#IMPLIED
+		yearofpub		CDATA		#IMPLIED
+		primaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED >
+
+
+<!ELEMENT section2 (no?,title,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section3*) >
+<!ATTLIST section2
+		productid		CDATA		#IMPLIED
+		pagecount		CDATA		#IMPLIED
+		type		(Material|Theory|CaseStudy|Discussion|Results|Method|Exp|Intro|Procedure|Conclusion)		#IMPLIED
+		secondaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED
+		id		ID		#IMPLIED
+		lastpage		CDATA		#IMPLIED
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		colorgraphics		(yes|no)			'no'
+		issuenum		CDATA		#IMPLIED
+		firstpage		CDATA		#IMPLIED
+		articleid		CDATA		#IMPLIED
+		yearofpub		CDATA		#IMPLIED
+		primaryaudience		(Researcher|Professional|Librarian|Educator|Non-specialist|Undergraduate|Consumer)		#IMPLIED >
+
+
+<!ELEMENT endnotes (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|simplelist|itemizedlist|orderedlist|deflist|endnote)* >
+<!ATTLIST endnotes
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT section3 (no?,title,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section4*) >
+<!ATTLIST section3
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT primarysubcategory (#PCDATA) >
+<!ATTLIST primarysubcategory
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT section4 (no?,title,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section5*) >
+<!ATTLIST section4
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT section5 (no?,title,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)+) >
+<!ATTLIST section5
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT authornote (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST authornote
+		type		(award|member|certified|election|featured|specialtitle|misc)		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-patent (ref-patent-text|(patentownerfield,patenttitle,patentnum,date,doi?,addinfo?,linkset?)) >
+<!ATTLIST ref-patent
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		sequence		CDATA		#IMPLIED >
+
+
+<!ELEMENT endnote (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|simplelist|itemizedlist|orderedlist|deflist)* >
+<!ATTLIST endnote
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT corporate (#PCDATA|br|refrange)* >
+<!ATTLIST corporate
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT countryoforigin (#PCDATA) >
+
+
+<!ELEMENT pubplace (city,(state?|country?)) >
+<!ATTLIST pubplace
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT date (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST date
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT addline (#PCDATA) >
+<!ATTLIST addline
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT usa (addline*,city,state,zip?,country?,phone*,fax*,email*,webaddress*,addnote*,query*) >
+<!ATTLIST usa
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT docpubtitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST docpubtitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT coden (#PCDATA) >
+<!ATTLIST coden
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT addnote (#PCDATA) >
+<!ATTLIST addnote
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT subject (#PCDATA|sub|sup|b|i)* >
+
+
+<!ELEMENT roman (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST roman
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT orderedlist (listtitle?,listitem+) >
+<!ATTLIST orderedlist
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		spacing		(normal|compact)		#IMPLIED
+		numeration		(arabic|upperalpha|loweralpha|upperroman|lowerroman)		#IMPLIED
+		continuation		(continues|restarts)			'restarts' >
+
+
+<!ELEMENT ref-web (ref-web-text|(webaddress,doi?,addinfo?)) >
+<!ATTLIST ref-web
+		accessed		CDATA		#IMPLIED
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		sequence		CDATA		#IMPLIED >
+
+
+<!ELEMENT suffix (#PCDATA|footnoteref|xref|citationref|endnoteref|sup|sub)* >
+<!ATTLIST suffix
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		forcedisplay		(yes|no)		#IMPLIED >
+
+
+<!ELEMENT ackno (title?,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*) >
+<!ATTLIST ackno
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT production-dates EMPTY >
+<!ATTLIST production-dates
+		id		ID		#IMPLIED
+		webpubdate		CDATA		#IMPLIED
+		qaapprovdate		CDATA		#IMPLIED
+		reviseddate		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		receiveddate		CDATA		#IMPLIED
+		acceptdate		CDATA		#IMPLIED
+		projectedprintpubdate		CDATA		#IMPLIED
+		printpubdate		CDATA		#IMPLIED
+		finalapprovdate		CDATA		#IMPLIED >
+
+
+<!ELEMENT docpubdate (month?,day?,year) >
+<!ATTLIST docpubdate
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT intro (title?,((para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|exam|index|computertext|letter|address-text|supplementmaterial|enunciation|comment)+)*,section2*) >
+<!ATTLIST intro
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT logo EMPTY >
+<!ATTLIST logo
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		height		CDATA		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		rights		(full|electronic|print)		#IMPLIED
+		url		CDATA		#IMPLIED
+		width		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED
+		color		(bw|4-color|halftone|greyscale)		#IMPLIED >
+
+
+<!ELEMENT linkout EMPTY >
+<!ATTLIST linkout
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		remarks		CDATA		#IMPLIED >
+
+
+<!ELEMENT day (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST day
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT indxsubj (#PCDATA|subject|sub|sup|b|i|para)* >
+
+
+<!ELEMENT supplementmaterial (label?,(supplementfile|webaddress),graphic?,caption?,comment*) >
+<!ATTLIST supplementmaterial
+		productid		CDATA		#IMPLIED
+		id		ID		#IMPLIED
+		attachtoissue		(yes|no)			'no'
+		doi		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		freedownload		(yes|no)			'no'
+		articleid		CDATA		#IMPLIED
+		yearofpub		CDATA		#IMPLIED
+		contenttype		(video|audio|simulation|document|appendix|table|dataset|software|image)		#REQUIRED >
+
+
+<!ELEMENT colspec EMPTY >
+<!ATTLIST colspec
+		id		ID		#IMPLIED
+		colnum		NMTOKEN		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		colname		NMTOKEN		#REQUIRED
+		rowsep		NMTOKEN		#IMPLIED
+		colwidth		CDATA		#REQUIRED
+		colsep		NMTOKEN		#IMPLIED >
+
+
+<!ELEMENT patentowner-ref-text (#PCDATA|etal|surname|givenname|middlename|suffix|query)* >
+<!ATTLIST patentowner-ref-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT author (name,contactinfo?,bioinfo?,authornote*) >
+<!ATTLIST author
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		seq		CDATA		#IMPLIED
+		primaryauthor		(yes|no)			'no'
+		corresponding		(yes|no)			'no' >
+
+
+<!ELEMENT shortsectionhead (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST shortsectionhead
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-book-text (#PCDATA|author-ref-text|chaptitle|booktitle|editor-ref-text|seriesinfo|publicationfield-text|firstpage|lastpage|doi|addinfo|linkset)* >
+<!ATTLIST ref-book-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT entry (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|para|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|computertext|address-text)* >
+<!ATTLIST entry
+		namest		NMTOKEN		#IMPLIED
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		charoff		NMTOKEN		#IMPLIED
+		char		CDATA		#IMPLIED
+		align		(left|right|center|justify|char)		#IMPLIED
+		colname		NMTOKEN		#IMPLIED
+		rowsep		NMTOKEN		#IMPLIED
+		valign		(top|middle|bottom)		#IMPLIED
+		morerows		NMTOKEN		#IMPLIED
+		nameend		NMTOKEN		#IMPLIED
+		colsep		NMTOKEN		#IMPLIED >
+
+
+<!ELEMENT inlinechemeqn (structure*,formula?) >
+<!ATTLIST inlinechemeqn
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		url		CDATA		#IMPLIED >
+
+
+<!ELEMENT poemline (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST poemline
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT topic (#PCDATA) >
+<!ATTLIST topic
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT enunciationref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST enunciationref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT position (affiltitle?,email*,phone*,fax*,webaddress*) >
+<!ATTLIST position
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		affilref		IDREF		#REQUIRED
+		primaryaffiliation		(yes|no)			'no' >
+
+
+<!ELEMENT no (#PCDATA) >
+
+
+<!ELEMENT listitemref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST listitemref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT part (no?,title,section1+) >
+<!ATTLIST part
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT affiliations (affiliation)+ >
+<!ATTLIST affiliations
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT shortauthors (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST shortauthors
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT box (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|famousname|companyname|institutionname|citation)* >
+<!ATTLIST box
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT fundingrecipient (name?,institution?) >
+<!ATTLIST fundingrecipient
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-conf (ref-conf-text|(authorfield,presentationtitle,collectworktitle?,meetingfield,editorfield?,publicationfield,pagefield+,doi?,addinfo?,linkset?)) >
+<!ATTLIST ref-conf
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		sequence		CDATA		#IMPLIED >
+
+
+<!ELEMENT nomen-sect (title,deflist) >
+<!ATTLIST nomen-sect
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT indexsubentry ((indxname|indxsubj)*,(seeie|seealsoie|indexsubentry)*) >
+<!ATTLIST indexsubentry
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-govpub (ref-govpub-text|(authorfield,chaptitle?,docpubtitle,pubnum,pubfield,docpubdate?,pagefield+,doi?,addinfo?,linkset?)) >
+<!ATTLIST ref-govpub
+		id		ID		#REQUIRED
+		role		NMTOKENS		#IMPLIED
+		sequence		CDATA		#IMPLIED >
+
+
+<!ELEMENT para (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange|fundingsource|fundawardid|figure|formaltable|graphic|informaltable|chemeqn|unnumchemeqn|formula|compound|structure|matheqn|unnummatheqn|simplelist|itemizedlist|orderedlist|deflist|extract|poem|computertext|letter|address-text|supplementmaterial)* >
+<!ATTLIST para
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		indent		(0|1|2|3|4|5)		#IMPLIED >
+
+
+<!ELEMENT row (entry+) >
+<!ATTLIST row
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		rowsep		NMTOKEN		#IMPLIED
+		valign		(top|middle|bottom)		#IMPLIED >
+
+
+<!ELEMENT department (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST department
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT keywordset (title?,keyword+) >
+<!ATTLIST keywordset
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT subtopic (#PCDATA) >
+<!ATTLIST subtopic
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT patenttitle (#PCDATA|trademark|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST patenttitle
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT ref-govpub-text (#PCDATA|author-ref-text|chaptitle|docpubtitle|pubnum|pubfield|docpubdate|firstpage|lastpage|doi|addinfo|linkset)* >
+<!ATTLIST ref-govpub-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT author-ref-text (#PCDATA|etal|surname|prefix|givenname|middlename|suffix|query)* >
+<!ATTLIST author-ref-text
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT simplelist (listitem+) >
+<!ATTLIST simplelist
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		level		(1|2|3|4|5|6|7|8|9)		#IMPLIED >
+
+
+<!ELEMENT equation (no?,texstructure?,graphic?,formula?) >
+<!ATTLIST equation
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT computertext (#PCDATA|trademark|footnote|xref|chemeqnref|chemformref|matheqnref|tableref|citationref|figureref|suppmatref|listref|listitemref|chemstructureref|footnoteref|endnoteref|textref|enunciationref|inlinematheqn|inlinechemeqn|inlinegraphic|email|webaddress|famousname|companyname|institutionname|citation|acronym|terminology|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|br|refrange)* >
+<!ATTLIST computertext
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT compound (chemobj,chemobj+) >
+<!ATTLIST compound
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT listref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST listref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT structure EMPTY >
+<!ATTLIST structure
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		height		CDATA		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		rights		(full|electronic|print)		#IMPLIED
+		url		CDATA		#IMPLIED
+		width		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED
+		color		(bw|4-color|halftone|greyscale)		#IMPLIED >
+
+
+<!ELEMENT supplementfile (#PCDATA|inlinematheqn|inlinechemeqn|inlinegraphic|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query|famousname|companyname|institutionname|citation)* >
+<!ATTLIST supplementfile
+		entityref		ENTITY		#IMPLIED
+		id		ID		#IMPLIED
+		filename		CDATA		#IMPLIED
+		role		NMTOKENS		#IMPLIED
+		authorfilename		CDATA		#IMPLIED
+		url		CDATA		#IMPLIED
+		mimetype		CDATA		#IMPLIED
+		fileref		CDATA		#IMPLIED
+		mimesubtype		CDATA		#IMPLIED >
+
+
+<!ELEMENT citationref (#PCDATA|sub|sup|b|i|smallcaps|u|box|roman|script|tt|strikethrough|overline|newpage|query)* >
+<!ATTLIST citationref
+		id		ID		#IMPLIED
+		linkend		IDREF		#REQUIRED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!ELEMENT category (#PCDATA) >
+<!ATTLIST category
+		id		ID		#IMPLIED
+		role		NMTOKENS		#IMPLIED >
+
+
+<!-- ========================= -->
+<!-- ENTITY DECLARATIONS HERE -->
+<!-- ========================= -->
+
+<!ENTITY glE "&#x2A92;" >
+<!ENTITY nvrtrie "&#x22B5;&#x20D2;" >
+<!ENTITY Vdash "&#x22A9;" >
+<!ENTITY half "&#xBD;" >
+<!ENTITY PrecedesTilde "&#x227E;" >
+<!ENTITY boxvH "&#x256A;" >
+<!ENTITY llhard "&#x296B;" >
+<!ENTITY NestedGreaterGreater "&#x226B;" >
+<!ENTITY rdquor "&#x201D;" >
+<!ENTITY roang "&#x27ED;" >
+<!ENTITY nRightarrow "&#x21CF;" >
+<!ENTITY OverBracket "&#x23B4;" >
+<!ENTITY longleftrightarrow "&#x27F7;" >
+<!ENTITY Therefore "&#x2234;" >
+<!ENTITY kgrave "&#x5B;&#x6B;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY theta "&#x3B8;" >
+<!ENTITY NegativeThinSpace "&#x200B;" >
+<!ENTITY boxuR "&#x2558;" >
+<!ENTITY LeftTeeVector "&#x295A;" >
+<!ENTITY conint "&#x222E;" >
+<!ENTITY NotVerticalBar "&#x2224;" >
+<!ENTITY nges "&#x2A7E;&#x338;" >
+<!ENTITY Proportion "&#x2237;" >
+<!ENTITY c.tilde "&#x303;" >
+<!ENTITY ngeq "&#x2271;" >
+<!ENTITY checkmark "&#x2713;" >
+<!ENTITY DiacriticalAcute "&#xB4;" >
+<!ENTITY boxuL "&#x255B;" >
+<!ENTITY uacgr "&#x3CD;" >
+<!ENTITY gla "&#x2AA5;" >
+<!ENTITY Jcirc "&#x134;" >
+<!ENTITY xlarr "&#x27F5;" >
+<!ENTITY Hdot "&#x1E22;" >
+<!ENTITY boxvh "&#x253C;" >
+<!ENTITY glj "&#x2AA4;" >
+<!ENTITY blacktriangledown "&#x25BE;" >
+<!ENTITY rsqb "&#x5D;" >
+<!ENTITY nsmid "&#x2224;" >
+<!ENTITY Fgrave "&#x5B;&#x46;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY swarrow "&#x2199;" >
+<!ENTITY Cayleys "&#x212D;" >
+<!ENTITY ijlig "&#x133;" >
+<!ENTITY Sdot "&#x1E60;" >
+<!ENTITY boxur "&#x2514;" >
+<!ENTITY c.ogonek "&#x328;" >
+<!ENTITY boxvL "&#x2561;" >
+<!ENTITY NotSquareSubset "&#x228F;&#x338;" >
+<!ENTITY boxul "&#x2518;" >
+<!ENTITY dbkarow "&#x290F;" >
+<!ENTITY rightrightarrows "&#x21C9;" >
+<!ENTITY boxvR "&#x255E;" >
+<!ENTITY gnE "&#x2269;" >
+<!ENTITY Racute "&#x154;" >
+<!ENTITY tfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x31;&#x3B;" >
+<!ENTITY raquo "&#xBB;" >
+<!ENTITY Rcy "&#x420;" >
+<!ENTITY triminus "&#x2A3A;" >
+<!ENTITY thickapprox "&#x2248;" >
+<!ENTITY dtilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x3B;" >
+<!ENTITY szlig "&#xDF;" >
+<!ENTITY NotLeftTriangleBar "&#x29CF;&#x338;" >
+<!ENTITY nwarhk "&#x2923;" >
+<!ENTITY DoubleContourIntegral "&#x222F;" >
+<!ENTITY angzarr "&#x237C;" >
+<!ENTITY bumpE "&#x2AAE;" >
+<!ENTITY c.tcomab "&#x312;" >
+<!ENTITY plusb "&#x229E;" >
+<!ENTITY pluse "&#x2A72;" >
+<!ENTITY boxvl "&#x2524;" >
+<!ENTITY boxvr "&#x251C;" >
+<!ENTITY nrarr "&#x219B;" >
+<!ENTITY tgr "&#x3C4;" >
+<!ENTITY gne "&#x2A88;" >
+<!ENTITY gtrdot "&#x22D7;" >
+<!ENTITY c.tildov "&#x334;" >
+<!ENTITY NotGreaterEqual "&#x2271;" >
+<!ENTITY tdot "&#x20;&#x20DB;" >
+<!ENTITY CapitalDifferentialD "&#x2145;" >
+<!ENTITY nwarrow "&#x2196;" >
+<!ENTITY ltcir "&#x2A79;" >
+<!ENTITY veeeq "&#x225A;" >
+<!ENTITY emptyset "&#x2205;" >
+<!ENTITY gimel "&#x2137;" >
+<!ENTITY cfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x30;&#x3B;" >
+<!ENTITY Rang "&#x27EB;" >
+<!ENTITY twoheadleftarrow "&#x219E;" >
+<!ENTITY idot "&#x69;" >
+<!ENTITY ldquo "&#x201C;" >
+<!ENTITY bumpe "&#x224F;" >
+<!ENTITY smallsetminus "&#x2216;" >
+<!ENTITY Acy "&#x410;" >
+<!ENTITY thicksim "&#x223C;" >
+<!ENTITY RightAngleBracket "&#x27E9;" >
+<!ENTITY pitchfork "&#x22D4;" >
+<!ENTITY CloseCurlyDoubleQuote "&#x201D;" >
+<!ENTITY Xcheck "&#x5B;&#x58;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY c.macrbl "&#x331;" >
+<!ENTITY mumap "&#x22B8;" >
+<!ENTITY urcorner "&#x231D;" >
+<!ENTITY yddot "&#x1EF5;" >
+<!ENTITY propto "&#x221D;" >
+<!ENTITY Qcheck "&#x5B;&#x51;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY empty "&#x2205;" >
+<!ENTITY Qopf "&#x211A;" >
+<!ENTITY lvnE "&#x2268;&#xFE00;" >
+<!ENTITY bigwedge "&#x22C0;" >
+<!ENTITY hcirc "&#x125;" >
+<!ENTITY ncap "&#x2A43;" >
+<!ENTITY erDot "&#x2253;" >
+<!ENTITY prurel "&#x22B0;" >
+<!ENTITY sqcaps "&#x2293;&#xFE00;" >
+<!ENTITY Mgrave "&#x5B;&#x4D;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Rfr "&#x211C;" >
+<!ENTITY ccaron "&#x10D;" >
+<!ENTITY par "&#x2225;" >
+<!ENTITY lbrace "&#x7B;" >
+<!ENTITY dgrave "&#x5B;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY chi "&#x3C7;" >
+<!ENTITY GreaterTilde "&#x2273;" >
+<!ENTITY lbrack "&#x5B;" >
+<!ENTITY kappav "&#x3F0;" >
+<!ENTITY check "&#x2713;" >
+<!ENTITY vcheck "&#x5B;&#x76;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY c.retro "&#x322;" >
+<!ENTITY UnderBrace "&#x23DF;" >
+<!ENTITY Hacek "&#x2C7;" >
+<!ENTITY wcirc "&#x175;" >
+<!ENTITY congdot "&#x2A6D;" >
+<!ENTITY Lcaron "&#x13D;" >
+<!ENTITY digamma "&#x3DD;" >
+<!ENTITY rgrave "&#x5B;&#x72;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY wacute "&#x1E83;" >
+<!ENTITY YUcy "&#x42E;" >
+<!ENTITY Rgr "&#x3A1;" >
+<!ENTITY b.sigma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x34;&#x3B;" >
+<!ENTITY Fopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x44;&#x3B;" >
+<!ENTITY Ovec "&#x5B;&#x4F;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY sigmav "&#x3C2;" >
+<!ENTITY dstrok "&#x111;" >
+<!ENTITY ropf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x33;&#x3B;" >
+<!ENTITY harr "&#x2194;" >
+<!ENTITY midast "&#x2A;" >
+<!ENTITY Afr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x34;&#x3B;" >
+<!ENTITY cir "&#x25CB;" >
+<!ENTITY Zvec "&#x5B;&#x5A;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Ecaron "&#x11A;" >
+<!ENTITY cupcup "&#x2A4A;" >
+<!ENTITY Ftilde "&#x5B;&#x46;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY iinfin "&#x29DC;" >
+<!ENTITY napprox "&#x2249;" >
+<!ENTITY gtdot "&#x22D7;" >
+<!ENTITY Cscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x39;&#x45;&#x3B;" >
+<!ENTITY c.dotab "&#x307;" >
+<!ENTITY circledcirc "&#x229A;" >
+<!ENTITY ktilde "&#x5B;&#x6B;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY pcy "&#x43F;" >
+<!ENTITY Dashv "&#x2AE4;" >
+<!ENTITY Rarr "&#x21A0;" >
+<!ENTITY lesges "&#x2A93;" >
+<!ENTITY Vdashl "&#x2AE6;" >
+<!ENTITY Lddot "&#x1E36;" >
+<!ENTITY Auml "&#xC4;" >
+<!ENTITY Agr "&#x391;" >
+<!ENTITY gopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x38;&#x3B;" >
+<!ENTITY Cbar "&#x23B;" >
+<!ENTITY Yacute "&#xDD;" >
+<!ENTITY vartriangleleft "&#x22B2;" >
+<!ENTITY Dvec "&#x5B;&#x44;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY permil "&#x2030;" >
+<!ENTITY Fouriertrf "&#x2131;" >
+<!ENTITY sext "&#x2736;" >
+<!ENTITY dbar "&#x111;" >
+<!ENTITY lnap "&#x2A89;" >
+<!ENTITY Yscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x34;&#x3B;" >
+<!ENTITY drcrop "&#x230C;" >
+<!ENTITY ShortUpArrow "&#x2191;" >
+<!ENTITY notinva "&#x2209;" >
+<!ENTITY rarrap "&#x2975;" >
+<!ENTITY Otilde "&#xD5;" >
+<!ENTITY notinvc "&#x22F6;" >
+<!ENTITY Dacute "&#x5B;&#x44;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY notinvb "&#x22F7;" >
+<!ENTITY pvec "&#x5B;&#x70;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY dscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x39;&#x3B;" >
+<!ENTITY triplus "&#x2A39;" >
+<!ENTITY Jcheck "&#x5B;&#x4A;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Wcirc "&#x174;" >
+<!ENTITY ultri "&#x25F8;" >
+<!ENTITY ntgl "&#x2279;" >
+<!ENTITY bump "&#x224E;" >
+<!ENTITY block "&#x2588;" >
+<!ENTITY bemptyv "&#x29B0;" >
+<!ENTITY c.palat "&#x321;" >
+<!ENTITY LeftVector "&#x21BC;" >
+<!ENTITY order "&#x2134;" >
+<!ENTITY evec "&#x5B;&#x65;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY utri "&#x25B5;" >
+<!ENTITY Nbar "&#x5B;&#x4E;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY period "&#x2E;" >
+<!ENTITY emsp "&#x2003;" >
+<!ENTITY Square "&#x25A1;" >
+<!ENTITY HorizontalLine "&#x2500;" >
+<!ENTITY mcomma "&#x2A29;" >
+<!ENTITY Nscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x39;&#x3B;" >
+<!ENTITY c.langab "&#x31A;" >
+<!ENTITY Ybar "&#x5B;&#x59;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY Verbar "&#x2016;" >
+<!ENTITY c.comab "&#x313;" >
+<!ENTITY lrarr "&#x21C6;" >
+<!ENTITY ddotseq "&#x2A77;" >
+<!ENTITY bull "&#x2022;" >
+<!ENTITY pfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x44;&#x3B;" >
+<!ENTITY mapstoleft "&#x21A4;" >
+<!ENTITY c.uml "&#x308;" >
+<!ENTITY Hcheck "&#x5B;&#x48;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY npar "&#x2226;" >
+<!ENTITY andd "&#x2A5C;" >
+<!ENTITY precnapprox "&#x2AB9;" >
+<!ENTITY Nbreve "&#x5B;&#x4E;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY olcross "&#x29BB;" >
+<!ENTITY Ncy "&#x41D;" >
+<!ENTITY cedil "&#xB8;" >
+<!ENTITY zscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x46;&#x3B;" >
+<!ENTITY andv "&#x2A5A;" >
+<!ENTITY c.hookab "&#x309;" >
+<!ENTITY top "&#x22A4;" >
+<!ENTITY Kacute "&#x1E30;" >
+<!ENTITY twixt "&#x226C;" >
+<!ENTITY Ldot "&#x13F;" >
+<!ENTITY pgr "&#x3C0;" >
+<!ENTITY ntriangleleft "&#x22EA;" >
+<!ENTITY Ccheck "&#x5B;&#x43;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Omacr "&#x14C;" >
+<!ENTITY Gbreve "&#x11E;" >
+<!ENTITY Htilde "&#x5B;&#x48;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY zbar "&#x5B;&#x7A;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY uuarr "&#x21C8;" >
+<!ENTITY Bacute "&#x5B;&#x42;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY hyphen "&#x2010;" >
+<!ENTITY oscr "&#x2134;" >
+<!ENTITY Sqrt "&#x221A;" >
+<!ENTITY gvertneqq "&#x2269;&#xFE00;" >
+<!ENTITY dscy "&#x455;" >
+<!ENTITY thinsp "&#x2009;" >
+<!ENTITY leqq "&#x2266;" >
+<!ENTITY ubreve "&#x16D;" >
+<!ENTITY phi "&#x3C6;" >
+<!ENTITY Ccedil "&#xC7;" >
+<!ENTITY Adot "&#x226;" >
+<!ENTITY obar "&#x14D;" >
+<!ENTITY ygrave "&#x1EF3;" >
+<!ENTITY Vert "&#x2016;" >
+<!ENTITY Hcirc "&#x124;" >
+<!ENTITY DoubleUpArrow "&#x21D1;" >
+<!ENTITY roarr "&#x21FE;" >
+<!ENTITY zwnj "&#x200C;" >
+<!ENTITY boxhu "&#x2534;" >
+<!ENTITY LeftTeeArrow "&#x21A4;" >
+<!ENTITY prap "&#x2AB7;" >
+<!ENTITY bdot "&#x1E03;" >
+<!ENTITY c.rhrgbl "&#x339;" >
+<!ENTITY Iacute "&#xCD;" >
+<!ENTITY c.idarbl "&#x32B;" >
+<!ENTITY mdot "&#x1E41;" >
+<!ENTITY Downarrow "&#x21D3;" >
+<!ENTITY ucirc "&#xFB;" >
+<!ENTITY DownRightTeeVector "&#x295F;" >
+<!ENTITY ntrianglerighteq "&#x22ED;" >
+<!ENTITY Vtilde "&#x1E7C;" >
+<!ENTITY LowerRightArrow "&#x2198;" >
+<!ENTITY nsucceq "&#x2AB0;&#x338;" >
+<!ENTITY uArr "&#x21D1;" >
+<!ENTITY lap "&#x2A85;" >
+<!ENTITY Nfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x31;&#x3B;" >
+<!ENTITY piv "&#x3D6;" >
+<!ENTITY lneq "&#x2A87;" >
+<!ENTITY boxhd "&#x252C;" >
+<!ENTITY lat "&#x2AAB;" >
+<!ENTITY sqsupe "&#x2292;" >
+<!ENTITY nsime "&#x2244;" >
+<!ENTITY ShortLeftArrow "&#x2190;" >
+<!ENTITY eegr "&#x3B7;" >
+<!ENTITY Colone "&#x2A74;" >
+<!ENTITY upuparrows "&#x21C8;" >
+<!ENTITY rarrfs "&#x291E;" >
+<!ENTITY MediumSpace "&#x205F;" >
+<!ENTITY zcaron "&#x17E;" >
+<!ENTITY orderof "&#x2134;" >
+<!ENTITY gnapprox "&#x2A8A;" >
+<!ENTITY ccupssm "&#x2A50;" >
+<!ENTITY Longleftrightarrow "&#x27FA;" >
+<!ENTITY udblac "&#x171;" >
+<!ENTITY bsolb "&#x29C5;" >
+<!ENTITY PartialD "&#x2202;" >
+<!ENTITY And "&#x2A53;" >
+<!ENTITY lmoust "&#x23B0;" >
+<!ENTITY Ngr "&#x39D;" >
+<!ENTITY Wdot "&#x1E86;" >
+<!ENTITY lesg "&#x22DA;&#xFE00;" >
+<!ENTITY tgrave "&#x5B;&#x74;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY lsquo "&#x2018;" >
+<!ENTITY ngtr "&#x226F;" >
+<!ENTITY b.upsi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x36;&#x3B;" >
+<!ENTITY c.diamen "&#x20DF;" >
+<!ENTITY b.thetav "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x44;&#x3B;" >
+<!ENTITY imof "&#x22B7;" >
+<!ENTITY prsim "&#x227E;" >
+<!ENTITY b.thetas "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x39;&#x3B;" >
+<!ENTITY varpi "&#x3D6;" >
+<!ENTITY curren "&#xA4;" >
+<!ENTITY Omega "&#x3A9;" >
+<!ENTITY c.grave "&#x300;" >
+<!ENTITY times "&#xD7;" >
+<!ENTITY ClockwiseContourIntegral "&#x2232;" >
+<!ENTITY rsquor "&#x2019;" >
+<!ENTITY fallingdotseq "&#x2252;" >
+<!ENTITY xmap "&#x27FC;" >
+<!ENTITY lang "&#x27E8;" >
+<!ENTITY backsim "&#x223D;" >
+<!ENTITY Hstrok "&#x126;" >
+<!ENTITY LessGreater "&#x2276;" >
+<!ENTITY lcy "&#x43B;" >
+<!ENTITY Addot "&#x1EA0;" >
+<!ENTITY Ycirc "&#x176;" >
+<!ENTITY rarrhk "&#x21AA;" >
+<!ENTITY ange "&#x29A4;" >
+<!ENTITY wddot "&#x1E89;" >
+<!ENTITY ReverseElement "&#x220B;" >
+<!ENTITY Acheck "&#x5B;&#x41;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY xdot "&#x1E8B;" >
+<!ENTITY c.langbl "&#x349;" >
+<!ENTITY realine "&#x211B;" >
+<!ENTITY Jddot "&#x5B;&#x4A;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY c.vtilde "&#x33E;" >
+<!ENTITY ntlg "&#x2278;" >
+<!ENTITY Updownarrow "&#x21D5;" >
+<!ENTITY Pacute "&#x1E54;" >
+<!ENTITY scaron "&#x161;" >
+<!ENTITY NotSquareSuperset "&#x2290;&#x338;" >
+<!ENTITY questeq "&#x225F;" >
+<!ENTITY fddot "&#x5B;&#x66;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY upsi "&#x3C5;" >
+<!ENTITY cirfnint "&#x2A10;" >
+<!ENTITY PSgr "&#x3A8;" >
+<!ENTITY b.beta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x33;&#x3B;" >
+<!ENTITY lltri "&#x25FA;" >
+<!ENTITY leg "&#x22DA;" >
+<!ENTITY prec "&#x227A;" >
+<!ENTITY Vcheck "&#x5B;&#x56;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Uopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x43;&#x3B;" >
+<!ENTITY leq "&#x2264;" >
+<!ENTITY Tstrok "&#x166;" >
+<!ENTITY les "&#x2A7D;" >
+<!ENTITY OpenCurlyDoubleQuote "&#x201C;" >
+<!ENTITY caret "&#x2041;" >
+<!ENTITY vnsup "&#x2283;&#x20D2;" >
+<!ENTITY Rsh "&#x21B1;" >
+<!ENTITY lgE "&#x2A91;" >
+<!ENTITY FilledSmallSquare "&#x25FC;" >
+<!ENTITY rppolint "&#x2A12;" >
+<!ENTITY Ucirc "&#xDB;" >
+<!ENTITY igrave "&#xEC;" >
+<!ENTITY ssetmn "&#x2216;" >
+<!ENTITY leftharpoonup "&#x21BC;" >
+<!ENTITY Aring "&#xC5;" >
+<!ENTITY Jopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x31;&#x3B;" >
+<!ENTITY lfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x39;&#x3B;" >
+<!ENTITY RightDownVectorBar "&#x2955;" >
+<!ENTITY vnsub "&#x2282;&#x20D2;" >
+<!ENTITY b.sigmav "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x33;&#x3B;" >
+<!ENTITY c.tdotab "&#x20DB;" >
+<!ENTITY gtcc "&#x2AA7;" >
+<!ENTITY cup "&#x222A;" >
+<!ENTITY Jcy "&#x419;" >
+<!ENTITY NotEqualTilde "&#x2242;&#x338;" >
+<!ENTITY NotLeftTriangle "&#x22EA;" >
+<!ENTITY Svec "&#x5B;&#x53;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY ljcy "&#x459;" >
+<!ENTITY larr "&#x2190;" >
+<!ENTITY nshortmid "&#x2224;" >
+<!ENTITY sfgr "&#x3C2;" >
+<!ENTITY capdot "&#x2A40;" >
+<!ENTITY Gbar "&#x1E4;" >
+<!ENTITY Euml "&#xCB;" >
+<!ENTITY Union "&#x22C3;" >
+<!ENTITY c.tdotbl "&#x20E8;" >
+<!ENTITY DiacriticalDot "&#x2D9;" >
+<!ENTITY Fcirc "&#x5B;&#x46;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY LeftRightVector "&#x294E;" >
+<!ENTITY lgr "&#x3BB;" >
+<!ENTITY realpart "&#x211C;" >
+<!ENTITY mgrave "&#x5B;&#x6D;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY vopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x37;&#x3B;" >
+<!ENTITY Gscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x32;&#x3B;" >
+<!ENTITY h_bar "&#x127;" >
+<!ENTITY rrarr "&#x21C9;" >
+<!ENTITY lparlt "&#x2993;" >
+<!ENTITY andslope "&#x2A58;" >
+<!ENTITY Proportional "&#x221D;" >
+<!ENTITY barvee "&#x22BD;" >
+<!ENTITY rarrlp "&#x21AC;" >
+<!ENTITY kopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x43;&#x3B;" >
+<!ENTITY Ocheck "&#x5B;&#x4F;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY acheck "&#x5B;&#x61;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Hvec "&#x5B;&#x48;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Ttilde "&#x5B;&#x54;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY InvisibleTimes "&#x2062;" >
+<!ENTITY awint "&#x2A11;" >
+<!ENTITY NotSuperset "&#x2283;&#x20D2;" >
+<!ENTITY b.Theta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x41;&#x46;&#x3B;" >
+<!ENTITY RightTriangleEqual "&#x22B5;" >
+<!ENTITY rfloor "&#x230B;" >
+<!ENTITY prE "&#x2AB3;" >
+<!ENTITY zbreve "&#x5B;&#x7A;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY dsol "&#x29F6;" >
+<!ENTITY gtrapprox "&#x2A86;" >
+<!ENTITY jcirc "&#x135;" >
+<!ENTITY Hddot "&#x1E24;" >
+<!ENTITY hscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x44;&#x3B;" >
+<!ENTITY intlarhk "&#x2A17;" >
+<!ENTITY doublebarwedge "&#x2306;" >
+<!ENTITY ctdot "&#x22EF;" >
+<!ENTITY late "&#x2AAD;" >
+<!ENTITY c.acutbl "&#x317;" >
+<!ENTITY tvec "&#x5B;&#x74;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY rsquo "&#x2019;" >
+<!ENTITY Jfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x44;&#x3B;" >
+<!ENTITY dbnd "&#x2ED;" >
+<!ENTITY varrho "&#x3F1;" >
+<!ENTITY hbar "&#x210F;" >
+<!ENTITY c.ibreve "&#x311;" >
+<!ENTITY latail "&#x2919;" >
+<!ENTITY rightharpoondown "&#x21C1;" >
+<!ENTITY pre "&#x2AAF;" >
+<!ENTITY iecy "&#x435;" >
+<!ENTITY uwangle "&#x29A7;" >
+<!ENTITY lneqq "&#x2268;" >
+<!ENTITY Rbar "&#x5B;&#x52;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY LowerLeftArrow "&#x2199;" >
+<!ENTITY blacksquare "&#x25AA;" >
+<!ENTITY ycy "&#x44B;" >
+<!ENTITY Theta "&#x398;" >
+<!ENTITY c.cedil "&#x327;" >
+<!ENTITY fgrave "&#x5B;&#x66;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY KHcy "&#x425;" >
+<!ENTITY verbar "&#x7C;" >
+<!ENTITY Not "&#x2AEC;" >
+<!ENTITY ohacgr "&#x3CE;" >
+<!ENTITY Rscr "&#x211B;" >
+<!ENTITY c.qdotab "&#x20DC;" >
+<!ENTITY Bbreve "&#x5B;&#x42;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY Uacgr "&#x38E;" >
+<!ENTITY ivec "&#x5B;&#x69;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY hcheck "&#x5B;&#x68;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY iprod "&#x2A3C;" >
+<!ENTITY lHar "&#x2962;" >
+<!ENTITY varsubsetneqq "&#x2ACB;&#xFE00;" >
+<!ENTITY Edot "&#x116;" >
+<!ENTITY bprime "&#x2035;" >
+<!ENTITY psi "&#x3C8;" >
+<!ENTITY becaus "&#x2235;" >
+<!ENTITY perp "&#x22A5;" >
+<!ENTITY straightphi "&#x3D5;" >
+<!ENTITY LeftDoubleBracket "&#x27E6;" >
+<!ENTITY tint "&#x222D;" >
+<!ENTITY Mtilde "&#x5B;&#x4D;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY subsup "&#x2AD3;" >
+<!ENTITY ngeqq "&#x2267;&#x338;" >
+<!ENTITY dcirc "&#x5B;&#x64;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY nleq "&#x2270;" >
+<!ENTITY rpar "&#x29;" >
+<!ENTITY DoubleRightTee "&#x22A8;" >
+<!ENTITY Pdot "&#x1E56;" >
+<!ENTITY subsub "&#x2AD5;" >
+<!ENTITY starf "&#x2605;" >
+<!ENTITY nles "&#x2A7D;&#x338;" >
+<!ENTITY swnwar "&#x292A;" >
+<!ENTITY yen "&#xA5;" >
+<!ENTITY circeq "&#x2257;" >
+<!ENTITY lddot "&#x1E37;" >
+<!ENTITY ocheck "&#x5B;&#x6F;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY sbar "&#x5B;&#x73;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY osol "&#x2298;" >
+<!ENTITY Cddot "&#x5B;&#x43;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Ibreve "&#x12C;" >
+<!ENTITY otimesas "&#x2A36;" >
+<!ENTITY sscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x38;&#x3B;" >
+<!ENTITY mnplus "&#x2213;" >
+<!ENTITY lbbrk "&#x2772;" >
+<!ENTITY varsubsetneq "&#x228A;&#xFE00;" >
+<!ENTITY nldr "&#x2025;" >
+<!ENTITY rarrpl "&#x2945;" >
+<!ENTITY nsupe "&#x2289;" >
+<!ENTITY lnE "&#x2268;" >
+<!ENTITY yfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x36;&#x3B;" >
+<!ENTITY nltrie "&#x22EC;" >
+<!ENTITY Tgrave "&#x5B;&#x54;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY odsold "&#x29BC;" >
+<!ENTITY b.Pi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x37;&#x3B;" >
+<!ENTITY fdot "&#x5B;&#x66;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY qdot "&#x5B;&#x71;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Gammad "&#x3DC;" >
+<!ENTITY TScy "&#x426;" >
+<!ENTITY LeftTriangle "&#x22B2;" >
+<!ENTITY Equal "&#x2A75;" >
+<!ENTITY neArr "&#x21D7;" >
+<!ENTITY Acirc "&#xC2;" >
+<!ENTITY bernou "&#x212C;" >
+<!ENTITY Vvdash "&#x22AA;" >
+<!ENTITY succnsim "&#x22E9;" >
+<!ENTITY wgrave "&#x1E81;" >
+<!ENTITY NotSucceedsTilde "&#x227F;&#x338;" >
+<!ENTITY c.carnbl "&#x32C;" >
+<!ENTITY lne "&#x2A87;" >
+<!ENTITY LongLeftRightArrow "&#x27F7;" >
+<!ENTITY ncup "&#x2A42;" >
+<!ENTITY hddot "&#x1E25;" >
+<!ENTITY varkappa "&#x3F0;" >
+<!ENTITY sbreve "&#x5B;&#x73;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY sqsube "&#x2291;" >
+<!ENTITY Pbreve "&#x5B;&#x50;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY Scirc "&#x15C;" >
+<!ENTITY Yddot "&#x1EF4;" >
+<!ENTITY KHgr "&#x3A7;" >
+<!ENTITY prnE "&#x2AB5;" >
+<!ENTITY gesles "&#x2A94;" >
+<!ENTITY omega "&#x3C9;" >
+<!ENTITY lAtail "&#x291B;" >
+<!ENTITY o_dot "&#x22F;" >
+<!ENTITY Uparrow "&#x21D1;" >
+<!ENTITY c.apeqab "&#x34C;" >
+<!ENTITY c.dotbl "&#x323;" >
+<!ENTITY udhar "&#x296E;" >
+<!ENTITY hfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x35;&#x3B;" >
+<!ENTITY VerticalLine "&#x7C;" >
+<!ENTITY Scedil "&#x15E;" >
+<!ENTITY timesbar "&#x2A31;" >
+<!ENTITY iiint "&#x222D;" >
+<!ENTITY rtilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x37;&#x32;&#x3B;" >
+<!ENTITY NegativeVeryThinSpace "&#x200B;" >
+<!ENTITY quot "&#x22;" >
+<!ENTITY hookrightarrow "&#x21AA;" >
+<!ENTITY Fcy "&#x424;" >
+<!ENTITY cupcap "&#x2A46;" >
+<!ENTITY idiagr "&#x390;" >
+<!ENTITY npre "&#x2AAF;&#x338;" >
+<!ENTITY kcheck "&#x5B;&#x6B;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Lcedil "&#x13B;" >
+<!ENTITY dfisht "&#x297F;" >
+<!ENTITY vtilde "&#x1E7D;" >
+<!ENTITY triangle "&#x25B5;" >
+<!ENTITY UnderBracket "&#x23B5;" >
+<!ENTITY plussim "&#x2A26;" >
+<!ENTITY cwint "&#x2231;" >
+<!ENTITY loz "&#x25CA;" >
+<!ENTITY nprcue "&#x22E0;" >
+<!ENTITY prop "&#x221D;" >
+<!ENTITY preceq "&#x2AAF;" >
+<!ENTITY lBarr "&#x290E;" >
+<!ENTITY LongLeftArrow "&#x27F5;" >
+<!ENTITY nLeftrightarrow "&#x21CE;" >
+<!ENTITY xutri "&#x25B3;" >
+<!ENTITY nsupE "&#x2AC6;&#x338;" >
+<!ENTITY Wfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x41;&#x3B;" >
+<!ENTITY kcedil "&#x137;" >
+<!ENTITY prod "&#x220F;" >
+<!ENTITY fltns "&#x25B1;" >
+<!ENTITY DownArrowUpArrow "&#x21F5;" >
+<!ENTITY Lcheck "&#x5B;&#x4C;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY pgrave "&#x5B;&#x70;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY dcheck "&#x5B;&#x64;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY ytilde "&#x1EF9;" >
+<!ENTITY gtreqless "&#x22DB;" >
+<!ENTITY rarrtl "&#x21A3;" >
+<!ENTITY gacute "&#x1F5;" >
+<!ENTITY lbreve "&#x5B;&#x6C;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY b.delta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x35;&#x3B;" >
+<!ENTITY disin "&#x22F2;" >
+<!ENTITY Wbreve "&#x5B;&#x57;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY Yopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x30;&#x3B;" >
+<!ENTITY GreaterGreater "&#x2AA2;" >
+<!ENTITY biguplus "&#x2A04;" >
+<!ENTITY circledR "&#xAE;" >
+<!ENTITY Aacgr "&#x386;" >
+<!ENTITY circledS "&#x24C8;" >
+<!ENTITY Ffr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x39;&#x3B;" >
+<!ENTITY puncsp "&#x2008;" >
+<!ENTITY backsimeq "&#x22CD;" >
+<!ENTITY PrecedesSlantEqual "&#x227C;" >
+<!ENTITY pointint "&#x2A15;" >
+<!ENTITY b.Omega "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x30;&#x3B;" >
+<!ENTITY rcedil "&#x157;" >
+<!ENTITY c.sglbl "&#x33C;" >
+<!ENTITY lrcorner "&#x231F;" >
+<!ENTITY Ncaron "&#x147;" >
+<!ENTITY Fddot "&#x5B;&#x46;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Copf "&#x2102;" >
+<!ENTITY b.epsis "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x36;&#x3B;" >
+<!ENTITY vdash "&#x22A2;" >
+<!ENTITY lrm "&#x200E;" >
+<!ENTITY raemptyv "&#x29B3;" >
+<!ENTITY ucy "&#x443;" >
+<!ENTITY LeftUpDownVector "&#x2951;" >
+<!ENTITY Avec "&#x5B;&#x41;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY nacute "&#x144;" >
+<!ENTITY b.epsiv "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x43;&#x3B;" >
+<!ENTITY YIcy "&#x407;" >
+<!ENTITY TildeEqual "&#x2243;" >
+<!ENTITY square "&#x25A1;" >
+<!ENTITY Nopf "&#x2115;" >
+<!ENTITY squarf "&#x25AA;" >
+<!ENTITY otilde "&#xF5;" >
+<!ENTITY chcy "&#x447;" >
+<!ENTITY NotLeftTriangleEqual "&#x22EC;" >
+<!ENTITY fcirc "&#x5B;&#x66;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY VeryThinSpace "&#x200A;" >
+<!ENTITY xharr "&#x27F7;" >
+<!ENTITY omacr "&#x14D;" >
+<!ENTITY Darr "&#x21A1;" >
+<!ENTITY rfisht "&#x297D;" >
+<!ENTITY lsh "&#x21B0;" >
+<!ENTITY Bumpeq "&#x224E;" >
+<!ENTITY uacute "&#xFA;" >
+<!ENTITY Wddot "&#x1E88;" >
+<!ENTITY eparsl "&#x29E3;" >
+<!ENTITY ycirc "&#x177;" >
+<!ENTITY part "&#x2202;" >
+<!ENTITY c.ovline "&#x305;" >
+<!ENTITY c.annty "&#x20E7;" >
+<!ENTITY Iuml "&#xCF;" >
+<!ENTITY jddot "&#x5B;&#x6A;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Kbar "&#x5B;&#x4B;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY ebreve "&#x115;" >
+<!ENTITY rtri "&#x25B9;" >
+<!ENTITY Eddot "&#x5B;&#x45;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY zopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x42;&#x3B;" >
+<!ENTITY Scheck "&#x5B;&#x53;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY para "&#xB6;" >
+<!ENTITY Kscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x36;&#x3B;" >
+<!ENTITY bigtriangledown "&#x25BD;" >
+<!ENTITY Vbar "&#x2AEB;" >
+<!ENTITY Zcheck "&#x5B;&#x5A;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY tridot "&#x25EC;" >
+<!ENTITY bbrktbrk "&#x23B6;" >
+<!ENTITY colone "&#x2254;" >
+<!ENTITY dcy "&#x434;" >
+<!ENTITY bvec "&#x5B;&#x62;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY UpperLeftArrow "&#x2196;" >
+<!ENTITY dlcrop "&#x230D;" >
+<!ENTITY DoubleLongLeftArrow "&#x27F8;" >
+<!ENTITY GreaterFullEqual "&#x2267;" >
+<!ENTITY succsim "&#x227F;" >
+<!ENTITY oopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x30;&#x3B;" >
+<!ENTITY Conint "&#x222F;" >
+<!ENTITY Lvec "&#x5B;&#x4C;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY dopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x35;&#x3B;" >
+<!ENTITY RightTriangleBar "&#x29D0;" >
+<!ENTITY diamond "&#x22C4;" >
+<!ENTITY Wvec "&#x5B;&#x57;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY imagpart "&#x2111;" >
+<!ENTITY bgrave "&#x5B;&#x62;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Mellintrf "&#x2133;" >
+<!ENTITY rcheck "&#x5B;&#x72;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY ufr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x32;&#x3B;" >
+<!ENTITY lscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x31;&#x3B;" >
+<!ENTITY deg "&#xB0;" >
+<!ENTITY Scy "&#x421;" >
+<!ENTITY uuml "&#xFC;" >
+<!ENTITY rbrkslu "&#x2990;" >
+<!ENTITY Product "&#x220F;" >
+<!ENTITY wbar "&#x5B;&#x77;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY ascr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x36;&#x3B;" >
+<!ENTITY nsccue "&#x22E1;" >
+<!ENTITY ZHcy "&#x416;" >
+<!ENTITY cuwed "&#x22CF;" >
+<!ENTITY intcal "&#x22BA;" >
+<!ENTITY trpezium "&#x23E2;" >
+<!ENTITY SucceedsTilde "&#x227F;" >
+<!ENTITY lbar "&#x142;" >
+<!ENTITY ccheck "&#x5B;&#x63;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY b.rho "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x32;&#x3B;" >
+<!ENTITY rbrksld "&#x298E;" >
+<!ENTITY ecolon "&#x2255;" >
+<!ENTITY NotCongruent "&#x2262;" >
+<!ENTITY esdot "&#x2250;" >
+<!ENTITY smiley "&#x263A;" >
+<!ENTITY prime "&#x2032;" >
+<!ENTITY ugr "&#x3C5;" >
+<!ENTITY xvec "&#x5B;&#x78;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY boxVH "&#x256C;" >
+<!ENTITY ubrcy "&#x45E;" >
+<!ENTITY Vscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x31;&#x3B;" >
+<!ENTITY b.omega "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x41;&#x3B;" >
+<!ENTITY centerdot "&#xB7;" >
+<!ENTITY xvee "&#x22C1;" >
+<!ENTITY c.ibrvbl "&#x32F;" >
+<!ENTITY Nacute "&#x143;" >
+<!ENTITY trie "&#x225C;" >
+<!ENTITY Sbreve "&#x5B;&#x53;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY drcorn "&#x231F;" >
+<!ENTITY b.Xi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x35;&#x3B;" >
+<!ENTITY boxUR "&#x255A;" >
+<!ENTITY dfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x31;&#x3B;" >
+<!ENTITY SucceedsSlantEqual "&#x227D;" >
+<!ENTITY mvec "&#x5B;&#x6D;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY rBarr "&#x290F;" >
+<!ENTITY Bcy "&#x411;" >
+<!ENTITY boxUL "&#x255D;" >
+<!ENTITY SOFTcy "&#x42C;" >
+<!ENTITY IOcy "&#x401;" >
+<!ENTITY abar "&#x2C65;" >
+<!ENTITY V_bar "&#x5B;&#x56;&#x5F;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY Idot "&#x130;" >
+<!ENTITY boxVh "&#x256B;" >
+<!ENTITY rcub "&#x7D;" >
+<!ENTITY NotSupersetEqual "&#x2289;" >
+<!ENTITY searr "&#x2198;" >
+<!ENTITY dgr "&#x3B4;" >
+<!ENTITY boxUr "&#x2559;" >
+<!ENTITY Tdot "&#x1E6A;" >
+<!ENTITY AElig "&#xC6;" >
+<!ENTITY heartsuit "&#x2665;" >
+<!ENTITY xbreve "&#x5B;&#x78;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY boxVL "&#x2563;" >
+<!ENTITY nexists "&#x2204;" >
+<!ENTITY boxUl "&#x255C;" >
+<!ENTITY umacr "&#x16B;" >
+<!ENTITY boxVR "&#x2560;" >
+<!ENTITY Sfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x36;&#x3B;" >
+<!ENTITY varsupsetneqq "&#x2ACC;&#xFE00;" >
+<!ENTITY ccaps "&#x2A4D;" >
+<!ENTITY rlhar "&#x21CC;" >
+<!ENTITY longleftarrow "&#x27F5;" >
+<!ENTITY c.ltckbl "&#x318;" >
+<!ENTITY RoundImplies "&#x2970;" >
+<!ENTITY planck "&#x210F;" >
+<!ENTITY sbnd "&#x2012;" >
+<!ENTITY inodot "&#x131;" >
+<!ENTITY vgrave "&#x5B;&#x76;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY sacute "&#x15B;" >
+<!ENTITY c.cirben "&#x20E0;" >
+<!ENTITY Tddot "&#x5B;&#x54;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY rightleftharpoons "&#x21CC;" >
+<!ENTITY boxVl "&#x2562;" >
+<!ENTITY drbkarow "&#x2910;" >
+<!ENTITY nhArr "&#x21CE;" >
+<!ENTITY cylcty "&#x232D;" >
+<!ENTITY jmath "&#x237;" >
+<!ENTITY wscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x43;&#x3B;" >
+<!ENTITY boxVr "&#x255F;" >
+<!ENTITY Sgr "&#x3A3;" >
+<!ENTITY ffllig "&#xFB04;" >
+<!ENTITY die "&#xA8;" >
+<!ENTITY udot "&#x5B;&#x75;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY ltimes "&#x22C9;" >
+<!ENTITY iukcy "&#x456;" >
+<!ENTITY pddot "&#x5B;&#x70;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY easter "&#x2A6E;" >
+<!ENTITY rAtail "&#x291C;" >
+<!ENTITY b.Gammad "&#x26;&#x23;&#x78;&#x31;&#x44;&#x37;&#x43;&#x41;&#x3B;" >
+<!ENTITY OElig "&#x152;" >
+<!ENTITY Bfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x35;&#x3B;" >
+<!ENTITY div "&#xF7;" >
+<!ENTITY PlusMinus "&#xB1;" >
+<!ENTITY imped "&#x1B5;" >
+<!ENTITY lates "&#x2AAD;&#xFE00;" >
+<!ENTITY Dstrok "&#x110;" >
+<!ENTITY csube "&#x2AD1;" >
+<!ENTITY OHgr "&#x3A9;" >
+<!ENTITY ncongdot "&#x2A6D;&#x338;" >
+<!ENTITY NewLine "&#xA;" >
+<!ENTITY kacute "&#x1E31;" >
+<!ENTITY Xgrave "&#x5B;&#x58;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY softcy "&#x44C;" >
+<!ENTITY NonBreakingSpace "&#xA0;" >
+<!ENTITY yucy "&#x44E;" >
+<!ENTITY Bgr "&#x392;" >
+<!ENTITY jdot "&#x5B;&#x6A;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY succeq "&#x2AB0;" >
+<!ENTITY Because "&#x2235;" >
+<!ENTITY NotRightTriangle "&#x22EB;" >
+<!ENTITY bbreve "&#x5B;&#x62;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY Dcirc "&#x5B;&#x44;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY utrif "&#x25B4;" >
+<!ENTITY sfrown "&#x2322;" >
+<!ENTITY ncirc "&#x1E4B;" >
+<!ENTITY nsqsupe "&#x22E3;" >
+<!ENTITY GreaterSlantEqual "&#x2A7E;" >
+<!ENTITY rArr "&#x21D2;" >
+<!ENTITY b.Phi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x44;&#x3B;" >
+<!ENTITY blank "&#x2423;" >
+<!ENTITY napid "&#x224B;&#x338;" >
+<!ENTITY NotSubsetEqual "&#x2288;" >
+<!ENTITY Rtilde "&#x5B;&#x52;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY nleftarrow "&#x219A;" >
+<!ENTITY rightthreetimes "&#x22CC;" >
+<!ENTITY expectation "&#x2130;" >
+<!ENTITY gammad "&#x3DD;" >
+<!ENTITY pound "&#xA3;" >
+<!ENTITY NotDoubleVerticalBar "&#x2226;" >
+<!ENTITY uml "&#xA8;" >
+<!ENTITY alpha "&#x3B1;" >
+<!ENTITY lsim "&#x2272;" >
+<!ENTITY mapsto "&#x21A6;" >
+<!ENTITY Rcirc "&#x5B;&#x52;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY c.lharab "&#x20D0;" >
+<!ENTITY incare "&#x2105;" >
+<!ENTITY Gopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x45;&#x3B;" >
+<!ENTITY OverParenthesis "&#x23DC;" >
+<!ENTITY abreve "&#x103;" >
+<!ENTITY wtilde "&#x5B;&#x77;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY EqualTilde "&#x2242;" >
+<!ENTITY solb "&#x29C4;" >
+<!ENTITY ensp "&#x2002;" >
+<!ENTITY cddot "&#x5B;&#x63;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY divonx "&#x22C7;" >
+<!ENTITY ccedil "&#xE7;" >
+<!ENTITY c.commbl "&#x326;" >
+<!ENTITY CenterDot "&#xB7;" >
+<!ENTITY UpperRightArrow "&#x2197;" >
+<!ENTITY leqslant "&#x2A7D;" >
+<!ENTITY varpropto "&#x221D;" >
+<!ENTITY NotLess "&#x226E;" >
+<!ENTITY qfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x45;&#x3B;" >
+<!ENTITY DoubleDot "&#xA8;" >
+<!ENTITY Ocy "&#x41E;" >
+<!ENTITY Rddot "&#x1E5A;" >
+<!ENTITY Ebreve "&#x114;" >
+<!ENTITY uogon "&#x173;" >
+<!ENTITY hopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x39;&#x3B;" >
+<!ENTITY Evec "&#x5B;&#x45;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY kgreen "&#x138;" >
+<!ENTITY lessdot "&#x22D6;" >
+<!ENTITY ThinSpace "&#x2009;" >
+<!ENTITY zcheck "&#x5B;&#x7A;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY ltlarr "&#x2976;" >
+<!ENTITY eacute "&#xE9;" >
+<!ENTITY telrec "&#x2315;" >
+<!ENTITY c.hmthab "&#x34B;" >
+<!ENTITY NotGreaterSlantEqual "&#x2A7E;&#x338;" >
+<!ENTITY olarr "&#x21BA;" >
+<!ENTITY rdquo "&#x201D;" >
+<!ENTITY Precedes "&#x227A;" >
+<!ENTITY Igrave "&#xCC;" >
+<!ENTITY macr "&#xAF;" >
+<!ENTITY NotGreaterFullEqual "&#x2267;&#x338;" >
+<!ENTITY Ropf "&#x211D;" >
+<!ENTITY nsubE "&#x2AC5;&#x338;" >
+<!ENTITY Rgrave "&#x5B;&#x52;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY infin "&#x221E;" >
+<!ENTITY strns "&#xAF;" >
+<!ENTITY qcheck "&#x5B;&#x71;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Obar "&#x14C;" >
+<!ENTITY TildeTilde "&#x2248;" >
+<!ENTITY natur "&#x266E;" >
+<!ENTITY Facute "&#x5B;&#x46;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY dot "&#x2D9;" >
+<!ENTITY c.dvstov "&#x20E6;" >
+<!ENTITY c.duline "&#x333;" >
+<!ENTITY orslope "&#x2A57;" >
+<!ENTITY varsigma "&#x3C2;" >
+<!ENTITY itilde "&#x129;" >
+<!ENTITY lceil "&#x2308;" >
+<!ENTITY b.rhov "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x45;&#x30;&#x3B;" >
+<!ENTITY Zbar "&#x5B;&#x5A;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY shchcy "&#x449;" >
+<!ENTITY efDot "&#x2252;" >
+<!ENTITY Oscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x41;&#x3B;" >
+<!ENTITY YAcy "&#x42F;" >
+<!ENTITY UpArrow "&#x2191;" >
+<!ENTITY Ofr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x32;&#x3B;" >
+<!ENTITY map "&#x21A6;" >
+<!ENTITY fvec "&#x5B;&#x66;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY gtcir "&#x2A7A;" >
+<!ENTITY Hmacr "&#x48;&#x304;" >
+<!ENTITY Pvec "&#x5B;&#x50;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY angrtvbd "&#x299D;" >
+<!ENTITY sopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x34;&#x3B;" >
+<!ENTITY c.minbl "&#x320;" >
+<!ENTITY yacute "&#xFD;" >
+<!ENTITY nltri "&#x22EA;" >
+<!ENTITY Iukcy "&#x406;" >
+<!ENTITY nsubseteqq "&#x2AC5;&#x338;" >
+<!ENTITY Dbar "&#x110;" >
+<!ENTITY eqsim "&#x2242;" >
+<!ENTITY rthree "&#x22CC;" >
+<!ENTITY c.scrnen "&#x20E2;" >
+<!ENTITY Ogr "&#x39F;" >
+<!ENTITY backprime "&#x2035;" >
+<!ENTITY acirc "&#xE2;" >
+<!ENTITY xuplus "&#x2A04;" >
+<!ENTITY Dscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x39;&#x46;&#x3B;" >
+<!ENTITY boxHU "&#x2569;" >
+<!ENTITY ogon "&#x2DB;" >
+<!ENTITY yuml "&#xFF;" >
+<!ENTITY nlArr "&#x21CD;" >
+<!ENTITY b.Delta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x41;&#x42;&#x3B;" >
+<!ENTITY prnap "&#x2AB9;" >
+<!ENTITY pscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x35;&#x3B;" >
+<!ENTITY smile "&#x2323;" >
+<!ENTITY notindot "&#x22F5;&#x338;" >
+<!ENTITY Jtilde "&#x5B;&#x4A;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY mapstodown "&#x21A7;" >
+<!ENTITY pbar "&#x5B;&#x70;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY supplus "&#x2AC0;" >
+<!ENTITY radic "&#x221A;" >
+<!ENTITY nwArr "&#x21D6;" >
+<!ENTITY boxHD "&#x2566;" >
+<!ENTITY ebar "&#x113;" >
+<!ENTITY boxHu "&#x2567;" >
+<!ENTITY mcy "&#x43C;" >
+<!ENTITY egsdot "&#x2A98;" >
+<!ENTITY Zscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x35;&#x3B;" >
+<!ENTITY lcirc "&#x1E3D;" >
+<!ENTITY DiacriticalGrave "&#x60;" >
+<!ENTITY cularrp "&#x293D;" >
+<!ENTITY upsilon "&#x3C5;" >
+<!ENTITY upharpoonright "&#x21BE;" >
+<!ENTITY Dgrave "&#x5B;&#x44;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY sdote "&#x2A66;" >
+<!ENTITY pbreve "&#x5B;&#x70;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY SHcy "&#x428;" >
+<!ENTITY rotimes "&#x2A35;" >
+<!ENTITY sdotb "&#x22A1;" >
+<!ENTITY boxbox "&#x29C9;" >
+<!ENTITY operp "&#x29B9;" >
+<!ENTITY escr "&#x212F;" >
+<!ENTITY lrhard "&#x296D;" >
+<!ENTITY b.lambda "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x43;&#x3B;" >
+<!ENTITY qvec "&#x5B;&#x71;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Wacute "&#x1E82;" >
+<!ENTITY b.Upsi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x43;&#x3B;" >
+<!ENTITY DownRightVector "&#x21C1;" >
+<!ENTITY nvinfin "&#x29DE;" >
+<!ENTITY bumpeq "&#x224F;" >
+<!ENTITY LessTilde "&#x2272;" >
+<!ENTITY boxHd "&#x2564;" >
+<!ENTITY hgrave "&#x5B;&#x68;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY gcaron "&#x1E7;" >
+<!ENTITY tilde "&#x2DC;" >
+<!ENTITY ocir "&#x229A;" >
+<!ENTITY Mcheck "&#x5B;&#x4D;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY RightUpDownVector "&#x294F;" >
+<!ENTITY subdot "&#x2ABD;" >
+<!ENTITY ohbar "&#x29B5;" >
+<!ENTITY nsube "&#x2288;" >
+<!ENTITY Bdot "&#x1E02;" >
+<!ENTITY Xdot "&#x1E8A;" >
+<!ENTITY beth "&#x2136;" >
+<!ENTITY SquareSubset "&#x228F;" >
+<!ENTITY cups "&#x222A;&#xFE00;" >
+<!ENTITY triangleleft "&#x25C3;" >
+<!ENTITY plustwo "&#x2A27;" >
+<!ENTITY beta "&#x3B2;" >
+<!ENTITY duhar "&#x296F;" >
+<!ENTITY ntilde "&#xF1;" >
+<!ENTITY opar "&#x29B7;" >
+<!ENTITY lsqb "&#x5B;" >
+<!ENTITY aacgr "&#x3AC;" >
+<!ENTITY qint "&#x2A0C;" >
+<!ENTITY hslash "&#x210F;" >
+<!ENTITY subsetneqq "&#x2ACB;" >
+<!ENTITY hybull "&#x2043;" >
+<!ENTITY Longleftarrow "&#x27F8;" >
+<!ENTITY quatint "&#x2A16;" >
+<!ENTITY nddot "&#x1E47;" >
+<!ENTITY nGg "&#x22D9;&#x338;" >
+<!ENTITY idigr "&#x3CA;" >
+<!ENTITY curlyeqsucc "&#x22DF;" >
+<!ENTITY DoubleLeftTee "&#x2AE4;" >
+<!ENTITY nrightarrow "&#x219B;" >
+<!ENTITY Pcirc "&#x5B;&#x50;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY lcheck "&#x5B;&#x6C;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY eddot "&#x5B;&#x65;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY UnderParenthesis "&#x23DD;" >
+<!ENTITY nsucc "&#x2281;" >
+<!ENTITY middot "&#xB7;" >
+<!ENTITY Mdot "&#x1E40;" >
+<!ENTITY mfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x41;&#x3B;" >
+<!ENTITY napos "&#x149;" >
+<!ENTITY nGt "&#x226B;&#x20D2;" >
+<!ENTITY boxdr "&#x250C;" >
+<!ENTITY Kcy "&#x41A;" >
+<!ENTITY doteq "&#x2250;" >
+<!ENTITY rceil "&#x2309;" >
+<!ENTITY Subset "&#x22D0;" >
+<!ENTITY supseteq "&#x2287;" >
+<!ENTITY ydot "&#x1E8F;" >
+<!ENTITY boxdl "&#x2510;" >
+<!ENTITY doteqdot "&#x2251;" >
+<!ENTITY supne "&#x228B;" >
+<!ENTITY ftilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x45;&#x3B;" >
+<!ENTITY supseteqq "&#x2AC6;" >
+<!ENTITY DoubleLeftRightArrow "&#x21D4;" >
+<!ENTITY lopar "&#x2985;" >
+<!ENTITY mgr "&#x3BC;" >
+<!ENTITY GreaterLess "&#x2277;" >
+<!ENTITY psgr "&#x3C8;" >
+<!ENTITY Congruent "&#x2261;" >
+<!ENTITY Ncirc "&#x1E4A;" >
+<!ENTITY b.Sigma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x41;&#x3B;" >
+<!ENTITY hellip "&#x2026;" >
+<!ENTITY gbreve "&#x11F;" >
+<!ENTITY tritime "&#x2A3B;" >
+<!ENTITY Sub "&#x22D0;" >
+<!ENTITY Pddot "&#x5B;&#x50;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY rdca "&#x2937;" >
+<!ENTITY numsp "&#x2007;" >
+<!ENTITY ndot "&#x1E45;" >
+<!ENTITY cdot "&#x10B;" >
+<!ENTITY vsupne "&#x228B;&#xFE00;" >
+<!ENTITY lfisht "&#x297C;" >
+<!ENTITY Lang "&#x27EA;" >
+<!ENTITY Sum "&#x2211;" >
+<!ENTITY lcaron "&#x13E;" >
+<!ENTITY nsimeq "&#x2244;" >
+<!ENTITY malt "&#x2720;" >
+<!ENTITY Sup "&#x22D1;" >
+<!ENTITY c.lsolov "&#x338;" >
+<!ENTITY NegativeMediumSpace "&#x200B;" >
+<!ENTITY langle "&#x27E8;" >
+<!ENTITY CirclePlus "&#x2295;" >
+<!ENTITY Gcedil "&#x122;" >
+<!ENTITY LeftDownVector "&#x21C3;" >
+<!ENTITY mho "&#x2127;" >
+<!ENTITY lbrke "&#x298B;" >
+<!ENTITY Umacr "&#x16A;" >
+<!ENTITY crarr "&#x21B5;" >
+<!ENTITY vArr "&#x21D5;" >
+<!ENTITY male "&#x2642;" >
+<!ENTITY c.caron "&#x30C;" >
+<!ENTITY thetav "&#x3D1;" >
+<!ENTITY wcheck "&#x5B;&#x77;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY CloseCurlyQuote "&#x2019;" >
+<!ENTITY LeftUpVectorBar "&#x2958;" >
+<!ENTITY Ubrcy "&#x40E;" >
+<!ENTITY emptyv "&#x2205;" >
+<!ENTITY tddot "&#x5B;&#x74;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY vsupnE "&#x2ACC;&#xFE00;" >
+<!ENTITY mid "&#x2223;" >
+<!ENTITY scap "&#x2AB8;" >
+<!ENTITY simne "&#x2246;" >
+<!ENTITY VerticalSeparator "&#x2758;" >
+<!ENTITY demptyv "&#x29B1;" >
+<!ENTITY angsph "&#x2222;" >
+<!ENTITY Kfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x45;&#x3B;" >
+<!ENTITY Kopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x32;&#x3B;" >
+<!ENTITY Rcedil "&#x156;" >
+<!ENTITY aelig "&#xE6;" >
+<!ENTITY v_bar "&#x5B;&#x76;&#x5F;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY boxhU "&#x2568;" >
+<!ENTITY b.Psi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x46;&#x3B;" >
+<!ENTITY star "&#x2606;" >
+<!ENTITY DownLeftVector "&#x21BD;" >
+<!ENTITY Rcheck "&#x5B;&#x52;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY lthree "&#x22CB;" >
+<!ENTITY lozenge "&#x25CA;" >
+<!ENTITY zcy "&#x437;" >
+<!ENTITY macute "&#x1E3F;" >
+<!ENTITY HumpDownHump "&#x224E;" >
+<!ENTITY Kgr "&#x39A;" >
+<!ENTITY minusdu "&#x2A2A;" >
+<!ENTITY SquareUnion "&#x2294;" >
+<!ENTITY Upsi "&#x3D2;" >
+<!ENTITY nvlArr "&#x2902;" >
+<!ENTITY LongRightArrow "&#x27F6;" >
+<!ENTITY esim "&#x2242;" >
+<!ENTITY boxhD "&#x2565;" >
+<!ENTITY gamma "&#x3B3;" >
+<!ENTITY squgf "&#x2592;" >
+<!ENTITY ratio "&#x2236;" >
+<!ENTITY qgrave "&#x5B;&#x71;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Lmidot "&#x13F;" >
+<!ENTITY tcheck "&#x5B;&#x74;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY coprod "&#x2210;" >
+<!ENTITY c.brvbl "&#x32E;" >
+<!ENTITY Ivec "&#x5B;&#x49;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY aopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x32;&#x3B;" >
+<!ENTITY dcaron "&#x10F;" >
+<!ENTITY eDot "&#x2251;" >
+<!ENTITY dashv "&#x22A3;" >
+<!ENTITY lopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x44;&#x3B;" >
+<!ENTITY nLl "&#x22D8;&#x338;" >
+<!ENTITY diams "&#x2666;" >
+<!ENTITY smeparsl "&#x29E4;" >
+<!ENTITY RBarr "&#x2910;" >
+<!ENTITY LessLess "&#x2AA1;" >
+<!ENTITY nLt "&#x226A;&#x20D2;" >
+<!ENTITY nhpar "&#x2AF2;" >
+<!ENTITY xnis "&#x22FB;" >
+<!ENTITY b.mu "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x44;&#x3B;" >
+<!ENTITY c.lrarbl "&#x34D;" >
+<!ENTITY icy "&#x438;" >
+<!ENTITY Zgrave "&#x5B;&#x5A;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY ovbar "&#x233D;" >
+<!ENTITY lowbar "&#x5F;" >
+<!ENTITY khcy "&#x445;" >
+<!ENTITY supsetneq "&#x228B;" >
+<!ENTITY NotSubset "&#x2282;&#x20D2;" >
+<!ENTITY Vopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x44;&#x3B;" >
+<!ENTITY Lgrave "&#x5B;&#x4C;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY rhov "&#x3F1;" >
+<!ENTITY RightDownVector "&#x21C2;" >
+<!ENTITY mapstoup "&#x21A5;" >
+<!ENTITY Tacute "&#x5B;&#x54;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY Agrave "&#xC0;" >
+<!ENTITY lmoustache "&#x23B0;" >
+<!ENTITY succneqq "&#x2AB6;" >
+<!ENTITY c.lrarab "&#x20E1;" >
+<!ENTITY Larr "&#x219E;" >
+<!ENTITY Cconint "&#x2230;" >
+<!ENTITY gsime "&#x2A8E;" >
+<!ENTITY ZeroWidthSpace "&#x200B;" >
+<!ENTITY laemptyv "&#x29B4;" >
+<!ENTITY LeftAngleBracket "&#x27E8;" >
+<!ENTITY eplus "&#x2A71;" >
+<!ENTITY lotimes "&#x2A34;" >
+<!ENTITY xwedge "&#x22C0;" >
+<!ENTITY gsiml "&#x2A90;" >
+<!ENTITY Poincareplane "&#x210C;" >
+<!ENTITY Xtilde "&#x5B;&#x58;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY phmmat "&#x2133;" >
+<!ENTITY Prime "&#x2033;" >
+<!ENTITY Sbar "&#x5B;&#x53;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY vBarv "&#x2AE9;" >
+<!ENTITY zfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x37;&#x3B;" >
+<!ENTITY Element "&#x2208;" >
+<!ENTITY SHCHcy "&#x429;" >
+<!ENTITY Atilde "&#xC3;" >
+<!ENTITY luruhar "&#x2966;" >
+<!ENTITY Sscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x45;&#x3B;" >
+<!ENTITY uvec "&#x5B;&#x75;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY odash "&#x229D;" >
+<!ENTITY vellip "&#x22EE;" >
+<!ENTITY gesdotol "&#x2A84;" >
+<!ENTITY NotHumpEqual "&#x224F;&#x338;" >
+<!ENTITY c.rharab "&#x20D1;" >
+<!ENTITY NegativeThickSpace "&#x200B;" >
+<!ENTITY supdot "&#x2ABE;" >
+<!ENTITY tprime "&#x2034;" >
+<!ENTITY jvec "&#x5B;&#x6A;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY qtilde "&#x5B;&#x71;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY boxdR "&#x2552;" >
+<!ENTITY zgr "&#x3B6;" >
+<!ENTITY Tvec "&#x5B;&#x54;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY dtri "&#x25BF;" >
+<!ENTITY iff "&#x21D4;" >
+<!ENTITY Dcheck "&#x5B;&#x44;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Hbar "&#x5B;&#x48;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY boxdL "&#x2555;" >
+<!ENTITY supnE "&#x2ACC;" >
+<!ENTITY icheck "&#x5B;&#x69;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY NotHumpDownHump "&#x224E;&#x338;" >
+<!ENTITY ifr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x36;&#x3B;" >
+<!ENTITY simlE "&#x2A9F;" >
+<!ENTITY ddagger "&#x2021;" >
+<!ENTITY subsetneq "&#x228A;" >
+<!ENTITY longrightarrow "&#x27F6;" >
+<!ENTITY ShortRightArrow "&#x2192;" >
+<!ENTITY nspar "&#x2226;" >
+<!ENTITY Hscr "&#x210B;" >
+<!ENTITY cwconint "&#x2232;" >
+<!ENTITY EmptyVerySmallSquare "&#x25AB;" >
+<!ENTITY wopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x38;&#x3B;" >
+<!ENTITY ominus "&#x2296;" >
+<!ENTITY rcirc "&#x5B;&#x72;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY Gcy "&#x413;" >
+<!ENTITY lAarr "&#x21DA;" >
+<!ENTITY backcong "&#x224C;" >
+<!ENTITY Rarrtl "&#x2916;" >
+<!ENTITY b.nu "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x45;&#x3B;" >
+<!ENTITY sqsubseteq "&#x2291;" >
+<!ENTITY commat "&#x40;" >
+<!ENTITY Bernoullis "&#x212C;" >
+<!ENTITY tscy "&#x446;" >
+<!ENTITY Scaron "&#x160;" >
+<!ENTITY c.eqbl "&#x347;" >
+<!ENTITY rtimes "&#x22CA;" >
+<!ENTITY Dtilde "&#x5B;&#x44;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY integers "&#x2124;" >
+<!ENTITY csupe "&#x2AD2;" >
+<!ENTITY igr "&#x3B9;" >
+<!ENTITY OHacgr "&#x38F;" >
+<!ENTITY NJcy "&#x40A;" >
+<!ENTITY THORN "&#xDE;" >
+<!ENTITY DoubleRightArrow "&#x21D2;" >
+<!ENTITY ruml "&#x5B;&#x72;&#x75;&#x6D;&#x6C;&#x5D;" >
+<!ENTITY CounterClockwiseContourIntegral "&#x2233;" >
+<!ENTITY tscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x39;&#x3B;" >
+<!ENTITY bnot "&#x2310;" >
+<!ENTITY Xfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x42;&#x3B;" >
+<!ENTITY jbreve "&#x5B;&#x6A;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY rarrbfs "&#x2920;" >
+<!ENTITY b.pi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x31;&#x3B;" >
+<!ENTITY iscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x45;&#x3B;" >
+<!ENTITY tbar "&#x167;" >
+<!ENTITY nmid "&#x2224;" >
+<!ENTITY dotminus "&#x2238;" >
+<!ENTITY NotSucceedsSlantEqual "&#x22E1;" >
+<!ENTITY Qacute "&#x5B;&#x51;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY c.lvlnov "&#x20D2;" >
+<!ENTITY DownArrow "&#x2193;" >
+<!ENTITY lbarr "&#x290C;" >
+<!ENTITY larrbfs "&#x291F;" >
+<!ENTITY DoubleLeftArrow "&#x21D0;" >
+<!ENTITY khgr "&#x3C7;" >
+<!ENTITY shortparallel "&#x2225;" >
+<!ENTITY ibar "&#x268;" >
+<!ENTITY eeacgr "&#x3AE;" >
+<!ENTITY boxtimes "&#x22A0;" >
+<!ENTITY Lcirc "&#x1E3C;" >
+<!ENTITY rarrsim "&#x2974;" >
+<!ENTITY Xgr "&#x39E;" >
+<!ENTITY NotNestedLessLess "&#x2AA1;&#x338;" >
+<!ENTITY curarrm "&#x293C;" >
+<!ENTITY urtri "&#x25F9;" >
+<!ENTITY DoubleLongLeftRightArrow "&#x27FA;" >
+<!ENTITY curlywedge "&#x22CF;" >
+<!ENTITY c.vlnbl "&#x329;" >
+<!ENTITY uhblk "&#x2580;" >
+<!ENTITY gnsim "&#x22E7;" >
+<!ENTITY erarr "&#x2971;" >
+<!ENTITY mdash "&#x2014;" >
+<!ENTITY subseteq "&#x2286;" >
+<!ENTITY Gfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x41;&#x3B;" >
+<!ENTITY RightDownTeeVector "&#x295D;" >
+<!ENTITY rightleftarrows "&#x21C4;" >
+<!ENTITY ctilde "&#x5B;&#x63;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY capcup "&#x2A47;" >
+<!ENTITY longmapsto "&#x27FC;" >
+<!ENTITY pluscir "&#x2A22;" >
+<!ENTITY SmallCircle "&#x2218;" >
+<!ENTITY Succeeds "&#x227B;" >
+<!ENTITY DownArrowBar "&#x2913;" >
+<!ENTITY sccue "&#x227D;" >
+<!ENTITY larrsim "&#x2973;" >
+<!ENTITY Fdot "&#x5B;&#x46;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY andand "&#x2A55;" >
+<!ENTITY tcedil "&#x163;" >
+<!ENTITY sqsupseteq "&#x2292;" >
+<!ENTITY plankv "&#x210F;" >
+<!ENTITY vcy "&#x432;" >
+<!ENTITY Uogon "&#x172;" >
+<!ENTITY Longrightarrow "&#x27F9;" >
+<!ENTITY pacute "&#x1E55;" >
+<!ENTITY comma "&#x2C;" >
+<!ENTITY dArr "&#x21D3;" >
+<!ENTITY Ggr "&#x393;" >
+<!ENTITY Tab "&#x9;" >
+<!ENTITY c.vlnab "&#x30D;" >
+<!ENTITY ulcorn "&#x231C;" >
+<!ENTITY boxminus "&#x229F;" >
+<!ENTITY isins "&#x22F4;" >
+<!ENTITY isinv "&#x2208;" >
+<!ENTITY spar "&#x2225;" >
+<!ENTITY Ucheck "&#x5B;&#x55;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY b.eta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x38;&#x3B;" >
+<!ENTITY Qdot "&#x5B;&#x51;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY supedot "&#x2AC4;" >
+<!ENTITY topfork "&#x2ADA;" >
+<!ENTITY daleth "&#x2138;" >
+<!ENTITY NotRightTriangleEqual "&#x22ED;" >
+<!ENTITY c.comabr "&#x315;" >
+<!ENTITY vBar "&#x2AE8;" >
+<!ENTITY Kbreve "&#x5B;&#x4B;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY leftarrow "&#x2190;" >
+<!ENTITY Gamma "&#x393;" >
+<!ENTITY InvisibleComma "&#x2063;" >
+<!ENTITY vee "&#x2228;" >
+<!ENTITY ecy "&#x44D;" >
+<!ENTITY ldrushar "&#x294B;" >
+<!ENTITY aring "&#xE5;" >
+<!ENTITY qprime "&#x2057;" >
+<!ENTITY rbbrk "&#x2773;" >
+<!ENTITY swarhk "&#x2926;" >
+<!ENTITY dagger "&#x2020;" >
+<!ENTITY rmoustache "&#x23B1;" >
+<!ENTITY rddot "&#x1E5B;" >
+<!ENTITY rdot "&#x1E59;" >
+<!ENTITY trisb "&#x29CD;" >
+<!ENTITY tstrok "&#x167;" >
+<!ENTITY bigvee "&#x22C1;" >
+<!ENTITY bottom "&#x22A5;" >
+<!ENTITY rcaron "&#x159;" >
+<!ENTITY isinE "&#x22F9;" >
+<!ENTITY VerticalBar "&#x2223;" >
+<!ENTITY DZcy "&#x40F;" >
+<!ENTITY hkswarow "&#x2926;" >
+<!ENTITY angmsdae "&#x29AC;" >
+<!ENTITY angmsdaf "&#x29AD;" >
+<!ENTITY Ybreve "&#x5B;&#x59;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY gdot "&#x121;" >
+<!ENTITY angmsdag "&#x29AE;" >
+<!ENTITY Cap "&#x22D2;" >
+<!ENTITY angmsdah "&#x29AF;" >
+<!ENTITY rangle "&#x27E9;" >
+<!ENTITY c.circen "&#x20DD;" >
+<!ENTITY Ograve "&#xD2;" >
+<!ENTITY Utilde "&#x168;" >
+<!ENTITY angmsdaa "&#x29A8;" >
+<!ENTITY angmsdab "&#x29A9;" >
+<!ENTITY yicy "&#x457;" >
+<!ENTITY angmsdac "&#x29AA;" >
+<!ENTITY angmsdad "&#x29AB;" >
+<!ENTITY isinsv "&#x22F3;" >
+<!ENTITY Dopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x42;&#x3B;" >
+<!ENTITY ngrave "&#x1F9;" >
+<!ENTITY addot "&#x1EA1;" >
+<!ENTITY vfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x33;&#x3B;" >
+<!ENTITY nvap "&#x224D;&#x20D2;" >
+<!ENTITY dtrif "&#x25BE;" >
+<!ENTITY Nddot "&#x1E46;" >
+<!ENTITY otimes "&#x2297;" >
+<!ENTITY Tcy "&#x422;" >
+<!ENTITY DownLeftVectorBar "&#x2956;" >
+<!ENTITY NotLessEqual "&#x2270;" >
+<!ENTITY nvltrie "&#x22B4;&#x20D2;" >
+<!ENTITY ApplyFunction "&#x2061;" >
+<!ENTITY fcheck "&#x5B;&#x66;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY b.xi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x46;&#x3B;" >
+<!ENTITY scnE "&#x2AB6;" >
+<!ENTITY c.circbl "&#x32D;" >
+<!ENTITY Oopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x36;&#x3B;" >
+<!ENTITY nshortparallel "&#x2226;" >
+<!ENTITY acaron "&#x1CE;" >
+<!ENTITY HumpEqual "&#x224F;" >
+<!ENTITY clubs "&#x2663;" >
+<!ENTITY ltcc "&#x2AA6;" >
+<!ENTITY Oslash "&#xD8;" >
+<!ENTITY lozf "&#x29EB;" >
+<!ENTITY pcirc "&#x5B;&#x70;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY bacute "&#x5B;&#x62;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY ttilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x37;&#x35;&#x3B;" >
+<!ENTITY diamondsuit "&#x2666;" >
+<!ENTITY grave "&#x60;" >
+<!ENTITY asymp "&#x2248;" >
+<!ENTITY Tilde "&#x223C;" >
+<!ENTITY Gcheck "&#x5B;&#x47;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY LeftVectorBar "&#x2952;" >
+<!ENTITY int "&#x222B;" >
+<!ENTITY slarr "&#x2190;" >
+<!ENTITY efr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x32;&#x3B;" >
+<!ENTITY swarr "&#x2199;" >
+<!ENTITY trade "&#x2122;" >
+<!ENTITY xrarr "&#x27F6;" >
+<!ENTITY imagline "&#x2110;" >
+<!ENTITY isin "&#x2208;" >
+<!ENTITY naturals "&#x2115;" >
+<!ENTITY xlArr "&#x27F8;" >
+<!ENTITY popf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x31;&#x3B;" >
+<!ENTITY ncheck "&#x5B;&#x6E;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY cupbrcap "&#x2A48;" >
+<!ENTITY ExponentialE "&#x2147;" >
+<!ENTITY Mvec "&#x5B;&#x4D;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY c.macr "&#x304;" >
+<!ENTITY iiota "&#x2129;" >
+<!ENTITY fflig "&#xFB00;" >
+<!ENTITY bigcup "&#x22C3;" >
+<!ENTITY Bvec "&#x5B;&#x42;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY eopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x36;&#x3B;" >
+<!ENTITY egs "&#x2A96;" >
+<!ENTITY egr "&#x3B5;" >
+<!ENTITY aogon "&#x105;" >
+<!ENTITY triangleq "&#x225C;" >
+<!ENTITY stilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x37;&#x34;&#x3B;" >
+<!ENTITY xddot "&#x5B;&#x78;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Xvec "&#x5B;&#x58;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY nlsim "&#x2274;" >
+<!ENTITY because "&#x2235;" >
+<!ENTITY tbreve "&#x5B;&#x74;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY zhcy "&#x436;" >
+<!ENTITY c.cwrgov "&#x20D9;" >
+<!ENTITY vcirc "&#x5B;&#x76;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY hacute "&#x5B;&#x68;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY horbar "&#x2015;" >
+<!ENTITY Tfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x37;&#x3B;" >
+<!ENTITY Zopf "&#x2124;" >
+<!ENTITY gcirc "&#x11D;" >
+<!ENTITY Tcaron "&#x164;" >
+<!ENTITY Lleftarrow "&#x21DA;" >
+<!ENTITY Abar "&#x23A;" >
+<!ENTITY iocy "&#x451;" >
+<!ENTITY CupCap "&#x224D;" >
+<!ENTITY lowast "&#x2217;" >
+<!ENTITY rdsh "&#x21B3;" >
+<!ENTITY EmptySmallSquare "&#x25FB;" >
+<!ENTITY wedbar "&#x2A5F;" >
+<!ENTITY HARDcy "&#x42A;" >
+<!ENTITY lstrok "&#x142;" >
+<!ENTITY Cacute "&#x106;" >
+<!ENTITY Ugrave "&#xD9;" >
+<!ENTITY xodot "&#x2A00;" >
+<!ENTITY parsim "&#x2AF3;" >
+<!ENTITY Tgr "&#x3A4;" >
+<!ENTITY lrtri "&#x22BF;" >
+<!ENTITY Wscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x32;&#x3B;" >
+<!ENTITY primes "&#x2119;" >
+<!ENTITY yvec "&#x5B;&#x79;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Bcheck "&#x5B;&#x42;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY rbarr "&#x290D;" >
+<!ENTITY lhblk "&#x2584;" >
+<!ENTITY uharl "&#x21BF;" >
+<!ENTITY bsime "&#x22CD;" >
+<!ENTITY Hbreve "&#x1E2A;" >
+<!ENTITY cuvee "&#x22CE;" >
+<!ENTITY Cfr "&#x212D;" >
+<!ENTITY dollar "&#x24;" >
+<!ENTITY uharr "&#x21BE;" >
+<!ENTITY ddarr "&#x21CA;" >
+<!ENTITY nvec "&#x5B;&#x6E;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY infintie "&#x29DD;" >
+<!ENTITY GreaterEqualLess "&#x22DB;" >
+<!ENTITY Mddot "&#x1E42;" >
+<!ENTITY Ascr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x39;&#x43;&#x3B;" >
+<!ENTITY bbar "&#x180;" >
+<!ENTITY ncedil "&#x146;" >
+<!ENTITY ulcrop "&#x230F;" >
+<!ENTITY toea "&#x2928;" >
+<!ENTITY acE "&#x223E;&#x333;" >
+<!ENTITY eqslantgtr "&#x2A96;" >
+<!ENTITY Lbar "&#x141;" >
+<!ENTITY Ntilde "&#xD1;" >
+<!ENTITY Iacgr "&#x38A;" >
+<!ENTITY gcheck "&#x5B;&#x67;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY forall "&#x2200;" >
+<!ENTITY Xcirc "&#x5B;&#x58;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY rcy "&#x440;" >
+<!ENTITY Icheck "&#x5B;&#x49;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Lscr "&#x2112;" >
+<!ENTITY excl "&#x21;" >
+<!ENTITY awconint "&#x2233;" >
+<!ENTITY Wbar "&#x5B;&#x57;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY Delta "&#x394;" >
+<!ENTITY Uuml "&#xDC;" >
+<!ENTITY RightUpVector "&#x21BE;" >
+<!ENTITY amalg "&#x2A3F;" >
+<!ENTITY Assign "&#x2254;" >
+<!ENTITY cvec "&#x5B;&#x63;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY c.awarab "&#x20D4;" >
+<!ENTITY DD "&#x2145;" >
+<!ENTITY acd "&#x223F;" >
+<!ENTITY DownBreve "&#x20;&#x311;" >
+<!ENTITY nvgt "&#x3E;&#x20D2;" >
+<!ENTITY lpar "&#x28;" >
+<!ENTITY downdownarrows "&#x21CA;" >
+<!ENTITY Ngrave "&#x1F8;" >
+<!ENTITY mstpos "&#x223E;" >
+<!ENTITY tbnd "&#x2261;" >
+<!ENTITY xscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x44;&#x3B;" >
+<!ENTITY reg "&#xAE;" >
+<!ENTITY nvge "&#x2265;&#x20D2;" >
+<!ENTITY EEacgr "&#x389;" >
+<!ENTITY acy "&#x430;" >
+<!ENTITY Jdot "&#x5B;&#x4A;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Zddot "&#x1E92;" >
+<!ENTITY female "&#x2640;" >
+<!ENTITY Pcheck "&#x5B;&#x50;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY lagran "&#x2112;" >
+<!ENTITY xbar "&#x5B;&#x78;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY sqsubset "&#x228F;" >
+<!ENTITY ell "&#x2113;" >
+<!ENTITY b.infin "&#x221E;" >
+<!ENTITY mscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x32;&#x3B;" >
+<!ENTITY plusacir "&#x2A23;" >
+<!ENTITY mbreve "&#x5B;&#x6D;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY els "&#x2A95;" >
+<!ENTITY ltrie "&#x22B4;" >
+<!ENTITY bscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x37;&#x3B;" >
+<!ENTITY ltrif "&#x25C2;" >
+<!ENTITY Barwed "&#x2306;" >
+<!ENTITY fnof "&#x192;" >
+<!ENTITY ssmile "&#x2323;" >
+<!ENTITY ohgr "&#x3C9;" >
+<!ENTITY ufisht "&#x297E;" >
+<!ENTITY ltilde "&#x26B;" >
+<!ENTITY suplarr "&#x297B;" >
+<!ENTITY Breve "&#x2D8;" >
+<!ENTITY mbar "&#x5B;&#x6D;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY Vbreve "&#x5B;&#x56;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY GJcy "&#x403;" >
+<!ENTITY therefore "&#x2234;" >
+<!ENTITY harrcir "&#x2948;" >
+<!ENTITY capcap "&#x2A4B;" >
+<!ENTITY rfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x46;&#x3B;" >
+<!ENTITY PHgr "&#x3A6;" >
+<!ENTITY Pcy "&#x41F;" >
+<!ENTITY UpEquilibrium "&#x296E;" >
+<!ENTITY kdot "&#x1E33;" >
+<!ENTITY zwj "&#x200D;" >
+<!ENTITY NotSucceedsEqual "&#x2AB0;&#x338;" >
+<!ENTITY Gtilde "&#x5B;&#x47;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY Icirc "&#xCE;" >
+<!ENTITY coloneq "&#x2254;" >
+<!ENTITY lesdotor "&#x2A83;" >
+<!ENTITY cirE "&#x29C3;" >
+<!ENTITY oplus "&#x2295;" >
+<!ENTITY ngeqslant "&#x2A7E;&#x338;" >
+<!ENTITY rgr "&#x3C1;" >
+<!ENTITY bullet "&#x2022;" >
+<!ENTITY Lambda "&#x39B;" >
+<!ENTITY varsupsetneq "&#x228B;&#xFE00;" >
+<!ENTITY eng "&#x14B;" >
+<!ENTITY CircleDot "&#x2299;" >
+<!ENTITY approxeq "&#x224A;" >
+<!ENTITY l_dot "&#x1E39;" >
+<!ENTITY lessgtr "&#x2276;" >
+<!ENTITY hArr "&#x21D4;" >
+<!ENTITY LeftTee "&#x22A3;" >
+<!ENTITY afr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x45;&#x3B;" >
+<!ENTITY utdot "&#x22F0;" >
+<!ENTITY micro "&#xB5;" >
+<!ENTITY dlcorn "&#x231E;" >
+<!ENTITY icirc "&#xEE;" >
+<!ENTITY rnmid "&#x2AEE;" >
+<!ENTITY rho "&#x3C1;" >
+<!ENTITY ucheck "&#x5B;&#x75;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY b.alpha "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x32;&#x3B;" >
+<!ENTITY Coproduct "&#x2210;" >
+<!ENTITY Obreve "&#x14E;" >
+<!ENTITY Udot "&#x5B;&#x55;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY rpargt "&#x2994;" >
+<!ENTITY HE "&#x5D4;" >
+<!ENTITY etilde "&#x1EBD;" >
+<!ENTITY nabla "&#x2207;" >
+<!ENTITY Gg "&#x22D9;" >
+<!ENTITY zigrarr "&#x21DD;" >
+<!ENTITY cudarrl "&#x2938;" >
+<!ENTITY downarrow "&#x2193;" >
+<!ENTITY Wcheck "&#x5B;&#x57;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY sstarf "&#x22C6;" >
+<!ENTITY Gt "&#x226B;" >
+<!ENTITY agr "&#x3B1;" >
+<!ENTITY blacktriangle "&#x25B4;" >
+<!ENTITY supmult "&#x2AC2;" >
+<!ENTITY tbrk "&#x23B4;" >
+<!ENTITY Ggrave "&#x5B;&#x47;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY jgrave "&#x5B;&#x6A;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY tcirc "&#x5B;&#x74;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY bsim "&#x223D;" >
+<!ENTITY pertenk "&#x2031;" >
+<!ENTITY nap "&#x2249;" >
+<!ENTITY Pfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x33;&#x3B;" >
+<!ENTITY Odblac "&#x150;" >
+<!ENTITY zeetrf "&#x2128;" >
+<!ENTITY iiiint "&#x2A0C;" >
+<!ENTITY rbrace "&#x7D;" >
+<!ENTITY vdot "&#x5B;&#x76;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY rbrack "&#x5D;" >
+<!ENTITY icaron "&#x1D0;" >
+<!ENTITY supsim "&#x2AC8;" >
+<!ENTITY leftrightarrows "&#x21C6;" >
+<!ENTITY subseteqq "&#x2AC5;" >
+<!ENTITY HilbertSpace "&#x210B;" >
+<!ENTITY Zacute "&#x179;" >
+<!ENTITY NotNestedGreaterGreater "&#x2AA2;&#x338;" >
+<!ENTITY lurdshar "&#x294A;" >
+<!ENTITY Emacr "&#x112;" >
+<!ENTITY cire "&#x2257;" >
+<!ENTITY circ "&#x2C6;" >
+<!ENTITY Pgr "&#x3A0;" >
+<!ENTITY lfloor "&#x230A;" >
+<!ENTITY DotDot "&#x20;&#x20DC;" >
+<!ENTITY cudarrr "&#x2935;" >
+<!ENTITY complexes "&#x2102;" >
+<!ENTITY nesear "&#x2928;" >
+<!ENTITY Im "&#x2111;" >
+<!ENTITY yacy "&#x44F;" >
+<!ENTITY simeq "&#x2243;" >
+<!ENTITY Upsilon "&#x3A5;" >
+<!ENTITY simgE "&#x2AA0;" >
+<!ENTITY Phi "&#x3A6;" >
+<!ENTITY cgrave "&#x5B;&#x63;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Zcirc "&#x1E90;" >
+<!ENTITY Sopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x41;&#x3B;" >
+<!ENTITY spadesuit "&#x2660;" >
+<!ENTITY NotTilde "&#x2241;" >
+<!ENTITY gtlPar "&#x2995;" >
+<!ENTITY Laplacetrf "&#x2112;" >
+<!ENTITY nvlt "&#x26;&#x23;&#x78;&#x30;&#x30;&#x30;&#x33;&#x43;&#x3B;&#x20D2;" >
+<!ENTITY ncy "&#x43D;" >
+<!ENTITY precapprox "&#x2AB7;" >
+<!ENTITY tshcy "&#x45B;" >
+<!ENTITY ohgrdot "&#x3C9;&#x307;" >
+<!ENTITY divideontimes "&#x22C7;" >
+<!ENTITY amacr "&#x101;" >
+<!ENTITY vacute "&#x5B;&#x76;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY sharp "&#x266F;" >
+<!ENTITY rlm "&#x200F;" >
+<!ENTITY nvle "&#x2264;&#x20D2;" >
+<!ENTITY lrhar "&#x21CB;" >
+<!ENTITY fbreve "&#x5B;&#x66;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY vddot "&#x1E7F;" >
+<!ENTITY DownRightVectorBar "&#x2957;" >
+<!ENTITY ccups "&#x2A4C;" >
+<!ENTITY notin "&#x2209;" >
+<!ENTITY triangledown "&#x25BF;" >
+<!ENTITY spades "&#x2660;" >
+<!ENTITY cemptyv "&#x29B2;" >
+<!ENTITY curvearrowright "&#x21B7;" >
+<!ENTITY Kddot "&#x5B;&#x4B;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Hopf "&#x210D;" >
+<!ENTITY nisd "&#x22FA;" >
+<!ENTITY OverBrace "&#x23DE;" >
+<!ENTITY iacgr "&#x3AF;" >
+<!ENTITY vltri "&#x22B2;" >
+<!ENTITY Qvec "&#x5B;&#x51;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY cent "&#xA2;" >
+<!ENTITY topf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x35;&#x3B;" >
+<!ENTITY aacute "&#xE1;" >
+<!ENTITY DownTeeArrow "&#x21A7;" >
+<!ENTITY LessSlantEqual "&#x2A7D;" >
+<!ENTITY notni "&#x220C;" >
+<!ENTITY ltri "&#x25C3;" >
+<!ENTITY Ebar "&#x112;" >
+<!ENTITY RuleDelayed "&#x29F4;" >
+<!ENTITY NotCupCap "&#x226D;" >
+<!ENTITY eta "&#x3B7;" >
+<!ENTITY brvbar "&#xA6;" >
+<!ENTITY OpenCurlyQuote "&#x2018;" >
+<!ENTITY epsiv "&#x3F5;" >
+<!ENTITY eth "&#xF0;" >
+<!ENTITY ffilig "&#xFB03;" >
+<!ENTITY Escr "&#x2130;" >
+<!ENTITY complement "&#x2201;" >
+<!ENTITY dbreve "&#x5B;&#x64;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY rationals "&#x211A;" >
+<!ENTITY Ll "&#x22D8;" >
+<!ENTITY SucceedsEqual "&#x2AB0;" >
+<!ENTITY hardcy "&#x44A;" >
+<!ENTITY nVdash "&#x22AE;" >
+<!ENTITY c.uarrbl "&#x34E;" >
+<!ENTITY apid "&#x224B;" >
+<!ENTITY Lt "&#x226A;" >
+<!ENTITY sqcup "&#x2294;" >
+<!ENTITY real "&#x211C;" >
+<!ENTITY ngE "&#x2267;&#x338;" >
+<!ENTITY iopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x41;&#x3B;" >
+<!ENTITY Fvec "&#x5B;&#x46;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY iexcl "&#xA1;" >
+<!ENTITY supset "&#x2283;" >
+<!ENTITY boxplus "&#x229E;" >
+<!ENTITY nfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x42;&#x3B;" >
+<!ENTITY FilledVerySmallSquare "&#x25AA;" >
+<!ENTITY homtht "&#x223B;" >
+<!ENTITY shcy "&#x448;" >
+<!ENTITY circledast "&#x229B;" >
+<!ENTITY bsol "&#x5C;" >
+<!ENTITY fbar "&#x5B;&#x66;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY Lcy "&#x41B;" >
+<!ENTITY amp "&#x26;&#x23;&#x33;&#x38;&#x3B;" >
+<!ENTITY kbreve "&#x5B;&#x6B;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY jsercy "&#x458;" >
+<!ENTITY Gcirc "&#x11C;" >
+<!ENTITY Ycheck "&#x5B;&#x59;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY fscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x42;&#x3B;" >
+<!ENTITY backepsilon "&#x3F6;" >
+<!ENTITY nge "&#x2271;" >
+<!ENTITY rect "&#x25AD;" >
+<!ENTITY uHar "&#x2963;" >
+<!ENTITY and "&#x2227;" >
+<!ENTITY rvec "&#x5B;&#x72;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY ngr "&#x3BD;" >
+<!ENTITY ofcir "&#x29BF;" >
+<!ENTITY urcorn "&#x231D;" >
+<!ENTITY nsubset "&#x2282;&#x20D2;" >
+<!ENTITY oacute "&#xF3;" >
+<!ENTITY ngt "&#x226F;" >
+<!ENTITY VerticalTilde "&#x2240;" >
+<!ENTITY ang "&#x2220;" >
+<!ENTITY lescc "&#x2AA8;" >
+<!ENTITY ztilde "&#x5B;&#x7A;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY RightUpTeeVector "&#x295C;" >
+<!ENTITY eDDot "&#x2A77;" >
+<!ENTITY Pbar "&#x5B;&#x50;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY ulcorner "&#x231C;" >
+<!ENTITY Xbreve "&#x5B;&#x58;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY nGtv "&#x226B;&#x338;" >
+<!ENTITY LessFullEqual "&#x2266;" >
+<!ENTITY b.iota "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x41;&#x3B;" >
+<!ENTITY Yuml "&#x178;" >
+<!ENTITY odiv "&#x2A38;" >
+<!ENTITY c.ringov "&#x20D8;" >
+<!ENTITY Pscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x42;&#x3B;" >
+<!ENTITY vartheta "&#x3D1;" >
+<!ENTITY c.plusbl "&#x31F;" >
+<!ENTITY c.ntldab "&#x34A;" >
+<!ENTITY apE "&#x2A70;" >
+<!ENTITY uarr "&#x2191;" >
+<!ENTITY plusmn "&#xB1;" >
+<!ENTITY gvec "&#x5B;&#x67;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY nesim "&#x2242;&#x338;" >
+<!ENTITY dblac "&#x2DD;" >
+<!ENTITY c.dvlnbl "&#x348;" >
+<!ENTITY boxDR "&#x2554;" >
+<!ENTITY Qbreve "&#x5B;&#x51;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY ImaginaryI "&#x2148;" >
+<!ENTITY varphi "&#x3D5;" >
+<!ENTITY Or "&#x2A54;" >
+<!ENTITY scsim "&#x227F;" >
+<!ENTITY ring "&#x2DA;" >
+<!ENTITY Jsercy "&#x408;" >
+<!ENTITY xoplus "&#x2A01;" >
+<!ENTITY minusb "&#x229F;" >
+<!ENTITY boxDL "&#x2557;" >
+<!ENTITY notinE "&#x22F9;&#x338;" >
+<!ENTITY SquareSuperset "&#x2290;" >
+<!ENTITY minusd "&#x2238;" >
+<!ENTITY kcirc "&#x5B;&#x6B;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY sube "&#x2286;" >
+<!ENTITY lcedil "&#x13C;" >
+<!ENTITY blk34 "&#x2593;" >
+<!ENTITY ape "&#x224A;" >
+<!ENTITY suphsol "&#x27C9;" >
+<!ENTITY Pi "&#x3A0;" >
+<!ENTITY Lfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x46;&#x3B;" >
+<!ENTITY nis "&#x22FC;" >
+<!ENTITY niv "&#x220B;" >
+<!ENTITY triangleright "&#x25B9;" >
+<!ENTITY DotEqual "&#x2250;" >
+<!ENTITY Iddot "&#x1ECA;" >
+<!ENTITY scnsim "&#x22E9;" >
+<!ENTITY Ndot "&#x1E44;" >
+<!ENTITY Ptilde "&#x5B;&#x50;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY Cup "&#x22D3;" >
+<!ENTITY boxDr "&#x2553;" >
+<!ENTITY models "&#x22A7;" >
+<!ENTITY Pr "&#x2ABB;" >
+<!ENTITY iota "&#x3B9;" >
+<!ENTITY rtriltri "&#x29CE;" >
+<!ENTITY qscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x36;&#x3B;" >
+<!ENTITY DiacriticalDoubleAcute "&#x2DD;" >
+<!ENTITY langd "&#x2991;" >
+<!ENTITY qacute "&#x5B;&#x71;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY boxDl "&#x2556;" >
+<!ENTITY Rcaron "&#x158;" >
+<!ENTITY timesb "&#x22A0;" >
+<!ENTITY ouml "&#xF6;" >
+<!ENTITY nsupseteqq "&#x2AC6;&#x338;" >
+<!ENTITY c.dblac "&#x30B;" >
+<!ENTITY timesd "&#x2A30;" >
+<!ENTITY subE "&#x2AC5;" >
+<!ENTITY epar "&#x22D5;" >
+<!ENTITY barwedge "&#x2305;" >
+<!ENTITY qbar "&#x5B;&#x71;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY KJcy "&#x40C;" >
+<!ENTITY Lgr "&#x39B;" >
+<!ENTITY vbreve "&#x5B;&#x76;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY utilde "&#x169;" >
+<!ENTITY Cdot "&#x10A;" >
+<!ENTITY RightTee "&#x22A2;" >
+<!ENTITY Dagger "&#x2021;" >
+<!ENTITY sqcap "&#x2293;" >
+<!ENTITY echeck "&#x5B;&#x65;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY simplus "&#x2A24;" >
+<!ENTITY NotTildeFullEqual "&#x2247;" >
+<!ENTITY tosa "&#x2929;" >
+<!ENTITY subrarr "&#x2979;" >
+<!ENTITY numero "&#x2116;" >
+<!ENTITY c.awrgov "&#x20DA;" >
+<!ENTITY rsh "&#x21B1;" >
+<!ENTITY nlE "&#x2266;&#x338;" >
+<!ENTITY lbrksld "&#x298F;" >
+<!ENTITY odot "&#x2299;" >
+<!ENTITY ddot "&#x5B;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Lacute "&#x139;" >
+<!ENTITY supsetneqq "&#x2ACC;" >
+<!ENTITY Esim "&#x2A73;" >
+<!ENTITY Re "&#x211C;" >
+<!ENTITY Star "&#x22C6;" >
+<!ENTITY LeftCeiling "&#x2308;" >
+<!ENTITY bbrk "&#x23B5;" >
+<!ENTITY Wgrave "&#x1E80;" >
+<!ENTITY odblac "&#x151;" >
+<!ENTITY nearhk "&#x2924;" >
+<!ENTITY LeftArrowBar "&#x21E4;" >
+<!ENTITY Eacute "&#xC9;" >
+<!ENTITY ccirc "&#x109;" >
+<!ENTITY TildeFullEqual "&#x2245;" >
+<!ENTITY Etilde "&#x1EBC;" >
+<!ENTITY jcy "&#x439;" >
+<!ENTITY bigstar "&#x2605;" >
+<!ENTITY gesdoto "&#x2A82;" >
+<!ENTITY nle "&#x2270;" >
+<!ENTITY lArr "&#x21D0;" >
+<!ENTITY Wtilde "&#x5B;&#x57;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY ecir "&#x2256;" >
+<!ENTITY c.dvlnab "&#x30E;" >
+<!ENTITY cuesc "&#x22DF;" >
+<!ENTITY rbreve "&#x213;" >
+<!ENTITY Sc "&#x2ABC;" >
+<!ENTITY circlearrowright "&#x21BB;" >
+<!ENTITY midcir "&#x2AF0;" >
+<!ENTITY zcirc "&#x1E91;" >
+<!ENTITY cularr "&#x21B6;" >
+<!ENTITY succ "&#x227B;" >
+<!ENTITY Bddot "&#x5B;&#x42;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY lcub "&#x7B;" >
+<!ENTITY nlt "&#x226E;" >
+<!ENTITY THgr "&#x398;" >
+<!ENTITY Ydot "&#x1E8E;" >
+<!ENTITY lbrkslu "&#x298D;" >
+<!ENTITY larrtl "&#x21A2;" >
+<!ENTITY Hat "&#x5E;" >
+<!ENTITY mddot "&#x1E43;" >
+<!ENTITY jacute "&#x5B;&#x6A;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY apos "&#x27;" >
+<!ENTITY ldquor "&#x201E;" >
+<!ENTITY NotGreaterGreater "&#x226B;&#x338;" >
+<!ENTITY ast "&#x2A;" >
+<!ENTITY Vcirc "&#x5B;&#x56;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY xacute "&#x5B;&#x78;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY fjlig "&#x66;&#x6A;" >
+<!ENTITY Ycy "&#x42B;" >
+<!ENTITY profline "&#x2312;" >
+<!ENTITY b.equals "&#x3D;" >
+<!ENTITY larrb "&#x21E4;" >
+<!ENTITY trianglerighteq "&#x22B5;" >
+<!ENTITY omegadot "&#x5B;&#x6F;&#x6D;&#x65;&#x67;&#x61;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY gddot "&#x5B;&#x67;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Jbreve "&#x5B;&#x4A;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY eqvparsl "&#x29E5;" >
+<!ENTITY c.lstrov "&#x336;" >
+<!ENTITY Hacute "&#x5B;&#x48;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY lesdoto "&#x2A81;" >
+<!ENTITY nang "&#x2220;&#x20D2;" >
+<!ENTITY vsubne "&#x228A;&#xFE00;" >
+<!ENTITY Psi "&#x3A8;" >
+<!ENTITY trianglelefteq "&#x22B4;" >
+<!ENTITY curlyvee "&#x22CE;" >
+<!ENTITY dwangle "&#x29A6;" >
+<!ENTITY prcue "&#x227C;" >
+<!ENTITY LessEqualGreater "&#x22DA;" >
+<!ENTITY ltrPar "&#x2996;" >
+<!ENTITY succcurlyeq "&#x227D;" >
+<!ENTITY zdot "&#x17C;" >
+<!ENTITY jfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x37;&#x3B;" >
+<!ENTITY ReverseUpEquilibrium "&#x296F;" >
+<!ENTITY ybreve "&#x5B;&#x79;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY oelig "&#x153;" >
+<!ENTITY hairsp "&#x200A;" >
+<!ENTITY asympeq "&#x224D;" >
+<!ENTITY UpArrowBar "&#x2912;" >
+<!ENTITY llarr "&#x21C7;" >
+<!ENTITY vsubnE "&#x2ACB;&#xFE00;" >
+<!ENTITY b.phiv "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x46;&#x3B;" >
+<!ENTITY NotRightTriangleBar "&#x29D0;&#x338;" >
+<!ENTITY Wopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x45;&#x3B;" >
+<!ENTITY Ltilde "&#x5B;&#x4C;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY simrarr "&#x2972;" >
+<!ENTITY NotTildeEqual "&#x2244;" >
+<!ENTITY RightTeeVector "&#x295B;" >
+<!ENTITY Cbreve "&#x5B;&#x43;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY okina "&#x2BB;" >
+<!ENTITY caps "&#x2229;&#xFE00;" >
+<!ENTITY c.cndrb "&#x310;" >
+<!ENTITY not "&#xAC;" >
+<!ENTITY Stilde "&#x5B;&#x53;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY Aacute "&#xC1;" >
+<!ENTITY blk14 "&#x2591;" >
+<!ENTITY blk12 "&#x2592;" >
+<!ENTITY b.phis "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x37;&#x3B;" >
+<!ENTITY Aopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x38;&#x3B;" >
+<!ENTITY cuepr "&#x22DE;" >
+<!ENTITY race "&#x223D;&#x331;" >
+<!ENTITY Yfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x43;&#x3B;" >
+<!ENTITY CircleTimes "&#x2297;" >
+<!ENTITY dharl "&#x21C3;" >
+<!ENTITY larrpl "&#x2939;" >
+<!ENTITY xsqcup "&#x2A06;" >
+<!ENTITY nsqsube "&#x22E2;" >
+<!ENTITY frown "&#x2322;" >
+<!ENTITY ratail "&#x291A;" >
+<!ENTITY dharr "&#x21C2;" >
+<!ENTITY target "&#x2316;" >
+<!ENTITY npr "&#x2280;" >
+<!ENTITY Sacute "&#x15A;" >
+<!ENTITY gvnE "&#x2269;&#xFE00;" >
+<!ENTITY bnequiv "&#x2261;&#x20E5;" >
+<!ENTITY colon "&#x3A;" >
+<!ENTITY c.dblgr "&#x30F;" >
+<!ENTITY egrave "&#xE8;" >
+<!ENTITY napE "&#x2A70;&#x338;" >
+<!ENTITY Barv "&#x2AE7;" >
+<!ENTITY Lopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x33;&#x3B;" >
+<!ENTITY lesdot "&#x2A7F;" >
+<!ENTITY NotLessTilde "&#x2274;" >
+<!ENTITY njcy "&#x45A;" >
+<!ENTITY Oacute "&#xD3;" >
+<!ENTITY nwnear "&#x2927;" >
+<!ENTITY c.xab "&#x33D;" >
+<!ENTITY Ibar "&#x197;" >
+<!ENTITY bowtie "&#x22C8;" >
+<!ENTITY c.lhrgbl "&#x31C;" >
+<!ENTITY c.sstrov "&#x335;" >
+<!ENTITY hbreve "&#x1E2B;" >
+<!ENTITY dtdot "&#x22F1;" >
+<!ENTITY CircleMinus "&#x2296;" >
+<!ENTITY Xi "&#x39E;" >
+<!ENTITY nbumpe "&#x224F;&#x338;" >
+<!ENTITY bcong "&#x224C;" >
+<!ENTITY Hfr "&#x210C;" >
+<!ENTITY xopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x39;&#x3B;" >
+<!ENTITY Ztilde "&#x5B;&#x5A;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY Tbar "&#x166;" >
+<!ENTITY bigotimes "&#x2A02;" >
+<!ENTITY c.breve "&#x306;" >
+<!ENTITY Iscr "&#x2110;" >
+<!ENTITY UpTeeArrow "&#x21A5;" >
+<!ENTITY gneqq "&#x2269;" >
+<!ENTITY npart "&#x2202;&#x338;" >
+<!ENTITY nrtri "&#x22EB;" >
+<!ENTITY DownLeftTeeVector "&#x295E;" >
+<!ENTITY compfn "&#x2218;" >
+<!ENTITY Jvec "&#x5B;&#x4A;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY mopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x45;&#x3B;" >
+<!ENTITY tcaron "&#x165;" >
+<!ENTITY DoubleVerticalBar "&#x2225;" >
+<!ENTITY bopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x33;&#x3B;" >
+<!ENTITY rightarrowtail "&#x21A3;" >
+<!ENTITY Supset "&#x22D1;" >
+<!ENTITY lgrave "&#x5B;&#x6C;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY phone "&#x260E;" >
+<!ENTITY Uvec "&#x5B;&#x55;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY nvdash "&#x22AC;" >
+<!ENTITY zddot "&#x1E93;" >
+<!ENTITY Superset "&#x2283;" >
+<!ENTITY c.dovlin "&#x33F;" >
+<!ENTITY Lstrok "&#x141;" >
+<!ENTITY Gddot "&#x5B;&#x47;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY NotSquareSubsetEqual "&#x22E2;" >
+<!ENTITY LeftUpVector "&#x21BF;" >
+<!ENTITY lmidot "&#x140;" >
+<!ENTITY ntriangleright "&#x22EB;" >
+<!ENTITY rmoust "&#x23B1;" >
+<!ENTITY ropar "&#x2986;" >
+<!ENTITY nsc "&#x2281;" >
+<!ENTITY Tbreve "&#x5B;&#x54;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY ecirc "&#xEA;" >
+<!ENTITY kddot "&#x5B;&#x6B;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Dddot "&#x5B;&#x44;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Dcaron "&#x10E;" >
+<!ENTITY xcirc "&#x25EF;" >
+<!ENTITY ubar "&#x289;" >
+<!ENTITY jscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x46;&#x3B;" >
+<!ENTITY rightharpoonup "&#x21C0;" >
+<!ENTITY bsemi "&#x204F;" >
+<!ENTITY nparallel "&#x2226;" >
+<!ENTITY omid "&#x29B6;" >
+<!ENTITY geqq "&#x2267;" >
+<!ENTITY SupersetEqual "&#x2287;" >
+<!ENTITY Vddot "&#x1E7E;" >
+<!ENTITY capbrcup "&#x2A49;" >
+<!ENTITY jbar "&#x25F;" >
+<!ENTITY RightArrowBar "&#x21E5;" >
+<!ENTITY kappa "&#x3BA;" >
+<!ENTITY DJcy "&#x402;" >
+<!ENTITY fcy "&#x444;" >
+<!ENTITY diam "&#x22C4;" >
+<!ENTITY b.gamma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x34;&#x3B;" >
+<!ENTITY eqcolon "&#x2255;" >
+<!ENTITY Btilde "&#x5B;&#x42;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY gnap "&#x2A8A;" >
+<!ENTITY emsp14 "&#x2005;" >
+<!ENTITY leftthreetimes "&#x22CB;" >
+<!ENTITY emsp13 "&#x2004;" >
+<!ENTITY rbrke "&#x298C;" >
+<!ENTITY vvec "&#x5B;&#x76;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Tscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x46;&#x3B;" >
+<!ENTITY sgrave "&#x5B;&#x73;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY larrlp "&#x21AB;" >
+<!ENTITY risingdotseq "&#x2253;" >
+<!ENTITY gEl "&#x2A8C;" >
+<!ENTITY UnionPlus "&#x228E;" >
+<!ENTITY obreve "&#x14F;" >
+<!ENTITY gtreqqless "&#x2A8C;" >
+<!ENTITY LeftUpTeeVector "&#x2960;" >
+<!ENTITY nearr "&#x2197;" >
+<!ENTITY subplus "&#x2ABF;" >
+<!ENTITY harrw "&#x21AD;" >
+<!ENTITY kvec "&#x5B;&#x6B;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY supE "&#x2AC6;" >
+<!ENTITY iquest "&#xBF;" >
+<!ENTITY wfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x34;&#x3B;" >
+<!ENTITY Gdot "&#x120;" >
+<!ENTITY TripleDot "&#x20;&#x20DB;" >
+<!ENTITY num "&#x23;" >
+<!ENTITY gesl "&#x22DB;&#xFE00;" >
+<!ENTITY downharpoonleft "&#x21C3;" >
+<!ENTITY Bcirc "&#x5B;&#x42;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY Ucy "&#x423;" >
+<!ENTITY Itilde "&#x128;" >
+<!ENTITY atilde "&#xE3;" >
+<!ENTITY Rdot "&#x1E58;" >
+<!ENTITY sup2 "&#xB2;" >
+<!ENTITY sup3 "&#xB3;" >
+<!ENTITY dotplus "&#x2214;" >
+<!ENTITY sup1 "&#xB9;" >
+<!ENTITY Cgrave "&#x5B;&#x43;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY rAarr "&#x21DB;" >
+<!ENTITY c.utrien "&#x20E4;" >
+<!ENTITY Rrightarrow "&#x21DB;" >
+<!ENTITY xhArr "&#x27FA;" >
+<!ENTITY lobrk "&#x27E6;" >
+<!ENTITY blacktriangleleft "&#x25C2;" >
+<!ENTITY hamilt "&#x210B;" >
+<!ENTITY Lsh "&#x21B0;" >
+<!ENTITY dzcy "&#x45F;" >
+<!ENTITY Tcirc "&#x5B;&#x54;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY veebar "&#x22BB;" >
+<!ENTITY Mbreve "&#x5B;&#x4D;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY sung "&#x266A;" >
+<!ENTITY qbnd "&#x2263;" >
+<!ENTITY ffr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x33;&#x3B;" >
+<!ENTITY marker "&#x25AE;" >
+<!ENTITY precsim "&#x227E;" >
+<!ENTITY iddot "&#x1ECB;" >
+<!ENTITY planckh "&#x210E;" >
+<!ENTITY UpTee "&#x22A5;" >
+<!ENTITY Xddot "&#x5B;&#x58;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Rightarrow "&#x21D2;" >
+<!ENTITY Dcy "&#x414;" >
+<!ENTITY uscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x41;&#x3B;" >
+<!ENTITY isindot "&#x22F5;" >
+<!ENTITY nrArr "&#x21CF;" >
+<!ENTITY b.epsi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x36;&#x3B;" >
+<!ENTITY acute "&#xB4;" >
+<!ENTITY sdot "&#x22C5;" >
+<!ENTITY zgrave "&#x5B;&#x7A;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY boxV "&#x2551;" >
+<!ENTITY Cross "&#x2A2F;" >
+<!ENTITY supdsub "&#x2AD8;" >
+<!ENTITY gtrsim "&#x2273;" >
+<!ENTITY Idigr "&#x3AA;" >
+<!ENTITY eacgr "&#x3AD;" >
+<!ENTITY percnt "&#x25;" >
+<!ENTITY orarr "&#x21BB;" >
+<!ENTITY hdot "&#x1E23;" >
+<!ENTITY boxh "&#x2500;" >
+<!ENTITY copysr "&#x2117;" >
+<!ENTITY larrfs "&#x291D;" >
+<!ENTITY parallel "&#x2225;" >
+<!ENTITY shortmid "&#x2223;" >
+<!ENTITY lsquor "&#x201A;" >
+<!ENTITY Jgrave "&#x5B;&#x4A;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Ufr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x38;&#x3B;" >
+<!ENTITY supe "&#x2287;" >
+<!ENTITY gneq "&#x2A88;" >
+<!ENTITY ldca "&#x2936;" >
+<!ENTITY Vacute "&#x5B;&#x56;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY Del "&#x2207;" >
+<!ENTITY udarr "&#x21C5;" >
+<!ENTITY larrhk "&#x21A9;" >
+<!ENTITY Fbreve "&#x5B;&#x46;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY boxH "&#x2550;" >
+<!ENTITY scE "&#x2AB4;" >
+<!ENTITY RightTriangle "&#x22B3;" >
+<!ENTITY nleftrightarrow "&#x21AE;" >
+<!ENTITY dotsquare "&#x22A1;" >
+<!ENTITY htilde "&#x5B;&#x68;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY approx "&#x2248;" >
+<!ENTITY vangrt "&#x299C;" >
+<!ENTITY Ugr "&#x3A5;" >
+<!ENTITY Ccirc "&#x108;" >
+<!ENTITY wedge "&#x2227;" >
+<!ENTITY b.kappa "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x42;&#x3B;" >
+<!ENTITY frac12 "&#xBD;" >
+<!ENTITY frac15 "&#x2155;" >
+<!ENTITY topbot "&#x2336;" >
+<!ENTITY frac16 "&#x2159;" >
+<!ENTITY Dfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x37;&#x3B;" >
+<!ENTITY NotSucceeds "&#x2281;" >
+<!ENTITY frac13 "&#x2153;" >
+<!ENTITY frac14 "&#xBC;" >
+<!ENTITY sce "&#x2AB0;" >
+<!ENTITY notniva "&#x220C;" >
+<!ENTITY SquareIntersection "&#x2293;" >
+<!ENTITY angrt "&#x221F;" >
+<!ENTITY elinters "&#x23E7;" >
+<!ENTITY notnivc "&#x22FD;" >
+<!ENTITY frac18 "&#x215B;" >
+<!ENTITY notnivb "&#x22FE;" >
+<!ENTITY leftarrowtail "&#x21A2;" >
+<!ENTITY Integral "&#x222B;" >
+<!ENTITY preccurlyeq "&#x227C;" >
+<!ENTITY rightsquigarrow "&#x219D;" >
+<!ENTITY Ctilde "&#x5B;&#x43;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY rang "&#x27E9;" >
+<!ENTITY ac "&#x223E;" >
+<!ENTITY NotEqual "&#x2260;" >
+<!ENTITY boxv "&#x2502;" >
+<!ENTITY af "&#x2061;" >
+<!ENTITY c.diarbl "&#x324;" >
+<!ENTITY scy "&#x441;" >
+<!ENTITY npolint "&#x2A14;" >
+<!ENTITY seArr "&#x21D8;" >
+<!ENTITY succnapprox "&#x2ABA;" >
+<!ENTITY frac23 "&#x2154;" >
+<!ENTITY Equilibrium "&#x21CC;" >
+<!ENTITY Dgr "&#x394;" >
+<!ENTITY ThickSpace "&#x205F;&#x200A;" >
+<!ENTITY ap "&#x2248;" >
+<!ENTITY qddot "&#x5B;&#x71;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY ycheck "&#x5B;&#x79;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY angst "&#xC5;" >
+<!ENTITY frac25 "&#x2156;" >
+<!ENTITY DoubleUpDownArrow "&#x21D5;" >
+<!ENTITY lharul "&#x296A;" >
+<!ENTITY npreceq "&#x2AAF;&#x338;" >
+<!ENTITY origof "&#x22B6;" >
+<!ENTITY LeftDownTeeVector "&#x2961;" >
+<!ENTITY DiacriticalTilde "&#x2DC;" >
+<!ENTITY nvrArr "&#x2903;" >
+<!ENTITY leftrightharpoons "&#x21CB;" >
+<!ENTITY hksearow "&#x2925;" >
+<!ENTITY Zbreve "&#x5B;&#x5A;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY dacute "&#x5B;&#x64;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY nvsim "&#x223C;&#x20D2;" >
+<!ENTITY profalar "&#x232E;" >
+<!ENTITY subsim "&#x2AC7;" >
+<!ENTITY Qcirc "&#x5B;&#x51;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY ocirc "&#xF4;" >
+<!ENTITY b.Gamma "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x41;&#x41;&#x3B;" >
+<!ENTITY c.larrov "&#x20EA;" >
+<!ENTITY Qgrave "&#x5B;&#x51;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY frac34 "&#xBE;" >
+<!ENTITY scpolint "&#x2A13;" >
+<!ENTITY fopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x37;&#x3B;" >
+<!ENTITY ncaron "&#x148;" >
+<!ENTITY Cvec "&#x5B;&#x43;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY frac38 "&#x215C;" >
+<!ENTITY c.wbrgab "&#x20E9;" >
+<!ENTITY frac35 "&#x2157;" >
+<!ENTITY OverBar "&#x203E;" >
+<!ENTITY bddot "&#x5B;&#x62;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY franc "&#x20A3;" >
+<!ENTITY dzigrarr "&#x27FF;" >
+<!ENTITY NotPrecedesEqual "&#x2AAF;&#x338;" >
+<!ENTITY bcy "&#x431;" >
+<!ENTITY nharr "&#x21AE;" >
+<!ENTITY twoheadrightarrow "&#x21A0;" >
+<!ENTITY jcheck "&#x5B;&#x6A;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY iogon "&#x12F;" >
+<!ENTITY ruluhar "&#x2968;" >
+<!ENTITY gesdot "&#x2A80;" >
+<!ENTITY ggrave "&#x5B;&#x67;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Eopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x43;&#x3B;" >
+<!ENTITY nearrow "&#x2197;" >
+<!ENTITY xcap "&#x22C2;" >
+<!ENTITY Dbreve "&#x5B;&#x44;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY b.chi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x38;&#x3B;" >
+<!ENTITY c.circ "&#x302;" >
+<!ENTITY rdldhar "&#x2969;" >
+<!ENTITY c.keyen "&#x20E3;" >
+<!ENTITY hstrok "&#x127;" >
+<!ENTITY frac45 "&#x2158;" >
+<!ENTITY epsi "&#x3B5;" >
+<!ENTITY maltese "&#x2720;" >
+<!ENTITY setminus "&#x2216;" >
+<!ENTITY Popf "&#x2119;" >
+<!ENTITY thkap "&#x2248;" >
+<!ENTITY RightArrowLeftArrow "&#x21C4;" >
+<!ENTITY downharpoonright "&#x21C2;" >
+<!ENTITY ibreve "&#x12D;" >
+<!ENTITY sfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x30;&#x3B;" >
+<!ENTITY smashp "&#x2A33;" >
+<!ENTITY vartriangleright "&#x22B3;" >
+<!ENTITY dd "&#x2146;" >
+<!ENTITY Echeck "&#x5B;&#x45;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Mbar "&#x5B;&#x4D;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY nleqq "&#x2266;&#x338;" >
+<!ENTITY lacute "&#x13A;" >
+<!ENTITY Ygrave "&#x1EF2;" >
+<!ENTITY intercal "&#x22BA;" >
+<!ENTITY Bbar "&#x243;" >
+<!ENTITY Mscr "&#x2133;" >
+<!ENTITY Xbar "&#x5B;&#x58;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY nsupset "&#x2283;&#x20D2;" >
+<!ENTITY nLtv "&#x226A;&#x338;" >
+<!ENTITY NotLessSlantEqual "&#x2A7D;&#x338;" >
+<!ENTITY nbump "&#x224E;&#x338;" >
+<!ENTITY rarr "&#x2192;" >
+<!ENTITY aleph "&#x2135;" >
+<!ENTITY lesssim "&#x2272;" >
+<!ENTITY b.phi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x37;&#x3B;" >
+<!ENTITY dvec "&#x5B;&#x64;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Jukcy "&#x404;" >
+<!ENTITY sgr "&#x3C3;" >
+<!ENTITY angmsd "&#x2221;" >
+<!ENTITY sigma "&#x3C3;" >
+<!ENTITY ee "&#x2147;" >
+<!ENTITY image "&#x2111;" >
+<!ENTITY qopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x32;&#x3B;" >
+<!ENTITY eg "&#x2A9A;" >
+<!ENTITY Nvec "&#x5B;&#x4E;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY el "&#x2A99;" >
+<!ENTITY gjcy "&#x453;" >
+<!ENTITY bfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x46;&#x3B;" >
+<!ENTITY Yvec "&#x5B;&#x59;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY urcrop "&#x230E;" >
+<!ENTITY geqslant "&#x2A7E;" >
+<!ENTITY LeftRightArrow "&#x2194;" >
+<!ENTITY llcorner "&#x231E;" >
+<!ENTITY NotExists "&#x2204;" >
+<!ENTITY nvHarr "&#x2904;" >
+<!ENTITY udigr "&#x3CB;" >
+<!ENTITY gE "&#x2267;" >
+<!ENTITY ENG "&#x14A;" >
+<!ENTITY Bscr "&#x212C;" >
+<!ENTITY smid "&#x2223;" >
+<!ENTITY ybar "&#x5B;&#x79;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY precnsim "&#x22E8;" >
+<!ENTITY robrk "&#x27E7;" >
+<!ENTITY shy "&#xAD;" >
+<!ENTITY nscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x33;&#x3B;" >
+<!ENTITY UpArrowDownArrow "&#x21C5;" >
+<!ENTITY Backslash "&#x2216;" >
+<!ENTITY bgr "&#x3B2;" >
+<!ENTITY nsce "&#x2AB0;&#x338;" >
+<!ENTITY nbar "&#x5B;&#x6E;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY sim "&#x223C;" >
+<!ENTITY phgr "&#x3C6;" >
+<!ENTITY divide "&#xF7;" >
+<!ENTITY Colon "&#x2237;" >
+<!ENTITY Qfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x34;&#x3B;" >
+<!ENTITY ge "&#x2265;" >
+<!ENTITY NotSquareSupersetEqual "&#x22E3;" >
+<!ENTITY gg "&#x226B;" >
+<!ENTITY reals "&#x211D;" >
+<!ENTITY parsl "&#x2AFD;" >
+<!ENTITY zvec "&#x5B;&#x7A;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Xscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x33;&#x3B;" >
+<!ENTITY seswar "&#x2929;" >
+<!ENTITY gl "&#x2277;" >
+<!ENTITY Uddot "&#x1EE4;" >
+<!ENTITY Uring "&#x16E;" >
+<!ENTITY ltdot "&#x22D6;" >
+<!ENTITY NotPrecedes "&#x2280;" >
+<!ENTITY bsolhsub "&#x27C8;" >
+<!ENTITY Diamond "&#x22C4;" >
+<!ENTITY varepsilon "&#x3F5;" >
+<!ENTITY Ytilde "&#x1EF8;" >
+<!ENTITY gt "&#x3E;" >
+<!ENTITY wreath "&#x2240;" >
+<!ENTITY bkarow "&#x290D;" >
+<!ENTITY Gacute "&#x1F4;" >
+<!ENTITY ovec "&#x5B;&#x6F;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY cscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x38;&#x3B;" >
+<!ENTITY fork "&#x22D4;" >
+<!ENTITY rHar "&#x2964;" >
+<!ENTITY wedgeq "&#x2259;" >
+<!ENTITY frowny "&#x2639;" >
+<!ENTITY circlearrowleft "&#x21BA;" >
+<!ENTITY Exists "&#x2203;" >
+<!ENTITY cirscir "&#x29C2;" >
+<!ENTITY weierp "&#x2118;" >
+<!ENTITY NoBreak "&#x2060;" >
+<!ENTITY Imacr "&#x12A;" >
+<!ENTITY cbar "&#x23C;" >
+<!ENTITY auml "&#xE4;" >
+<!ENTITY subset "&#x2282;" >
+<!ENTITY nparsl "&#x2AFD;&#x20E5;" >
+<!ENTITY eqcirc "&#x2256;" >
+<!ENTITY gtilde "&#x5B;&#x67;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY vert "&#x7C;" >
+<!ENTITY c.squbl "&#x33B;" >
+<!ENTITY cupor "&#x2A45;" >
+<!ENTITY smtes "&#x2AAC;&#xFE00;" >
+<!ENTITY LeftTriangleBar "&#x29CF;" >
+<!ENTITY phiv "&#x3D5;" >
+<!ENTITY GreaterEqual "&#x2265;" >
+<!ENTITY caron "&#x2C7;" >
+<!ENTITY oint "&#x222E;" >
+<!ENTITY imacr "&#x12B;" >
+<!ENTITY gtquest "&#x2A7C;" >
+<!ENTITY blacktriangleright "&#x25B8;" >
+<!ENTITY b.zeta "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x37;&#x3B;" >
+<!ENTITY RightArrow "&#x2192;" >
+<!ENTITY ic "&#x2063;" >
+<!ENTITY Vdot "&#x5B;&#x56;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY racute "&#x155;" >
+<!ENTITY oddot "&#x5B;&#x6F;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY ii "&#x2148;" >
+<!ENTITY agrave "&#xE0;" >
+<!ENTITY lesseqgtr "&#x22DA;" >
+<!ENTITY ocy "&#x43E;" >
+<!ENTITY in "&#x2208;" >
+<!ENTITY Ecirc "&#xCA;" >
+<!ENTITY tacute "&#x5B;&#x74;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY Dot "&#xA8;" >
+<!ENTITY mcirc "&#x5B;&#x6D;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY uplus "&#x228E;" >
+<!ENTITY srarr "&#x2192;" >
+<!ENTITY it "&#x2062;" >
+<!ENTITY yscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x45;&#x3B;" >
+<!ENTITY looparrowright "&#x21AC;" >
+<!ENTITY gtrless "&#x2277;" >
+<!ENTITY Otimes "&#x2A37;" >
+<!ENTITY bcheck "&#x5B;&#x62;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY bigoplus "&#x2A01;" >
+<!ENTITY Kdot "&#x1E32;" >
+<!ENTITY Map "&#x2905;" >
+<!ENTITY c.gravbl "&#x316;" >
+<!ENTITY Intersection "&#x22C2;" >
+<!ENTITY wdot "&#x1E87;" >
+<!ENTITY Kgrave "&#x5B;&#x4B;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY gtrarr "&#x2978;" >
+<!ENTITY nless "&#x226E;" >
+<!ENTITY suphsub "&#x2AD7;" >
+<!ENTITY lharu "&#x21BC;" >
+<!ENTITY c.rtckbl "&#x319;" >
+<!ENTITY equest "&#x225F;" >
+<!ENTITY lE "&#x2266;" >
+<!ENTITY angle "&#x2220;" >
+<!ENTITY ptilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x37;&#x31;&#x3B;" >
+<!ENTITY squf "&#x25AA;" >
+<!ENTITY smt "&#x2AAA;" >
+<!ENTITY xotime "&#x2A02;" >
+<!ENTITY subnE "&#x2ACB;" >
+<!ENTITY Ocirc "&#xD4;" >
+<!ENTITY c.squen "&#x20DE;" >
+<!ENTITY thorn "&#xFE;" >
+<!ENTITY nLeftarrow "&#x21CD;" >
+<!ENTITY adot "&#x227;" >
+<!ENTITY DScy "&#x405;" >
+<!ENTITY b.tau "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x35;&#x3B;" >
+<!ENTITY ReverseEquilibrium "&#x21CB;" >
+<!ENTITY RightVector "&#x21C0;" >
+<!ENTITY Qtilde "&#x5B;&#x51;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY hercon "&#x22B9;" >
+<!ENTITY lhard "&#x21BD;" >
+<!ENTITY equals "&#x3D;" >
+<!ENTITY ETH "&#xD0;" >
+<!ENTITY dddot "&#x5B;&#x64;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY le "&#x2264;" >
+<!ENTITY DifferentialD "&#x2146;" >
+<!ENTITY ofr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x43;&#x3B;" >
+<!ENTITY lg "&#x2276;" >
+<!ENTITY c.rarrab "&#x20D7;" >
+<!ENTITY subne "&#x228A;" >
+<!ENTITY equivDD "&#x2A78;" >
+<!ENTITY ll "&#x226A;" >
+<!ENTITY rsaquo "&#x203A;" >
+<!ENTITY Mcy "&#x41C;" >
+<!ENTITY Bgrave "&#x5B;&#x42;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY c.dtckbl "&#x31E;" >
+<!ENTITY duarr "&#x21F5;" >
+<!ENTITY lessapprox "&#x2A85;" >
+<!ENTITY lt "&#x26;&#x23;&#x36;&#x30;&#x3B;" >
+<!ENTITY LeftArrowRightArrow "&#x21C6;" >
+<!ENTITY DoubleDownArrow "&#x21D3;" >
+<!ENTITY RightCeiling "&#x2309;" >
+<!ENTITY there4 "&#x2234;" >
+<!ENTITY scedil "&#x15F;" >
+<!ENTITY frac56 "&#x215A;" >
+<!ENTITY roplus "&#x2A2E;" >
+<!ENTITY ordf "&#xAA;" >
+<!ENTITY sol "&#x2F;" >
+<!ENTITY upharpoonleft "&#x21BF;" >
+<!ENTITY frac58 "&#x215D;" >
+<!ENTITY scheck "&#x5B;&#x73;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Fcheck "&#x5B;&#x46;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY ordm "&#xBA;" >
+<!ENTITY bne "&#x3D;&#x20E5;" >
+<!ENTITY sqsupset "&#x2290;" >
+<!ENTITY nsim "&#x2241;" >
+<!ENTITY angrtvb "&#x22BE;" >
+<!ENTITY succapprox "&#x2AB8;" >
+<!ENTITY ogr "&#x3BF;" >
+<!ENTITY ogt "&#x29C1;" >
+<!ENTITY Uacute "&#xDA;" >
+<!ENTITY Iopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x30;&#x3B;" >
+<!ENTITY oslash "&#xF8;" >
+<!ENTITY nlarr "&#x219A;" >
+<!ENTITY mp "&#x2213;" >
+<!ENTITY Ccaron "&#x10C;" >
+<!ENTITY searrow "&#x2198;" >
+<!ENTITY mu "&#x3BC;" >
+<!ENTITY lvertneqq "&#x2268;&#xFE00;" >
+<!ENTITY sqsub "&#x228F;" >
+<!ENTITY EEgr "&#x397;" >
+<!ENTITY Eacgr "&#x388;" >
+<!ENTITY NotLessGreater "&#x2278;" >
+<!ENTITY subedot "&#x2AC3;" >
+<!ENTITY plus "&#x2B;" >
+<!ENTITY eqslantless "&#x2A95;" >
+<!ENTITY cacute "&#x107;" >
+<!ENTITY ohm "&#x3A9;" >
+<!ENTITY ne "&#x2260;" >
+<!ENTITY Iogon "&#x12E;" >
+<!ENTITY c.rcomab "&#x314;" >
+<!ENTITY sqsup "&#x2290;" >
+<!ENTITY ni "&#x220B;" >
+<!ENTITY ograve "&#xF2;" >
+<!ENTITY LeftArrow "&#x2190;" >
+<!ENTITY nwarr "&#x2196;" >
+<!ENTITY Uarr "&#x219F;" >
+<!ENTITY oS "&#x24C8;" >
+<!ENTITY wbreve "&#x5B;&#x77;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY bot "&#x22A5;" >
+<!ENTITY nu "&#x3BD;" >
+<!ENTITY LeftFloor "&#x230A;" >
+<!ENTITY RightFloor "&#x230B;" >
+<!ENTITY jopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x42;&#x3B;" >
+<!ENTITY nVDash "&#x22AF;" >
+<!ENTITY curlyeqprec "&#x22DE;" >
+<!ENTITY nprec "&#x2280;" >
+<!ENTITY frac78 "&#x215E;" >
+<!ENTITY lnapprox "&#x2A89;" >
+<!ENTITY Tcheck "&#x5B;&#x54;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Gvec "&#x5B;&#x47;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY Pgrave "&#x5B;&#x50;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY rharul "&#x296C;" >
+<!ENTITY fllig "&#xFB02;" >
+<!ENTITY VDash "&#x22AB;" >
+<!ENTITY squ "&#x25A1;" >
+<!ENTITY ltquest "&#x2A7B;" >
+<!ENTITY Mfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x30;&#x3B;" >
+<!ENTITY Oacgr "&#x38C;" >
+<!ENTITY cupdot "&#x228D;" >
+<!ENTITY LeftDownVectorBar "&#x2959;" >
+<!ENTITY PrecedesEqual "&#x2AAF;" >
+<!ENTITY or "&#x2228;" >
+<!ENTITY Tcedil "&#x162;" >
+<!ENTITY cross "&#x2717;" >
+<!ENTITY bcirc "&#x5B;&#x62;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY SquareSupersetEqual "&#x2292;" >
+<!ENTITY IJlig "&#x132;" >
+<!ENTITY nrtrie "&#x22ED;" >
+<!ENTITY rtrie "&#x22B5;" >
+<!ENTITY rtrif "&#x25B8;" >
+<!ENTITY nequiv "&#x2262;" >
+<!ENTITY Lbreve "&#x5B;&#x4C;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY equiv "&#x2261;" >
+<!ENTITY c.acute "&#x301;" >
+<!ENTITY xdtri "&#x25BD;" >
+<!ENTITY Topf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x42;&#x3B;" >
+<!ENTITY btilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x3B;" >
+<!ENTITY Sddot "&#x5B;&#x53;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY xcheck "&#x5B;&#x78;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY Mgr "&#x39C;" >
+<!ENTITY pi "&#x3C0;" >
+<!ENTITY ForAll "&#x2200;" >
+<!ENTITY pm "&#xB1;" >
+<!ENTITY RightTeeArrow "&#x21A6;" >
+<!ENTITY ldsh "&#x21B2;" >
+<!ENTITY Hgrave "&#x5B;&#x48;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Ouml "&#xD6;" >
+<!ENTITY Kcheck "&#x5B;&#x4B;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY pr "&#x227A;" >
+<!ENTITY Qbar "&#x5B;&#x51;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY RightUpVectorBar "&#x2954;" >
+<!ENTITY delta "&#x3B4;" >
+<!ENTITY rightarrow "&#x2192;" >
+<!ENTITY c.larrab "&#x20D6;" >
+<!ENTITY leftharpoondown "&#x21BD;" >
+<!ENTITY facute "&#x5B;&#x66;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY c.brgab "&#x346;" >
+<!ENTITY solbar "&#x233F;" >
+<!ENTITY nedot "&#x2250;&#x338;" >
+<!ENTITY Sgrave "&#x5B;&#x53;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY looparrowleft "&#x21AB;" >
+<!ENTITY lambda "&#x3BB;" >
+<!ENTITY c.utckbl "&#x31D;" >
+<!ENTITY hoarr "&#x21FF;" >
+<!ENTITY Qscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x43;&#x3B;" >
+<!ENTITY rharu "&#x21C0;" >
+<!ENTITY lsaquo "&#x2039;" >
+<!ENTITY varr "&#x2195;" >
+<!ENTITY hvec "&#x5B;&#x68;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY breve "&#x2D8;" >
+<!ENTITY kcy "&#x43A;" >
+<!ENTITY updownarrow "&#x2195;" >
+<!ENTITY b.kappav "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x45;&#x3B;" >
+<!ENTITY Rvec "&#x5B;&#x52;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY forkv "&#x2AD9;" >
+<!ENTITY NotTildeTilde "&#x2249;" >
+<!ENTITY uopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x36;&#x3B;" >
+<!ENTITY kjcy "&#x45C;" >
+<!ENTITY rhard "&#x21C1;" >
+<!ENTITY xgrave "&#x5B;&#x78;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY leftleftarrows "&#x21C7;" >
+<!ENTITY Fbar "&#x5B;&#x46;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY lEg "&#x2A8B;" >
+<!ENTITY lnsim "&#x22E6;" >
+<!ENTITY nexist "&#x2204;" >
+<!ENTITY olt "&#x29C0;" >
+<!ENTITY bepsi "&#x3F6;" >
+<!ENTITY exponentiale "&#x2147;" >
+<!ENTITY LeftTriangleEqual "&#x22B4;" >
+<!ENTITY nsubseteq "&#x2288;" >
+<!ENTITY Fscr "&#x2131;" >
+<!ENTITY b.Lambda "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x42;&#x32;&#x3B;" >
+<!ENTITY varnothing "&#x2205;" >
+<!ENTITY ngsim "&#x2275;" >
+<!ENTITY siml "&#x2A9D;" >
+<!ENTITY b.psi "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x44;&#x39;&#x3B;" >
+<!ENTITY minus "&#x2212;" >
+<!ENTITY sub "&#x2282;" >
+<!ENTITY simg "&#x2A9E;" >
+<!ENTITY rscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x37;&#x3B;" >
+<!ENTITY rx "&#x211E;" >
+<!ENTITY NotLessLess "&#x226A;&#x338;" >
+<!ENTITY sum "&#x2211;" >
+<!ENTITY udiagr "&#x3B0;" >
+<!ENTITY mDDot "&#x223A;" >
+<!ENTITY scnap "&#x2ABA;" >
+<!ENTITY sup "&#x2283;" >
+<!ENTITY sc "&#x227B;" >
+<!ENTITY Zcy "&#x417;" >
+<!ENTITY rbar "&#x5B;&#x72;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY bigodot "&#x2A00;" >
+<!ENTITY LJcy "&#x409;" >
+<!ENTITY bigtriangleup "&#x25B3;" >
+<!ENTITY pcheck "&#x5B;&#x70;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY jtilde "&#x5B;&#x6A;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY sime "&#x2243;" >
+<!ENTITY mldr "&#x2026;" >
+<!ENTITY eogon "&#x119;" >
+<!ENTITY euml "&#xEB;" >
+<!ENTITY leftrightsquigarrow "&#x21AD;" >
+<!ENTITY thgr "&#x3B8;" >
+<!ENTITY vprop "&#x221D;" >
+<!ENTITY gscr "&#x210A;" >
+<!ENTITY Wedge "&#x22C0;" >
+<!ENTITY ntrianglelefteq "&#x22EC;" >
+<!ENTITY c.brgbl "&#x32A;" >
+<!ENTITY sect "&#xA7;" >
+<!ENTITY b.gammad "&#x26;&#x23;&#x78;&#x31;&#x44;&#x37;&#x43;&#x42;&#x3B;" >
+<!ENTITY kfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x38;&#x3B;" >
+<!ENTITY svec "&#x5B;&#x73;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY gbar "&#x1E5;" >
+<!ENTITY Icy "&#x418;" >
+<!ENTITY smte "&#x2AAC;" >
+<!ENTITY mlcp "&#x2ADB;" >
+<!ENTITY uring "&#x16F;" >
+<!ENTITY Zdot "&#x17B;" >
+<!ENTITY NotPrecedesSlantEqual "&#x22E0;" >
+<!ENTITY scirc "&#x15D;" >
+<!ENTITY curvearrowleft "&#x21B6;" >
+<!ENTITY quest "&#x3F;" >
+<!ENTITY Mcirc "&#x5B;&#x4D;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY Qddot "&#x5B;&#x51;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY Implies "&#x21D2;" >
+<!ENTITY ecaron "&#x11B;" >
+<!ENTITY ldrdhar "&#x2967;" >
+<!ENTITY kgr "&#x3BA;" >
+<!ENTITY nbreve "&#x5B;&#x6E;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY DownTee "&#x22A4;" >
+<!ENTITY barwed "&#x2305;" >
+<!ENTITY Ddot "&#x5B;&#x44;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY RightVectorBar "&#x2953;" >
+<!ENTITY SuchThat "&#x220B;" >
+<!ENTITY Zfr "&#x2128;" >
+<!ENTITY apacir "&#x2A6F;" >
+<!ENTITY profsurf "&#x2313;" >
+<!ENTITY ncong "&#x2247;" >
+<!ENTITY IEcy "&#x415;" >
+<!ENTITY clubsuit "&#x2663;" >
+<!ENTITY c.uline "&#x332;" >
+<!ENTITY Cedilla "&#xB8;" >
+<!ENTITY xtilde "&#x5B;&#x78;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY capand "&#x2A44;" >
+<!ENTITY Odot "&#x22E;" >
+<!ENTITY Aogon "&#x104;" >
+<!ENTITY euro "&#x20AC;" >
+<!ENTITY Zgr "&#x396;" >
+<!ENTITY uddot "&#x1EE5;" >
+<!ENTITY NestedLessLess "&#x226A;" >
+<!ENTITY Sigma "&#x3A3;" >
+<!ENTITY SubsetEqual "&#x2286;" >
+<!ENTITY bigsqcup "&#x2A06;" >
+<!ENTITY lesseqqgtr "&#x2A8B;" >
+<!ENTITY nleqslant "&#x2A7D;&#x338;" >
+<!ENTITY csub "&#x2ACF;" >
+<!ENTITY Ifr "&#x2111;" >
+<!ENTITY gap "&#x2A86;" >
+<!ENTITY Udigr "&#x3AB;" >
+<!ENTITY wp "&#x2118;" >
+<!ENTITY measuredangle "&#x2221;" >
+<!ENTITY wr "&#x2240;" >
+<!ENTITY thksim "&#x223C;" >
+<!ENTITY zeta "&#x3B6;" >
+<!ENTITY ord "&#x2A5D;" >
+<!ENTITY plusdo "&#x2214;" >
+<!ENTITY b.nabla "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x43;&#x31;&#x3B;" >
+<!ENTITY Kcedil "&#x136;" >
+<!ENTITY NotReverseElement "&#x220C;" >
+<!ENTITY Ubreve "&#x16C;" >
+<!ENTITY edot "&#x117;" >
+<!ENTITY plusdu "&#x2A25;" >
+<!ENTITY pdot "&#x1E57;" >
+<!ENTITY xi "&#x3BE;" >
+<!ENTITY c_dot "&#x10B;" >
+<!ENTITY orv "&#x2A5B;" >
+<!ENTITY Igr "&#x399;" >
+<!ENTITY MinusPlus "&#x2213;" >
+<!ENTITY c.ssolov "&#x337;" >
+<!ENTITY NotElement "&#x2209;" >
+<!ENTITY jukcy "&#x454;" >
+<!ENTITY lsimg "&#x2A8F;" >
+<!ENTITY c.tildbl "&#x330;" >
+<!ENTITY Macute "&#x1E3E;" >
+<!ENTITY lsime "&#x2A8D;" >
+<!ENTITY xcup "&#x22C3;" >
+<!ENTITY loplus "&#x2A2D;" >
+<!ENTITY Amacr "&#x100;" >
+<!ENTITY quaternions "&#x210D;" >
+<!ENTITY nsupseteq "&#x2289;" >
+<!ENTITY setmn "&#x2216;" >
+<!ENTITY imath "&#x131;" >
+<!ENTITY cong "&#x2245;" >
+<!ENTITY cirmid "&#x2AEF;" >
+<!ENTITY nsup "&#x2285;" >
+<!ENTITY topcir "&#x2AF1;" >
+<!ENTITY ShortDownArrow "&#x2193;" >
+<!ENTITY TSHcy "&#x40B;" >
+<!ENTITY DoubleLongRightArrow "&#x27F9;" >
+<!ENTITY gcy "&#x433;" >
+<!ENTITY Mopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x34;&#x3B;" >
+<!ENTITY between "&#x226C;" >
+<!ENTITY mcheck "&#x5B;&#x6D;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY gsim "&#x2273;" >
+<!ENTITY nsub "&#x2284;" >
+<!ENTITY comp "&#x2201;" >
+<!ENTITY UnderBar "&#x5F;" >
+<!ENTITY squdiag "&#x25E9;" >
+<!ENTITY nbsp "&#xA0;" >
+<!ENTITY Leftarrow "&#x21D0;" >
+<!ENTITY natural "&#x266E;" >
+<!ENTITY csup "&#x2AD0;" >
+<!ENTITY laquo "&#xAB;" >
+<!ENTITY filig "&#xFB01;" >
+<!ENTITY emacr "&#x113;" >
+<!ENTITY simdot "&#x2A6A;" >
+<!ENTITY c.grjoin "&#x34F;" >
+<!ENTITY nvDash "&#x22AD;" >
+<!ENTITY exist "&#x2203;" >
+<!ENTITY oror "&#x2A56;" >
+<!ENTITY prnsim "&#x22E8;" >
+<!ENTITY oacgr "&#x3CC;" >
+<!ENTITY ugrave "&#xF9;" >
+<!ENTITY Bopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x39;&#x3B;" >
+<!ENTITY bNot "&#x2AED;" >
+<!ENTITY ndash "&#x2013;" >
+<!ENTITY precneqq "&#x2AB5;" >
+<!ENTITY bigcirc "&#x25EF;" >
+<!ENTITY nopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x46;&#x3B;" >
+<!ENTITY xfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x33;&#x35;&#x3B;" >
+<!ENTITY rangd "&#x2992;" >
+<!ENTITY range "&#x29A5;" >
+<!ENTITY Kvec "&#x5B;&#x4B;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY copf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x35;&#x34;&#x3B;" >
+<!ENTITY Vcy "&#x412;" >
+<!ENTITY NotGreaterTilde "&#x2275;" >
+<!ENTITY gel "&#x22DB;" >
+<!ENTITY straightepsilon "&#x3F5;" >
+<!ENTITY loang "&#x27EC;" >
+<!ENTITY geq "&#x2265;" >
+<!ENTITY djcy "&#x452;" >
+<!ENTITY darr "&#x2193;" >
+<!ENTITY ges "&#x2A7E;" >
+<!ENTITY Vvec "&#x5B;&#x56;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY flat "&#x266D;" >
+<!ENTITY copy "&#xA9;" >
+<!ENTITY semi "&#x3B;" >
+<!ENTITY Xacute "&#x5B;&#x58;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY Ktilde "&#x5B;&#x4B;&#x74;&#x69;&#x6C;&#x64;&#x65;&#x5D;" >
+<!ENTITY xgr "&#x3BE;" >
+<!ENTITY Xopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x34;&#x46;&#x3B;" >
+<!ENTITY DownLeftRightVector "&#x2950;" >
+<!ENTITY Abreve "&#x102;" >
+<!ENTITY UpDownArrow "&#x2195;" >
+<!ENTITY blacklozenge "&#x29EB;" >
+<!ENTITY b.piv "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x45;&#x31;&#x3B;" >
+<!ENTITY c.cwarab "&#x20D5;" >
+<!ENTITY NotGreaterLess "&#x2279;" >
+<!ENTITY qcirc "&#x5B;&#x71;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY circleddash "&#x229D;" >
+<!ENTITY gfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x32;&#x34;&#x3B;" >
+<!ENTITY c.bsolov "&#x20E5;" >
+<!ENTITY Vee "&#x22C1;" >
+<!ENTITY Ecy "&#x42D;" >
+<!ENTITY multimap "&#x22B8;" >
+<!ENTITY Eogon "&#x118;" >
+<!ENTITY intprod "&#x2A3C;" >
+<!ENTITY Egrave "&#xC8;" >
+<!ENTITY oast "&#x229B;" >
+<!ENTITY olcir "&#x29BE;" >
+<!ENTITY fpartint "&#x2A0D;" >
+<!ENTITY Leftrightarrow "&#x21D4;" >
+<!ENTITY CHcy "&#x427;" >
+<!ENTITY Uscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x42;&#x30;&#x3B;" >
+<!ENTITY c.horn "&#x31B;" >
+<!ENTITY ggg "&#x22D9;" >
+<!ENTITY wvec "&#x5B;&#x77;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY cbreve "&#x5B;&#x63;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY c.ringbl "&#x325;" >
+<!ENTITY ggr "&#x3B3;" >
+<!ENTITY hookleftarrow "&#x21A9;" >
+<!ENTITY lvec "&#x5B;&#x6C;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY elsdot "&#x2A97;" >
+<!ENTITY rlarr "&#x21C4;" >
+<!ENTITY mtilde "&#x26;&#x23;&#x78;&#x31;&#x44;&#x36;&#x46;&#x3B;" >
+<!ENTITY Udblac "&#x170;" >
+<!ENTITY supsup "&#x2AD6;" >
+<!ENTITY Vfr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x31;&#x39;&#x3B;" >
+<!ENTITY leftrightarrow "&#x2194;" >
+<!ENTITY DDotrahd "&#x2911;" >
+<!ENTITY tau "&#x3C4;" >
+<!ENTITY Jbar "&#x5B;&#x4A;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY uparrow "&#x2191;" >
+<!ENTITY Zcaron "&#x17D;" >
+<!ENTITY Kcirc "&#x5B;&#x4B;&#x63;&#x69;&#x72;&#x63;&#x5D;" >
+<!ENTITY gescc "&#x2AA9;" >
+<!ENTITY curarr "&#x21B7;" >
+<!ENTITY yopf "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x36;&#x41;&#x3B;" >
+<!ENTITY RightDoubleBracket "&#x27E7;" >
+<!ENTITY Ubar "&#x244;" >
+<!ENTITY vDash "&#x22A8;" >
+<!ENTITY vzigzag "&#x299A;" >
+<!ENTITY SquareSubsetEqual "&#x2291;" >
+<!ENTITY dHar "&#x2965;" >
+<!ENTITY Jscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x41;&#x35;&#x3B;" >
+<!ENTITY Oddot "&#x5B;&#x4F;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY dash "&#x2010;" >
+<!ENTITY searhk "&#x2925;" >
+<!ENTITY avec "&#x5B;&#x61;&#x76;&#x65;&#x63;&#x5D;" >
+<!ENTITY zacute "&#x17A;" >
+<!ENTITY Ncheck "&#x5B;&#x4E;&#x63;&#x68;&#x65;&#x63;&#x6B;&#x5D;" >
+<!ENTITY xrArr "&#x27F9;" >
+<!ENTITY iacute "&#xED;" >
+<!ENTITY c.ringab "&#x30A;" >
+<!ENTITY Vgrave "&#x5B;&#x56;&#x67;&#x72;&#x61;&#x76;&#x65;&#x5D;" >
+<!ENTITY Int "&#x222C;" >
+<!ENTITY nrarrc "&#x2933;&#x338;" >
+<!ENTITY supsub "&#x2AD4;" >
+<!ENTITY Efr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x35;&#x30;&#x38;&#x3B;" >
+<!ENTITY nrarrw "&#x219D;&#x338;" >
+<!ENTITY cap "&#x2229;" >
+<!ENTITY c.svlnov "&#x20D3;" >
+<!ENTITY swArr "&#x21D9;" >
+<!ENTITY hearts "&#x2665;" >
+<!ENTITY sddot "&#x5B;&#x73;&#x64;&#x64;&#x6F;&#x74;&#x5D;" >
+<!ENTITY loarr "&#x21FD;" >
+<!ENTITY submult "&#x2AC1;" >
+<!ENTITY vrtri "&#x22B3;" >
+<!ENTITY vscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x42;&#x3B;" >
+<!ENTITY rarrw "&#x219D;" >
+<!ENTITY qbreve "&#x5B;&#x71;&#x62;&#x72;&#x65;&#x76;&#x65;&#x5D;" >
+<!ENTITY rarrc "&#x2933;" >
+<!ENTITY bigcap "&#x22C2;" >
+<!ENTITY kscr "&#x26;&#x23;&#x78;&#x31;&#x44;&#x34;&#x43;&#x30;&#x3B;" >
+<!ENTITY rarrb "&#x21E5;" >
+<!ENTITY Uarrocir "&#x2949;" >
+<!ENTITY tcy "&#x442;" >
+<!ENTITY Ncedil "&#x145;" >
+<!ENTITY ContourIntegral "&#x222E;" >
+<!ENTITY Egr "&#x395;" >
+<!ENTITY NotGreater "&#x226F;" >
+<!ENTITY Rbreve "&#x212;" >
+<!ENTITY Jacute "&#x5B;&#x4A;&#x61;&#x63;&#x75;&#x74;&#x65;&#x5D;" >
+<!ENTITY sqcups "&#x2294;&#xFE00;" >
+<!ENTITY c.ibrgbl "&#x33A;" >
+<!ENTITY kbar "&#x5B;&#x6B;&#x62;&#x61;&#x72;&#x5D;" >
+<!ENTITY iuml "&#xEF;" >
+<!ENTITY frasl "&#x2044;" >
