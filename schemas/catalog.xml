@@ -23,52 +23,6 @@
         <system systemId="http://cats.informa.com/tfjats/1.0/dtd/tf-characters1.ent" uri="tf-characters1.ent"/>
     </group>
     
-    <group id="JATS-General">
-        <!-- JATS DTD (general) used by Editorial Manager -->
-        <systemSuffix systemIdSuffix="JATS-archivearticle1.dtd" uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
-    </group>
-    
-    <group id="NLM-v3.0-Archiving-OASIS">
-        <!-- NLM 3.0 Archiving and Interchange with OASIS tables -->
-        <public publicId="-//NLM//DTD Journal Archiving with OASIS Tables v3.0 20080202//EN" uri="nlm-v3.0-archive-oasis-article.dtd"/>
-        <system systemId="http://dtd.nlm.nih.gov/archiving/3.0/archive-oasis-article3.dtd" uri="nlm-v3.0-archive-oasis-article.dtd"/>
-        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archive-oasis-article3.dtd" uri="nlm-v3.0-archive-oasis-article.dtd"/>
-        <systemSuffix systemIdSuffix="archive-oasis-article3.dtd" uri="nlm-v3.0-archive-oasis-article.dtd"/>
-    </group>
-
-    <group id="NLM-v3.0-Archiving">
-        <!-- NLM 3.0 Archiving and Interchange without OASIS tables -->
-        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" uri="nlm-v3.0-archive-article.dtd"/>
-        <system systemId="http://dtd.nlm.nih.gov/archiving/3.0/archivearticle3.dtd" uri="nlm-v3.0-archive-article.dtd"/>
-        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archivearticle3.dtd" uri="nlm-v3.0-archive-article.dtd"/>
-        <systemSuffix systemIdSuffix="archivearticle3.dtd" uri="nlm-v3.0-archive-article.dtd"/>
-    </group>
-
-    <group id="JATS-v1.2-Archiving-MathML3-OASIS">
-        <!-- NISO JATS 1.2 Archiving and Interchange with OASIS tables and MathML 3 -->
-        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.2 20190208//EN" 
-            uri="JATS-archive-oasis-article1-mathml3-v1.2.dtd"/>
-        <system systemId="https://jats.nlm.nih.gov/archiving/1.2/JATS-archive-oasis-article1-mathml3.dtd" 
-            uri="JATS-archive-oasis-article1-mathml3-v1.2.dtd"/>
-        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-mathml3-v1.2.dtd" uri="JATS-archive-oasis-article1-mathml3-v1.2.dtd"/>
-    </group>
-
-    <group id="JATS-v1.2-Publishing-MathML3-OASIS">
-        <!-- NISO JATS 1.2 Publishing with OASIS tables and MathML 3 -->
-        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with MathML3 v1.2 20190208//EN" uri="JATS-journalpublishing-oasis-article1-mathml3-v1.2.dtd"/>
-        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1-mathml3.dtd" uri="JATS-journalpublishing-oasis-article1-mathml3-v1.2.dtd"/>
-    </group>
-
-    <group id="JATS-v1.3-Archiving-MathML3-OASIS">
-        <!-- NISO JATS 1.3 Archiving and Interchange with OASIS tables and MathML 3 -->
-        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.3 20210610//EN" 
-            uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
-        <system systemId="https://jats.nlm.nih.gov/archiving/1.3/JATS-archive-oasis-article1-3-mathml3.dtd" 
-            uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
-        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-3-mathml3.dtd" 
-            uri="JATS-archive-oasis-article1-3-mathml3-v1.3.dtd"/>
-    </group>
-    
     <group id="Atypon-Issue-v3.0.5">
         <!-- Atypon Journal DTD Suite v3.0.5 Issue -->
         <public publicId="-//Atypon//DTD Atypon Systems Archival NLM DTD Suite Issue XML DTD v3.0.5 20110520//EN" uri="atypon-nlm-v3.0.5-issue.dtd"/>
