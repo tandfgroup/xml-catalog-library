@@ -93,12 +93,22 @@ task basex_gui {
 }
 
 
-task basex_parse_examples (type: JavaExec) {
-  description "Run parse-examples.xq in BaseX"
+task basex_parse_examples1 (type: JavaExec) {
+  description "Run parse-examples1.xq in BaseX"
   group project.name
   classpath configurations.runtimeClasspath.asPath
   mainClass = "org.basex.BaseX"
   systemProperties System.getProperties()
-  args "-w", "test/parse-examples.xq"
+  args "-w", "test/parse-examples1.xq"
 }
 
+task basex_parse_examples2 (type: JavaExec) {
+  description "Run parse-examples2.xq in BaseX"
+  group project.name
+  classpath configurations.runtimeClasspath.asPath
+  mainClass = "org.basex.BaseX"
+  systemProperties System.getProperties()
+  args "-w", "test/parse-examples2.xq"
+}
+
+test.dependsOn "basex_parse_examples1", "basex_parse_examples2"
