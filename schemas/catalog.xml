@@ -65,6 +65,6 @@
         <systemSuffix systemIdSuffix="s1.dtd" uri="s1.dtd"/>
     </group>
     
-    <nextCatalog catalog="niso-jats/catalog.xml"/>
+    <nextCatalog catalog="NISO-JATS/catalog.xml"/>
     
 </catalog>

@@ -1,5 +1,7 @@
 # XML Catalog Library
 
+The `schemas` folder contains XML Catalog `catalog.xml` and DTD files that are often needed. The entire `schemas` folder or selected parts of its contents can be used in other projects.
+
 
 To flatten (minify) a DTD run:
 
