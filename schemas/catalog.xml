@@ -3,6 +3,12 @@
 <!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "catalog.dtd"> -->
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     
+    <group id="S1">
+        <!-- ScholarOne DTD -->
+        <!-- this entry should come before tfjats1.dtd -->
+        <systemSuffix systemIdSuffix="s1.dtd" uri="s1.dtd"/>
+    </group>
+    
     <group id="TFJA-DTD">
         <!-- TFJA DTD -->
         <!-- preferred -->
@@ -21,6 +27,7 @@
         <public publicId="-//TF//DTD JATS (Z39.96) v1.0 Taylor and Francis Journal Content v1.0//EN" uri="tfjats1.dtd"/>
         <system systemId="http://cats.informa.com/tfjats/1.0/dtd/tfjats1.dtd" uri="tfjats1.dtd"/>
         <system systemId="http://cats.informa.com/tfjats/1.0/dtd/tf-characters1.ent" uri="tf-characters1.ent"/>
+        <systemSuffix systemIdSuffix="tfjats1.dtd" uri="tfjats1.dtd"/>
     </group>
     
     <group id="Atypon-Issue-v3.0.5">
@@ -59,11 +66,6 @@
     
     <!-- Crossref -->
     <nextCatalog catalog="crossref-4.3.1/catalog.xml"/>
-    
-    <group id="S1">
-        <!-- ScholarOne DTD -->
-        <systemSuffix systemIdSuffix="s1.dtd" uri="s1.dtd"/>
-    </group>
     
     <nextCatalog catalog="NISO-JATS/catalog.xml"/>
     
