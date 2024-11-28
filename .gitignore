@@ -7,3 +7,9 @@ files/
 
 # Ignore Gradle build output directory
 build
+
+# BaseX
+/.basex*
+!/.basexhome
+/data/**
+/repo/**

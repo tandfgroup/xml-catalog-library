@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article 
+     PUBLIC "-//TF//DTD JATS (Z39.96) v1.0 Taylor and Francis Journal Content v1.0//EN" 
+     "http://cats.informa.com/tfjats/1.0/dtd/tfjats1.dtd"> 
+<article xmlns="http://jats.nlm.nih.gov" 
+    xmlns:tf="http://cats.informa.com/tfjats"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    tf:schema-version="1.0" xml:lang="en">
+    <tf:article-status stage="final">
+        <tf:tagger name="test"/>
+    </tf:article-status>
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="publisher-id">TFJATS</journal-id>
+            <journal-id journal-id-type="title-id">tfjats20</journal-id>
+            <journal-title-group>
+                <journal-title>TF JATS</journal-title>
+            </journal-title-group>
+            <issn pub-type="epub">0000-0000</issn>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="publisher-id">1001</article-id>
+            <article-id pub-id-type="doi">10.1080/example.tfjats.1001</article-id>
+            <article-categories>
+                <series-title content-type="article-type">Other</series-title>
+            </article-categories>
+            <title-group>
+                <article-title>TF JATS article</article-title>
+            </title-group>
+            <pub-date date-type="control" iso-8601-date="2012-01-01"/>
+            <volume>1</volume>
+            <issue>1</issue>
+            <permissions>
+                <copyright-holder>Taylor &amp; Francis</copyright-holder>
+            </permissions>
+        </article-meta>
+    </front>
+</article>

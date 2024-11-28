@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE unarticle SYSTEM "http://cats.informa.com/tfja/dtd/TFJA.dtd">
+<unarticle articleid="1002" doi="10.1080/example.tfja.1002" documenttype="Miscellaneous">
+    <meta productid="TFJA" seq="2">
+        <journalcode>TFJA</journalcode>
+        <issn type="electronic">0000-0000</issn>
+        <coden/>
+        <production-dates/>
+    </meta>
+    <title>TFJA unarticle</title>
+    <section1>
+        <title>TFJA unarticle</title>
+        <para>Fantastic!</para>
+    </section1>
+</unarticle>

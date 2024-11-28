@@ -1,8 +1,20 @@
 plugins {
+  id "java"
   id "de.undercouch.download" version "4.0.4"
 }
 
 import org.gradle.internal.os.OperatingSystem
+
+repositories {
+    mavenCentral()
+    maven { url "https://files.basex.org/maven" }
+}
+
+dependencies {
+    implementation "org.basex:basex-api:11.5"
+    implementation "org.xmlresolver:xmlresolver:6.0.4"
+}
+
 
 task DtdAnalyzer_download (type: Download) {
     group = project.name
@@ -60,3 +72,33 @@ task DtdAnalyzer_dtdflatten (type: Exec, dependsOn: ['DtdAnalyzer_setup']) {
         "-s", DtdAnalyzer_dtdflatten_output_path, "-t", DtdAnalyzer_dtdflatten_output_name, 
         DtdAnalyzer_dtdcompare_report_path
 }
+
+
+System.setProperty("java.io.tmpdir", "${projectDir}/data/.temp/")
+project.file(System.getProperty("java.io.tmpdir")).mkdirs()
+
+System.setProperty("org.basex.path", "${projectDir}") // BaseX home directory set to project location
+
+task basex_gui {
+    group = project.name
+    description = "Run BaseX GUI."
+    doLast {
+        ant.java(
+            fork: true, 
+            spawn: true, 
+            classpath: configurations.runtimeClasspath.asPath, 
+            classname: "org.basex.BaseXGUI",
+            clonevm: true)
+    }
+}
+
+
+task basex_parse_examples (type: JavaExec) {
+  description "Run parse-examples.xq in BaseX"
+  group project.name
+  classpath configurations.runtimeClasspath.asPath
+  mainClass = "org.basex.BaseX"
+  systemProperties System.getProperties()
+  args "-w", "test/parse-examples.xq"
+}
+

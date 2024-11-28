@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article SYSTEM "http://cats.informa.com/tfja/dtd/TFJA.dtd">
+<article articleid="1001" doi="10.1080/example.tfja.1001" documenttype="Miscellaneous">
+    <meta productid="TFJA" seq="1">
+        <journalcode>TFJA</journalcode>
+        <issn type="electronic">0000-0000</issn>
+        <coden/>
+        <production-dates/>
+    </meta>
+    <title>TFJA article</title>
+    <shorttitle>TFJA article</shorttitle>
+    <intro>
+        <para>This is a really fantastic article in TFJA article format.</para>
+    </intro>
+    <section1>
+        <title>TFJA article</title>
+        <para>Fantastic!</para>
+    </section1>
+</article>
