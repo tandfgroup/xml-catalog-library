@@ -93,22 +93,28 @@ task basex_gui {
 }
 
 
-task basex_parse_examples1 (type: JavaExec) {
-  description "Run parse-examples1.xq in BaseX"
-  group project.name
-  classpath configurations.runtimeClasspath.asPath
-  mainClass = "org.basex.BaseX"
-  systemProperties System.getProperties()
-  args "-w", "test/parse-examples1.xq"
+// Generate tasks for running XQuery
+fileTree(
+  dir: projectDir, 
+  include: ["**/*.xq"], 
+  exclude: [buildDir.getName()]
+).each { file -> 
+  def base = file.toString().replace("\\", "/")
+  def pos = projectDir.toString().length()
+  if (pos > 0) {
+    base = base.substring(pos + 1)
+  }
+  def taskname = base.replaceAll('[/\\\\:<>"?*|]', "_")
+  Task t1 = task "${taskname}" (type: JavaExec) {
+    group = project.name
+    description = "Run XQuery ${base}"
+    classpath configurations.runtimeClasspath
+    mainClass = "org.basex.BaseX"
+    systemProperties System.getProperties()
+    args "-w", "${file}"
+    doFirst { println "xquery ${base}" }
+  }
 }
 
-task basex_parse_examples2 (type: JavaExec) {
-  description "Run parse-examples2.xq in BaseX"
-  group project.name
-  classpath configurations.runtimeClasspath.asPath
-  mainClass = "org.basex.BaseX"
-  systemProperties System.getProperties()
-  args "-w", "test/parse-examples2.xq"
-}
 
-test.dependsOn "basex_parse_examples1", "basex_parse_examples2"
+test.dependsOn "test_parse-examples1.xq", "test_parse-examples2.xq", "test_catalog-test.xq"
