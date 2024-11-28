@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd"> -->
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "catalog.dtd"> -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+    
+    <!-- JATS unspecified version should resolve to the latest version -->
+    <group id="JATS-general">
+        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-4-OASIS-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-4-OASIS-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-4-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archivearticle1.dtd" uri="JATS-Archiving-1-4-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1-mathml3.dtd" uri="JATS-Publishing-1-4-OASIS-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-4-OASIS-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing1-mathml3.dtd" uri="JATS-Publishing-1-4-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-4-MathML2.dtd"/>
+    </group>
+
+    <!-- JATS Archiving and Interchange -->
+    <group id="JATS-Archiving-1-0-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.0 20120330//EN" uri="JATS-Archiving-1-0-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.0/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-0-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.0/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-0-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-0-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables v1.0 20120330//EN" uri="JATS-Archiving-1-0-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.0/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-0-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.0/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-0-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-1-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" uri="JATS-Archiving-1-1-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-1-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-1-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-1-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.1 20151215//EN" uri="JATS-Archiving-1-1-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-1-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-1-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-1-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables v1.1 20151215//EN" uri="JATS-Archiving-1-1-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-1-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-1-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-1-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.1 20151215//EN" uri="JATS-Archiving-1-1-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-1-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-1-OASIS-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN" uri="JATS-Archiving-1-2-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.2/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-2-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.2/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-2-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.2 20190208//EN" uri="JATS-Archiving-1-2-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.2/JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-2-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.2/JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-2-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables v1.2 20190208//EN" uri="JATS-Archiving-1-2-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-2-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-2-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.2 20190208//EN" uri="JATS-Archiving-1-2-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-2-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-2-OASIS-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-3-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.3 20210610//EN" uri="JATS-Archiving-1-3-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.3/JATS-archivearticle1-3.dtd" uri="JATS-Archiving-1-3-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.3/JATS-archivearticle1-3.dtd" uri="JATS-Archiving-1-3-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archivearticle1-3.dtd" uri="JATS-Archiving-1-3-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-3-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.3 20210610//EN" uri="JATS-Archiving-1-3-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.3/JATS-archivearticle1-3-mathml3.dtd" uri="JATS-Archiving-1-3-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.3/JATS-archivearticle1-3-mathml3.dtd" uri="JATS-Archiving-1-3-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archivearticle1-3-mathml3.dtd" uri="JATS-Archiving-1-3-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-3-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables v1.3 20210610//EN" uri="JATS-Archiving-1-3-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.3/JATS-archive-oasis-article1-3.dtd" uri="JATS-Archiving-1-3-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.3/JATS-archive-oasis-article1-3.dtd" uri="JATS-Archiving-1-3-OASIS-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-3.dtd" uri="JATS-Archiving-1-3-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-3-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.3 20210610//EN" uri="JATS-Archiving-1-3-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.3/JATS-archive-oasis-article1-3-mathml3.dtd" uri="JATS-Archiving-1-3-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.3/JATS-archive-oasis-article1-3-mathml3.dtd" uri="JATS-Archiving-1-3-OASIS-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-3-mathml3.dtd" uri="JATS-Archiving-1-3-OASIS-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-4-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.4 20241031//EN" uri="JATS-Archiving-1-4-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.4/JATS-archivearticle1-4.dtd" uri="JATS-Archiving-1-4-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.4/JATS-archivearticle1-4.dtd" uri="JATS-Archiving-1-4-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archivearticle1-4.dtd" uri="JATS-Archiving-1-4-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-4-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.4 20241031//EN" uri="JATS-Archiving-1-4-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.4/JATS-archivearticle1-4-mathml3.dtd" uri="JATS-Archiving-1-4-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.4/JATS-archivearticle1-4-mathml3.dtd" uri="JATS-Archiving-1-4-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archivearticle1-4-mathml3.dtd" uri="JATS-Archiving-1-4-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-4-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables v1.4 20241031//EN" uri="JATS-Archiving-1-4-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.4/JATS-archive-oasis-article1-4.dtd" uri="JATS-Archiving-1-4-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.4/JATS-archive-oasis-article1-4.dtd" uri="JATS-Archiving-1-4-OASIS-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-4.dtd" uri="JATS-Archiving-1-4-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-4-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.4 20241031//EN" uri="JATS-Archiving-1-4-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.4/JATS-archive-oasis-article1-4-mathml3.dtd" uri="JATS-Archiving-1-4-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.4/JATS-archive-oasis-article1-4-mathml3.dtd" uri="JATS-Archiving-1-4-OASIS-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-4-mathml3.dtd" uri="JATS-Archiving-1-4-OASIS-MathML3.dtd"/>
+    </group>
+    
+    <!-- JATS Publishing -->
+    <group id="JATS-Publishing-1-0-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.0 20120330//EN" uri="JATS-Publishing-1-0-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-0-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-0-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-0-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.0 20120330//EN" uri="JATS-Publishing-1-0-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-0-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.0/JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-0-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-1-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.1 20151215//EN" uri="JATS-Publishing-1-1-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-1-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-1-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-1-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with MathML3 v1.1 20151215//EN" uri="JATS-Publishing-1-1-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1-mathml3.dtd" uri="JATS-Publishing-1-1-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing1-mathml3.dtd" uri="JATS-Publishing-1-1-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-1-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.1 20151215//EN" uri="JATS-Publishing-1-1-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-1-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-1-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-1-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with MathML3 v1.1 20151215//EN" uri="JATS-Publishing-1-1-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing-oasis-article1-mathml3.dtd" uri="JATS-Publishing-1-1-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.1/JATS-journalpublishing-oasis-article1-mathml3.dtd" uri="JATS-Publishing-1-1-OASIS-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-2-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" uri="JATS-Publishing-1-2-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-2-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd" uri="JATS-Publishing-1-2-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-2-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with MathML3 v1.2 20190208//EN" uri="JATS-Publishing-1-2-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1-mathml3.dtd" uri="JATS-Publishing-1-2-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1-mathml3.dtd" uri="JATS-Publishing-1-2-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-2-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.2 20190208//EN" uri="JATS-Publishing-1-2-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-2-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing-oasis-article1.dtd" uri="JATS-Publishing-1-2-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-2-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with MathML3 v1.2 20190208//EN" uri="JATS-Publishing-1-2-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing-oasis-article1-mathml3.dtd" uri="JATS-Publishing-1-2-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing-oasis-article1-mathml3.dtd" uri="JATS-Publishing-1-2-OASIS-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-3-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.3 20210610//EN" uri="JATS-Publishing-1-3-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing1-3.dtd" uri="JATS-Publishing-1-3-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing1-3.dtd" uri="JATS-Publishing-1-3-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing1-3.dtd" uri="JATS-Publishing-1-3-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-3-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with MathML3 v1.3 20210610//EN" uri="JATS-Publishing-1-3-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing1-3-mathml3.dtd" uri="JATS-Publishing-1-3-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing1-3-mathml3.dtd" uri="JATS-Publishing-1-3-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing1-3-mathml3.dtd" uri="JATS-Publishing-1-3-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-3-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.3 20210610//EN" uri="JATS-Publishing-1-3-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing-oasis-article1-3.dtd" uri="JATS-Publishing-1-3-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing-oasis-article1-3.dtd" uri="JATS-Publishing-1-3-OASIS-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1-3.dtd" uri="JATS-Publishing-1-3-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-3-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with MathML3 v1.3 20210610//EN" uri="JATS-Publishing-1-3-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing-oasis-article1-3-mathml3.dtd" uri="JATS-Publishing-1-3-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.3/JATS-journalpublishing-oasis-article1-3-mathml3.dtd" uri="JATS-Publishing-1-3-OASIS-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1-3-mathml3.dtd" uri="JATS-Publishing-1-3-OASIS-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-4-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.4 20241031//EN" uri="JATS-Publishing-1-4-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing1-4.dtd" uri="JATS-Publishing-1-4-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing1-4.dtd" uri="JATS-Publishing-1-4-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing1-4.dtd" uri="JATS-Publishing-1-4-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-4-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with MathML3 v1.4 20241031//EN" uri="JATS-Publishing-1-4-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing1-4-mathml3.dtd" uri="JATS-Publishing-1-4-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing1-4-mathml3.dtd" uri="JATS-Publishing-1-4-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing1-4-mathml3.dtd" uri="JATS-Publishing-1-4-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-4-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables v1.4 20241031//EN" uri="JATS-Publishing-1-4-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing-oasis-article1-4.dtd" uri="JATS-Publishing-1-4-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing-oasis-article1-4.dtd" uri="JATS-Publishing-1-4-OASIS-MathML2.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1-4.dtd" uri="JATS-Publishing-1-4-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Publishing-1-4-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Publishing DTD with OASIS Tables with MathML3 v1.4 20241031//EN" uri="JATS-Publishing-1-4-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing-oasis-article1-4-mathml3.dtd" uri="JATS-Publishing-1-4-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/publishing/1.4/JATS-journalpublishing-oasis-article1-4-mathml3.dtd" uri="JATS-Publishing-1-4-OASIS-MathML3.dtd"/>
+        <systemSuffix systemIdSuffix="JATS-journalpublishing-oasis-article1-4-mathml3.dtd" uri="JATS-Publishing-1-4-OASIS-MathML3.dtd"/>
+    </group>
+    
+    <!-- Pre-NISO NLM Archiving and Interchange -->
+    <group id="NLM-archive-interchange-dtd-1-0">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v1.0 20021201//EN" uri="NLM-archive-interchange-dtd-1-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/1.0/archivearticle.dtd" uri="NLM-archive-interchange-dtd-1-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/1.0/archivearticle.dtd" uri="NLM-archive-interchange-dtd-1-0.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-dtd-1-1">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v1.1 20031101//EN" uri="NLM-archive-interchange-dtd-1-1.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/1.1/archivearticle.dtd" uri="NLM-archive-interchange-dtd-1-1.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/1.1/archivearticle.dtd" uri="NLM-archive-interchange-dtd-1-1.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-dtd-2-0">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v2.0 20040830//EN" uri="NLM-archive-interchange-dtd-2-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/2.0/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/2.0/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-0.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-dtd-2-1">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v2.1 20050630//EN" uri="NLM-archive-interchange-dtd-2-1.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/2.1/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-1.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/2.1/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-1.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-dtd-2-2">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v2.2 20060430//EN" uri="NLM-archive-interchange-dtd-2-2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/2.2/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/2.2/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-2.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-dtd-2-3">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v2.3 20070202//EN" uri="NLM-archive-interchange-dtd-2-3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/2.3/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/2.3/archivearticle.dtd" uri="NLM-archive-interchange-dtd-2-3.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-oasis-dtd-2-3">
+        <public publicId="-//NLM//DTD Journal Archiving with OASIS Tables v2.3 20070813//EN" uri="NLM-archive-interchange-oasis-dtd-2-3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/2.3/archive-OASIS.dtd" uri="NLM-archive-interchange-oasis-dtd-2-3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/2.3/archive-OASIS.dtd" uri="NLM-archive-interchange-oasis-dtd-2-3.dtd"/>
+        <systemSuffix systemIdSuffix="archive-OASIS.dtd" uri="NLM-archive-interchange-oasis-dtd-2-3.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-dtd-3-0">
+        <public publicId="-//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN" uri="NLM-archive-interchange-dtd-3-0.dtd"/>
+        <system systemId="http://dtd.nlm.nih.gov/archiving/3.0/archivearticle3.dtd" uri="NLM-archive-interchange-dtd-3-0.dtd"/>
+        <system systemId="https://dtd.nlm.nih.gov/archiving/3.0/archivearticle3.dtd" uri="NLM-archive-interchange-dtd-3-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archivearticle3.dtd" uri="NLM-archive-interchange-dtd-3-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archivearticle3.dtd" uri="NLM-archive-interchange-dtd-3-0.dtd"/>
+        <systemSuffix systemIdSuffix="archivearticle3.dtd" uri="NLM-archive-interchange-dtd-3-0.dtd"/>
+    </group>
+    <group id="NLM-archive-interchange-oasis-dtd-3-0">
+        <public publicId="-//NLM//DTD Journal Archiving with OASIS Tables v3.0 20080202//EN" uri="NLM-archive-interchange-oasis-dtd-3-0.dtd"/>
+        <system systemId="http://dtd.nlm.nih.gov/archiving/3.0/archive-oasis-article3.dtd" uri="NLM-archive-interchange-oasis-dtd-3-0.dtd"/>
+        <system systemId="https://dtd.nlm.nih.gov/archiving/3.0/archive-oasis-article3.dtd" uri="NLM-archive-interchange-oasis-dtd-3-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archive-oasis-article3.dtd" uri="NLM-archive-interchange-oasis-dtd-3-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/archiving/3.0/archive-oasis-article3.dtd" uri="NLM-archive-interchange-oasis-dtd-3-0.dtd"/>
+        <systemSuffix systemIdSuffix="archive-oasis-article3.dtd" uri="NLM-archive-interchange-oasis-dtd-3-0.dtd"/>
+    </group>
+    <!-- Pre-NISO NLM Publishing -->
+    <group id="NLM-journal-publishing-dtd-1-0">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v1.0 20030210//EN" uri="NLM-journal-publishing-dtd-1-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/1.0/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-1-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/1.0/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-1-0.dtd"/>
+    </group>
+    <group id="NLM-journal-publishing-dtd-1-1">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v1.1 20031101//EN" uri="NLM-journal-publishing-dtd-1-1.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/1.1/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-1-1.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/1.1/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-1-1.dtd"/>
+    </group>
+    <group id="NLM-journal-publishing-dtd-2-0">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v2.0 20040830//EN" uri="NLM-journal-publishing-dtd-2-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/2.0/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/2.0/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-0.dtd"/>
+    </group>
+    <group id="NLM-journal-publishing-dtd-2-1">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v2.1 20050630//EN" uri="NLM-journal-publishing-dtd-2-1.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/2.1/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-1.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/2.1/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-1.dtd"/>
+    </group>
+    <group id="NLM-journal-publishing-dtd-2-2">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v2.2 20060430//EN" uri="NLM-journal-publishing-dtd-2-2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/2.2/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/2.2/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-2.dtd"/>
+    </group>
+    <group id="NLM-journal-publishing-dtd-2-3">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v2.3 20070202//EN" uri="NLM-journal-publishing-dtd-2-3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/2.3/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/2.3/journalpublishing.dtd" uri="NLM-journal-publishing-dtd-2-3.dtd"/>
+    </group>
+    <group id="NLM-journalpub-oasis-dtd-2-3">
+        <public publicId="-//NLM//DTD Journal Publishing with OASIS Tables DTD v2.3 20070813//EN" uri="NLM-journalpub-oasis-dtd-2-3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/2.3/publishing-OASIS.dtd" uri="NLM-journalpub-oasis-dtd-2-3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/2.3/publishing-OASIS.dtd" uri="NLM-journalpub-oasis-dtd-2-3.dtd"/>
+        <systemSuffix systemIdSuffix="publishing-OASIS.dtd" uri="NLM-journalpub-oasis-dtd-2-3.dtd"/>
+    </group>
+    <group id="NLM-journal-publishing-dtd-3-0">
+        <public publicId="-//NLM//DTD Journal Publishing DTD v3.0 20080202//EN" uri="NLM-journal-publishing-dtd-3-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/3.0/journalpublishing3.dtd" uri="NLM-journal-publishing-dtd-3-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/3.0/journalpublishing3.dtd" uri="NLM-journal-publishing-dtd-3-0.dtd"/>
+        <systemSuffix systemIdSuffix="journalpublishing3.dtd" uri="NLM-journal-publishing-dtd-3-0.dtd"/>
+    </group>
+    <group id="NLM-journalpub-oasis-dtd-3-0">
+        <public publicId="-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" uri="NLM-journalpub-oasis-dtd-3-0.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/nlm-dtd/publishing/3.0/journalpub-oasis3.dtd" uri="NLM-journalpub-oasis-dtd-3-0.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/nlm-dtd/publishing/3.0/journalpub-oasis3.dtd" uri="NLM-journalpub-oasis-dtd-3-0.dtd"/>
+        <systemSuffix systemIdSuffix="journalpub-oasis3.dtd" uri="NLM-journalpub-oasis-dtd-3-0.dtd"/>
+    </group>
+    
+    <!-- JATS Committee Drafts -->
+    <group id="JATS-Archiving-1-2d1-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2d1 20170631//EN" uri="JATS-Archiving-1-2d1-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-2d1-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1.dtd" uri="JATS-Archiving-1-2d1-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2d1-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with MathML3 v1.2d1 20170631//EN" uri="JATS-Archiving-1-2d1-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-2d1-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archivearticle1-mathml3.dtd" uri="JATS-Archiving-1-2d1-MathML3.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2d1-OASIS-MathML2">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables v1.2d1 20170631//EN" uri="JATS-Archiving-1-2d1-OASIS-MathML2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-2d1-OASIS-MathML2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1.dtd" uri="JATS-Archiving-1-2d1-OASIS-MathML2.dtd"/>
+    </group>
+    <group id="JATS-Archiving-1-2d1-OASIS-MathML3">
+        <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.2d1 20170631//EN" uri="JATS-Archiving-1-2d1-OASIS-MathML3.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-2d1-OASIS-MathML3.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-2d1-OASIS-MathML3.dtd"/>
+    </group>
+    
+</catalog>
