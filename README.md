@@ -1,8 +1,8 @@
 # XML Catalog Library
 
-This repository contains a library of XML Catalog entries and corresponding XML DTDs. The main purpose of using XML Catalogs is to resolve the location of XML DTDs and XML Schemas to files stored on a local file system, which can greatly speed up processing by avoiding the automatic downloading of DTD files from a remote location. This can also help to solve problems such as: DTD files not being found at a location indicate in the DOCTYPE portion of an XML file, and subtle errors that might be encountered when an XML file is processed without using the DTD specified in a file.
+This repository contains a library of XML Catalog entries and corresponding XML DTDs. The main purpose of using XML Catalogs is to resolve the location of XML DTDs and XML Schemas to files stored on a local file system, which can greatly speed up processing by avoiding the automatic downloading of DTD files from a remote location. This can also help to solve problems such as: DTD files not being found at a location indicate in the DOCTYPE portion of an XML file, and subtle errors that might be encountered when an XML file is processed without using the DTD specified in the DOCTYPE.
 
-The `schemas` folder contains XML Catalog `catalog.xml` and DTD files that are often needed. The entire `schemas` folder or selected parts of its contents can be used in other projects.
+The `schemas` folder contains XML Catalog files `catalog.xml` and DTD files. The entire `schemas` folder or selected parts of its contents can be used in other projects.
 
 A recent version of Java is required to use the tools that are included in this library, although Java is not required in if you just want to use the XML Catalogs and DTDs in another project.
 
