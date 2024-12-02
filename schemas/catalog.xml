@@ -30,19 +30,6 @@
         <systemSuffix systemIdSuffix="tfjats1.dtd" uri="tfjats1.dtd"/>
     </group>
     
-    <group id="Atypon-Issue-v3.0.5">
-        <!-- Atypon Journal DTD Suite v3.0.5 Issue -->
-        <public publicId="-//Atypon//DTD Atypon Systems Archival NLM DTD Suite Issue XML DTD v3.0.5 20110520//EN" uri="atypon-nlm-v3.0.5-issue.dtd"/>
-        <systemSuffix systemIdSuffix="issuexml.dtd" uri="atypon-nlm-v3.0.5-issue.dtd"/>
-    </group>
-    
-    <group id="Atypon-Issue-v1.1">
-        <!-- Atypon JATS v1.1 Issue XML DTD -->
-        <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.1 20160222//EN" uri="atypon-jats-v1.1-issue.dtd"/>
-        <systemSuffix systemIdSuffix="Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
-        <system systemId="http://cats.informa.com/tfjats/1.2/dtd/atypon-jats-v1.1-issue.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
-    </group>
-    
     <group id="Atypon-NLM-v3.0.5">
         <!-- Atypon Journal DTD Suite v3.0.5 Article -->
         <public publicId="-//Atypon//DTD Atypon Systems Journal Archiving and Interchange NLM DTD v3.0.5 20110520//EN" uri="atypon-nlm-v3.0.5-article.dtd"/>
@@ -62,6 +49,9 @@
     
     <!-- Atypon API DTD -->
     <nextCatalog catalog="publications-dtd-v1.2/catalog.xml"/>
+    
+    <!-- Atypon Issue -->
+    <nextCatalog catalog="atypon-issue/catalog.xml"/>
     
     <!-- Crossref -->
     <nextCatalog catalog="crossref-4.3.1/catalog.xml"/>

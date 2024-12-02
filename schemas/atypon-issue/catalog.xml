@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd"> -->
+<!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "catalog.dtd"> -->
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <group id="Atypon-Issue-version-unspecified">
+        <systemSuffix systemIdSuffix="Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.3-issue.dtd"/>
+    </group>
+    
+    <group id="Atypon-Issue-v3.0.5">
+        <!-- Atypon Journal DTD Suite v3.0.5 Issue -->
+        <public publicId="-//Atypon//DTD Atypon Systems Archival NLM DTD Suite Issue XML DTD v3.0.5 20110520//EN" uri="atypon-nlm-v3.0.5-issue.dtd"/>
+        <systemSuffix systemIdSuffix="issuexml.dtd" uri="atypon-nlm-v3.0.5-issue.dtd"/>
+    </group>
+    
+    <group id="Atypon-Issue-v1.1">
+        <!-- Atypon JATS v1.1 Issue XML DTD -->
+        <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.1 20160222//EN" uri="atypon-jats-v1.1-issue.dtd"/>
+        <systemSuffix systemIdSuffix="Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
+        <system systemId="http://cats.informa.com/tfjats/1.2/dtd/atypon-jats-v1.1-issue.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
+    </group>
+    
+    <group id="Atypon-Issue-v1.2">
+        <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.2 20191030//EN" uri="atypon-jats-v1.2-issue.dtd"/>
+        <system systemId="https://www.tandfonline.com/DTD/JATS-1.2/Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.2-issue.dtd"/>
+    </group>
+    
+    <group id="Atypon-Issue-v1.3">
+        <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.3 20210610//EN" uri="atypon-jats-v1.3-issue.dtd"/>
+        <system systemId="https://www.tandfonline.com/DTD/JATS-1.3/Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.3-issue.dtd"/>
+    </group>
+    
+    <group id="Atypon-Issue-v1.3.1">
+        <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.3.1 20230203//EN" uri="atypon-jats-v1.3.1-issue.dtd"/>
+        <system systemId="https://www.tandfonline.com/DTD/JATS-1.3/Atypon-Issue-Xml.1.dtd" uri="atypon-jats-v1.3.1-issue.dtd"/>
+        <systemSuffix systemIdSuffix="Atypon-Issue-Xml.1.dtd" uri="atypon-jats-v1.3.1-issue.dtd"/>
+    </group>
+    
+</catalog>
