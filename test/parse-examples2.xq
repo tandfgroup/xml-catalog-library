@@ -2,7 +2,7 @@ import module namespace resolver = "xml-catalog-resolver" at "https://raw.github
 
 let $catalog := "schemas/catalog.xml"
 
-for $file in file:descendants("test\examples")[matches(., '\.xml$', 'i')]
+for $file in file:descendants("test/examples")[matches(., '\.xml$', 'i')]
 order by $file
 let $original := unparsed-text(file:resolve-path($file))
 let $resolved := resolver:resolveDOCTYPE($original, $catalog)

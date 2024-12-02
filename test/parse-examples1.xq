@@ -2,7 +2,7 @@ declare option db:intparse "false";
 declare option db:dtd "true";
 declare option db:catalog "schemas/catalog.xml";
 
-let $files := file:descendants("test\examples")[matches(., '\.xml$', 'i')]
+let $files := file:descendants("test/examples")[matches(., '\.xml$', 'i')]
 return (
   void(doc(file:resolve-path(head($files)))) (: first parsing always takes longer so do an extra parse before measuring :),
   
