@@ -52,7 +52,6 @@
     <group id="Atypon-JATS-v1.1">
         <!-- Atypon JATS v1.1 Article -->
         <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.1 20151215//EN" uri="atypon-jats-v1.1-article-mathml3.dtd"/>
-        <systemSuffix systemIdSuffix="JATS-archive-oasis-article1-mathml3.dtd" uri="atypon-jats-v1.1-article-mathml3.dtd"/>
     </group>
     
     <group id="Atypon-Manifest-v4.2">

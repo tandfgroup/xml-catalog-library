@@ -12,7 +12,7 @@ declare %unit:test function local:test() {
     file:name($file) || ' ' || $report/status,
     if ($report/status ne 'valid') then ($resolved),
     unit:assert($original ne $resolved, file:name($file) || " not resolved by catalog"),
-    unit:assert($report/status eq 'valid', file:name($file) || " not validated")
+    unit:assert($report/status eq 'valid', file:name($file) || " not validated " || string-join($report//text(), ' '))
   )
   
 };
