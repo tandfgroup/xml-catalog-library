@@ -4,6 +4,24 @@ Submission and peer-review metadata for articles processed in the ScholarOne Man
 -->
 
 <!--  ScholarOne DTD
+rev 4.28.7
+- -
+
+rev 4.28.6
+- -
+
+rev 4.28.5
+- -
+
+rev 4.28.4
+- - attributes for <article_status> updated:
+                - - added "withdraw_reason"
+rev 4.28.3
+- -
+
+rev 4.28.2
+- -
+
 rev 4.28.1
 - -
 
@@ -466,7 +484,8 @@ rev. 2.0  (Changes from v. 1.0 )  1 July 2003 (EJK)
 
 <!ELEMENT article_status (#PCDATA)>
 
-<!ATTLIST article_status  decision_status  (undecided | reject | accept | revise )  #REQUIRED >
+<!ATTLIST article_status  decision_status  (undecided | reject | accept | revise | withdraw)  #REQUIRED
+						  withdraw_reason       CDATA  #IMPLIED>
 <!ELEMENT article_title (#PCDATA | %data;)*>
 <!ELEMENT article_sub_title (#PCDATA | %data;)*>
 
@@ -756,7 +775,7 @@ topic_status CDATA #REQUIRED >
 <!ATTLIST assigned role CDATA  #REQUIRED>
 <!ATTLIST assigned date CDATA  #REQUIRED>
 
-<!ELEMENT recommendation (recommendation_comments*)>
+<!ELEMENT recommendation (recommendation_comments*, task_custom_fields*)>
 <!ATTLIST recommendation recommendation_type CDATA  #REQUIRED>
 <!ATTLIST recommendation recommendation_name CDATA  #REQUIRED>
 
@@ -768,13 +787,14 @@ topic_status CDATA #REQUIRED >
 <!ELEMENT review_file (#PCDATA)>
 <!ATTLIST review_file file_id CDATA  #REQUIRED>
 
-<!ELEMENT decision (decision_comments*)>
+<!ELEMENT decision (decision_comments* , task_custom_fields*)>
 <!ATTLIST decision decision_type CDATA  #REQUIRED>
 <!ATTLIST decision decision_name CDATA  #REQUIRED>
 
 
 <!ELEMENT review_comments (comment*)>
 <!ELEMENT decision_comments (comment*)>
+<!ELEMENT task_custom_fields (custom_fields*)>
 <!ELEMENT recommendation_comments (comment*)>
 
 <!--End of task element  -->
