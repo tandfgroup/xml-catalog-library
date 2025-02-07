@@ -18,6 +18,7 @@
         <public publicId="-//Atypon//DTD Atypon JATS Journal Archiving and Interchange Issue XML DTD v1.1 20160222//EN" uri="atypon-jats-v1.1-issue.dtd"/>
         <systemSuffix systemIdSuffix="Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
         <system systemId="http://cats.informa.com/tfjats/1.2/dtd/atypon-jats-v1.1-issue.dtd" uri="atypon-jats-v1.1-issue.dtd"/>
+        <system systemId="https://www.tandfonline.com/DTD/JATS-1.1/Atypon-Issue-Xml.dtd" uri="atypon-jats-v1.1-issue.dtd" />
     </group>
     
     <group id="Atypon-Issue-v1.2">
