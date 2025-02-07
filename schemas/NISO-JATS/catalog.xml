@@ -2,6 +2,17 @@
 <!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd"> -->
 <!-- <!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "catalog.dtd"> -->
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+
+    <!-- 
+    This XML Catalog contains all standard versions of JATS Archiving and Publishing DTDs
+    including all pre-NISO JATS NLM DTD versions and a few of the committee draft versions.
+    
+    Each group id value is from the file name of the zip file distribution of the DTD.
+
+    In recent versions of JATS, each JATS DTD has a unique file name that contains a version indicator and the DTD can be resolved using systemSuffix to the specific JATS version.
+    
+    In older versions of JATS, the DTD file names did not contain a version indicator, so these file names are resolved using systemSuffix to the most recent version of JATS in the group id "JATS-general".
+    -->
     
     <!-- JATS unspecified version should resolve to the latest version -->
     <group id="JATS-general">
