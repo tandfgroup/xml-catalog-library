@@ -12,6 +12,8 @@
     In recent versions of JATS, each JATS DTD has a unique file name that contains a version indicator and the DTD can be resolved using systemSuffix to the specific JATS version.
     
     In older versions of JATS, the DTD file names did not contain a version indicator, so these file names are resolved using systemSuffix to the most recent version of JATS in the group id "JATS-general".
+    
+    BITS, which is based on JATS, is also included here.
     -->
     
     <!-- JATS unspecified version should resolve to the latest version -->
@@ -411,6 +413,34 @@
         <public publicId="-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD with OASIS Tables with MathML3 v1.2d1 20170631//EN" uri="JATS-Archiving-1-2d1-OASIS-MathML3.dtd"/>
         <system systemId="http://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-2d1-OASIS-MathML3.dtd"/>
         <system systemId="https://jats.nlm.nih.gov/archiving/1.1/JATS-archive-oasis-article1-mathml3.dtd" uri="JATS-Archiving-1-2d1-OASIS-MathML3.dtd"/>
+    </group>
+    
+    <group id="BITS-2-2-DTD">
+        <public publicId="-//NLM//DTD BITS Book Interchange DTD v2.2 20250930//EN" uri="BITS-book2-2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/extensions/bits/2.2/BITS-book2-2.dtd" uri="BITS-book2-2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/extensions/bits/2.2/BITS-book2-2.dtd" uri="BITS-book2-2.dtd"/>
+        <systemSuffix systemIdSuffix="BITS-book2-2.dtd" uri="BITS-book2-2.dtd"/>
+    </group>
+    
+    <group id="BITS-OASIS-XHTML-TABLES-2-2-DTD">
+        <public publicId="-//NLM//DTD BITS Book Interchange DTD with OASIS and XHTML Tables v2.2 20250930//EN" uri="BITS-book-oasis2-2.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/extensions/bits/2.2/BITS-book-oasis2-2.dtd" uri="BITS-book-oasis2-2.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/extensions/bits/2.2/BITS-book-oasis2-2.dtd" uri="BITS-book-oasis2-2.dtd"/>
+        <systemSuffix systemIdSuffix="BITS-book-oasis2-2.dtd" uri="BITS-book-oasis2-2.dtd"/>
+    </group>
+    
+    <group id="BITS-2-1-DTD">
+        <public publicId="-//NLM//DTD BITS Book Interchange DTD v2.1 20220202//EN" uri="BITS-book2-1.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/extensions/bits/2.1/BITS-book2-1.dtd" uri="BITS-book2-1.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/extensions/bits/2.1/BITS-book2-1.dtd" uri="BITS-book2-1.dtd"/>
+        <systemSuffix systemIdSuffix="BITS-book2-1.dtd" uri="BITS-book2-1.dtd"/>
+    </group>
+    
+    <group id="BITS-OASIS-XHTML-TABLES-2-1-DTD">
+        <public publicId="-//NLM//DTD BITS Book Interchange DTD with OASIS and XHTML Tables v2.1 20220202//EN" uri="BITS-book-oasis2-1.dtd"/>
+        <system systemId="http://jats.nlm.nih.gov/extensions/bits/2.1/BITS-book-oasis2-1.dtd" uri="BITS-book-oasis2-1.dtd"/>
+        <system systemId="https://jats.nlm.nih.gov/extensions/bits/2.1/BITS-book-oasis2-1.dtd" uri="BITS-book-oasis2-1.dtd"/>
+        <systemSuffix systemIdSuffix="BITS-book-oasis2-1.dtd" uri="BITS-book-oasis2-1.dtd"/>
     </group>
     
 </catalog>
