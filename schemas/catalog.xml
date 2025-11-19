@@ -10,16 +10,15 @@
     </group>
     
     <group id="TFJA-DTD">
-        <!-- TFJA DTD -->
         <!-- preferred -->
-        <public publicId="-//Taylor and Francis//Journal Article//EN" uri="tfja.dtd"/>
-        <system systemId="http://cats.informa.com/tfja/dtd/TFJA.dtd" uri="tfja.dtd"/>
+        <public publicId="-//Taylor and Francis//Journal Article//EN" uri="tfja/dtd/TFJA.dtd"/>
+        <system systemId="http://cats.informa.com/tfja/dtd/TFJA.dtd" uri="tfja/dtd/TFJA.dtd"/>
         <!-- alternate and old -->
-        <system systemId="http://public.metapress.com/dtd/TAFXML/TFJA.dtd" uri="tfja.dtd"/>
-        <system systemId="http://cats.tfinforma.com/dtd/tfja/dtd/TFJA.dtd" uri="tfja.dtd"/>
-        <system systemId="http://cats.informa.com/dtd/tfja/dtd/TFJA.dtd" uri="tfja.dtd"/>
-        <systemSuffix systemIdSuffix="tfja.dtd" uri="tfja.dtd"/>
-        <systemSuffix systemIdSuffix="TFJA.dtd" uri="tfja.dtd"/>
+        <system systemId="http://public.metapress.com/dtd/TAFXML/TFJA.dtd" uri="tfja/dtd/TFJA.dtd"/>
+        <system systemId="http://cats.tfinforma.com/dtd/tfja/dtd/TFJA.dtd" uri="tfja/dtd/TFJA.dtd"/>
+        <system systemId="http://cats.informa.com/dtd/tfja/dtd/TFJA.dtd" uri="tfja/dtd/TFJA.dtd"/>
+        <systemSuffix systemIdSuffix="tfja.dtd" uri="tfja/dtd/TFJA.dtd"/>
+        <systemSuffix systemIdSuffix="TFJA.dtd" uri="tfja/dtd/TFJA.dtd"/>
     </group>
     
     <group id="TF-JATS-v1.0">

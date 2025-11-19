@@ -1,0 +1,1433 @@
+/* Use Times New Roman for default font */
+$DOCUMENT
+{
+  font-family: "Arial";
+  font-size: 10pt;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+$COMMENT {
+  display: block;
+  color: purple;
+  white-space: pre;
+}
+
+$PROCINS {
+  color: black;
+  background-color: #c0c0c0;
+}
+
+
+
+/*           */
+/* ARTICLE   */
+/*           */
+
+
+article:before
+{
+  display:block;
+  font-family: "Arial";
+  font-size:22pt;
+  content:"Taylor & Francis Journal Article";
+  color:green;
+  margin-left:-5mm;
+  margin-bottom:5mm;
+}
+
+article
+{
+  display:block;
+  font-family: "Arial";
+  font-size:10pt;
+  margin-left:5mm;
+}
+
+
+
+/*           */
+/* META DATA */
+/*           */
+
+
+meta:before
+{
+  display:block;
+  font-size:10pt;
+  content:"Metadata...";
+  color:green;
+  margin-left:-5mm;
+  margin-bottom:2mm;
+}
+
+meta
+{
+  display:block;
+  margin-left:15mm;
+  margin-bottom:15mm;
+}
+
+
+/* article identity */
+
+journalcode:before
+{
+  content:"Journal Code: ";
+  color:green;
+}
+
+issn:before
+{
+  content:"ISSN: ";
+  color:green;
+}
+
+coden:before
+{
+  content:"Coden: ";
+  color:green;
+}
+
+sici:before
+{
+  content:"SICI: ";
+  color:green;
+}
+
+pubitemid:before
+{
+  content:"Publisher Item ID: ";
+  color:green;
+}
+
+pubmedabbrev:before
+{
+  content:"PUBMED Abbreviation: ";
+  color:green;
+}
+
+author:before
+{
+  content:"Author: ";
+  color:green;
+}
+
+affiliations:before
+{
+  content:"Affiliations: ";
+  color:green;
+}
+
+search:before
+{
+  content:"Search: ";
+  color:green;
+}
+
+production-dates:before
+{
+  content:"Production Dates: ";
+  color:green;
+}
+
+syndication:before
+{
+  content:"Syndication: ";
+  color:green;
+}
+
+journalcode, issn, coden, sici, pubitemid, pubmedabbrev, author, affiliations, search, production-dates, syndication
+{
+  display:block;
+  font-family:monospace;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+
+/* AUTHOR DETAILS */
+
+name:before
+{
+  content:"Name: ";
+  color:green;
+}
+
+contactinfo:before
+{
+  content:"Contact Information: ";
+  color:green;
+}
+
+bioinfo:before
+{
+  content:"Biography Information: ";
+  color:green;
+}
+
+authornote:before
+{
+  content:"Author Note: ";
+  color:green;
+}
+
+name, contactinfo, bioinfo, authornote
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+/* Name */
+
+prefix:before, givenname:before, inits:before, surname:before, suffix:before, honorific:before, degree:before
+{
+  content:"[";
+  color:green;
+}
+
+prefix:after, givenname:after, inits:after, surname:after, suffix:after, honorific:after, degree:after
+{
+  content:"]";
+  color:green;
+}
+
+/* Contact Info (position and address) */
+
+contact:before
+{
+  content:"Contact: ";
+  color:green;
+}
+
+contact
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+address:before
+{
+  content: "<address[";
+  color:green;
+}
+
+position:before
+{
+  content: "<position[";
+  color:green;
+}
+
+address:after, position:after
+{
+  content: "]>";
+  color:green;
+}
+
+affiltitle:before, phone:before, fax:before, email:before, webaddress:before
+{
+  content:"[";
+  color:green;
+}
+
+affiltitle:after, phone:after, fax:after, email:after, webaddress:after
+{
+  content:"]";
+  color:green;
+}
+
+usa:before, internat:before, addline:before, city:before, state:before, zip:before, postalcode:before, country:before, addnote:before
+{
+  content:"[";
+  color:green;
+}
+
+usa:after, internat:after, addline:after, city:after, state:after, zip:after, postalcode:after, country:after, addnote:after
+{
+  content:"]";
+  color:green;
+}
+
+
+/* Bio Info */
+
+
+biography:before
+{
+  content:"Biography: ";
+  color:green;
+}
+
+photo:before
+{
+  content:"[Photograph]";
+  color:green;
+}
+
+biography, photo
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+
+/* Author Note (nothing to add here) */
+
+
+/* AFFILIATIONS */
+
+affiliation:before
+{
+  content:"Affiliation (" attr(id) "): ";
+  color:green;
+}
+
+
+affiliation
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left: 5mm;
+}
+
+
+affiliation > institution > institutionname:before , affiliation > institution > department:before
+{
+  content:"[";
+  color:green;
+}
+
+affiliation > institution > institutionname:after , affiliation > institution > department:after
+{
+  content:"]";
+  color:green;
+}
+
+
+/* SEARCH */
+
+category:before
+{
+  content:"<category[";
+  color:green;
+}
+
+primarysubcategory:before
+{
+  content:"<primary sub-category[";
+  color:green;
+}
+
+subcategory:before
+{
+  content:"<sub-category[";
+  color:green;
+}
+
+topic:before
+{
+  content:"<topic[";
+  color:green;
+}
+
+subtopic:before
+{
+  content:"<sub-topic[";
+  color:green;
+}
+
+category:after, primarysubcategory:after, subcategory:after, topic:after, subtopic:after
+{
+  content:"]> ";
+  color:green;
+}
+
+
+/* PRODUCTION DATES (nothing to add here) */
+
+/* SYNDICATION (nothing to add here) */
+
+
+/*                 */
+/* DOCUMENT TITLES */
+/*                 */
+
+
+journaltitle, supertitle
+{
+  display:block;
+  font-size:16pt;
+  font-weight:bold;
+  text-align:center;
+  margin-top:5mm;
+  margin-bottom:5mm;
+}
+
+article > title
+{
+  display:block;
+  font-size:16pt;
+  font-weight:bold;
+  text-align:center;
+  margin-top:5mm;
+  margin-bottom:5mm;
+}
+
+article > subtitle
+{
+  display:block;
+  font-size:14pt;
+  text-align:center;
+  margin-bottom:5mm;
+}
+
+article > shorttitle
+{
+  display:block;
+  font-size:16pt;
+  font-style:italic;
+  text-align:center;
+  margin-top:5mm;
+  margin-bottom:5mm;
+}
+
+article > abbrevtitle
+{
+  display:block;
+  font-size:16pt;
+  font-style:italic;
+  text-align:center;
+  margin-top:5mm;
+  margin-bottom:5mm;
+}
+
+doititle
+{
+  display:block;
+  font-size:16pt;
+  font-style:italic;
+  text-align:center;
+  margin-top:5mm;
+  margin-bottom:5mm;
+}
+
+
+
+/* LOGO */
+
+/* notthin to do, just show image */
+
+
+/* ABSTRACT */
+
+
+abstract
+{
+  display:block;
+  background-color:#F0F0F0;
+  margin-left:10mm;
+  margin-right:10mm;
+  margin-bottom:15mm;
+  margin-top:15mm;
+}
+
+
+/* KEYWORD SET */
+
+
+keywordset:before
+{
+  content:"Keywords: ";
+  display:block;
+  color:green;
+  margin-bottom:2mm;
+  margin-left:-5mm;
+}
+
+keywordset
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+keyword:before
+{
+  content:"[";
+  color:green;
+}
+
+keyword:after
+{
+  content:"]";
+  color:green;
+}
+
+
+/* TOC */
+
+
+toc:before
+{
+  content:"[TABLE OF CONTENTS REQUIRED]";
+  color:green;
+}
+
+toc
+{
+  display:block;
+}
+
+
+/* INTRO AND PARTS */
+
+
+intro, section1
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+
+part:before
+{
+  content:"--------------- PART -------------------";
+  color:green;
+  display:block;
+  margin:bottom:3mm;
+}
+
+part
+{
+  display:block;
+  margin-bottom:10mm;
+  margin-top:10mm;
+}
+
+no:before
+{
+  color:green;
+  content: "[";
+}
+no:after
+{
+  color:green;
+  content: "]";
+}
+no
+{
+  display:block;
+  color:blue;
+  font-weight:bold;
+  font-size:7pt;
+}
+
+section1:before
+{
+  content:"Section Level 1...";
+  color:green;
+  display:block;
+}
+
+section2:before
+{
+  content:"Section Level 2...";
+  color:green;
+  display:block;
+}
+
+section2
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+section3:before
+{
+  content:"Section Level 3...";
+  color:green;
+  display:block;
+}
+
+section3
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+section4:before
+{
+  content:"Section Level 4...";
+  color:green;
+  display:block;
+}
+
+section4
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+section5:before
+{
+  content:"Section Level 5...";
+  color:green;
+  display:block;
+}
+
+section5
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+
+
+/* BACK MATTER */
+
+
+ackno:before
+{
+  content: "Acknowledgements: "
+}
+
+ackno
+{
+  display:block;
+  background-color:#F0F0F0;
+  margin-left:10mm;
+  margin-right:10mm;
+  margin-bottom:15mm;
+  margin-top:15mm;
+}
+
+summary, glossary, references, notesaddedinproof, abbrev-sect, nomen-sect
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+translation
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+  border-width: 1pt;
+  border-color: black;
+  border-style:solid;
+}
+
+
+
+/* NON-DOCUMENT TITLES */
+
+
+translation > title, translation > subtitle, translation > shorttitle, translation > abbrevtitle
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:10pt;
+  font-weight:bold;
+}
+
+part > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:16pt;
+  font-weight:bold;
+}
+
+
+section1 > title , intro > title, summary > title, glossary > title, abbrev-sect > title, nomen-sect > title, references > title, notesaddedinproof > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:14pt;
+  font-weight:bold;
+}
+
+section2 > title , readings > title, refsection > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:13pt;
+  font-weight:bold;
+}
+
+section3 > title, abstract > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:12pt;
+  font-weight:bold;
+}
+
+section4 > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:11pt;
+  font-weight:bold;
+}
+
+section5 > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:10pt;
+  font-weight:bold;
+}
+
+formaltable > title, figure > title, videoobject > title, audioobject > title, simulationobject > title, index > title
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:9pt;
+  font-weight:bold;
+  font-style:italic;
+}
+
+indexdiv > title
+{
+  display:block;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:8pt;
+  font-weight:bold;
+  font-style:italic;
+}
+
+
+/* PARAGRAPHS AND OTHER BLOCKS */
+
+
+para, salutation, signature
+{
+  display:block;
+  margin-bottom:3mm;
+}
+
+para[indent="1"]
+{
+  display:block;
+  margin-left:5mm;
+  margin-bottom:3mm;
+}
+para[indent="2"]
+{
+  display:block;
+  margin-left:10mm;
+  margin-bottom:3mm;
+}
+para[indent="3"]
+{
+  display:block;
+  margin-left:15mm;
+  margin-bottom:3mm;
+}
+para[indent="4"]
+{
+  display:block;
+  margin-left:20mm;
+  margin-bottom:3mm;
+}
+para[indent="5"]
+{
+  display:block;
+  margin-left:25mm;
+  margin-bottom:3mm;
+}
+
+comment:before
+{
+  content:"COMMENT: ";
+  color:green;
+}
+
+comment
+{
+  display:block;
+  margin-bottom:3mm;
+  color:red;
+  font-family:monospace;
+}
+
+extract
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  background-color:#FFFBC6;
+}
+source
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  font-weight:bold;
+  background-color:#FFFBC6;
+  font-size:7pt;
+}
+
+
+
+poem
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  background-color:#FFFBC6;
+}
+stanza
+{
+  display:block;
+  margin-bottom:3mm;
+}
+poemline
+{
+  display:block;
+  font-style:italic;
+}
+
+
+exam
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  background-color:#FFFBC6;
+}
+question:before
+{
+  content:"Q: ";
+  font-weight:bold;
+  font-size:12pt;
+  color:green;
+}
+question
+{
+  display:block;
+  color:blue;
+}
+answer
+{
+  display:block;
+  margin-left:5mm;
+}
+
+
+
+
+index
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  background-color:#FFFBC6;
+}
+indexentry, indexsubentry
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  font-size:7pt;
+  border-width: 1pt;
+  border-color:black;
+  border-style:solid;
+}
+seeie:before
+{
+  content:"...";
+  color:green;
+}
+seeie
+{
+  font-style:italic;
+  display:block;
+}
+seealsoie:before
+{
+  content:"...";
+  color:green;
+}
+seealsoie
+{
+  font-style:italic;
+  display:block;
+}
+
+
+
+footnote:before
+{
+  content:"Footnote: ";
+  display:block;
+  color:green;
+  margin-bottom:2mm;
+  margin-left:-5mm;
+}
+
+footnote
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+
+/* LISTS */
+
+
+simplelist 
+{
+  list-style-type:disc;  
+}
+
+simplelist > listitem 
+{
+  display: list-item;
+  margin-bottom: 1.5mm;
+  margin-left: 10mm;
+  font-size:10pt;
+}
+
+itemizedlist 
+{
+  list-style-type:disc;  
+}
+
+itemizedlist > listitem 
+{
+  display: list-item;
+  margin-bottom: 1.5mm;
+  margin-left: 10mm;
+  font-size:10pt;
+}
+
+orderedlist 
+{
+  display: block;
+  list-style-type: decimal;
+}
+
+orderedlist > listitem 
+{
+  display: list-item;
+  margin-bottom: 1.5mm;
+  margin-left: 10mm;
+  font-size:10pt;
+}
+
+
+/* TABLES */
+
+
+formaltable, informaltable
+{
+  display:block;
+  margin-bottom:3mm;
+}
+
+
+/* MATH AND CHEMISTRY */
+
+
+alternativemath:before
+{
+  content:"[Alternative type='" attr(type) "'[";
+  color:green; 
+}
+
+tex:before
+{
+  content:"[TeX type='" attr(type) "'[";
+  color:green;
+}
+
+math:before
+{
+  content:"[Math [";
+  color:green;
+}
+
+alternativemath:after tex:after math:after
+{
+  content:"]";
+  color:green;
+}
+
+matheqn:before, chemeqn:before
+{
+  content:"[1] ";
+  color:green;
+}
+
+unnummatheqn, unnumchemeqn, matheqn, chemeqn
+{
+  display:block;
+  margin-bottom:3mm;
+  margin-left:3mm;
+  background-color:#E0E0E0;
+}
+
+compound:before, formula:before
+{
+  content:"[";
+  color:green;
+}
+
+compound:after, formula:after
+{
+  content:"]";
+  color:green;
+}
+
+equation:before
+{
+  content:"[EQN>";
+  color:green;
+}
+
+equation:after
+{
+  content:"<EQN]";
+  color:green;
+}
+
+formula
+{
+  font-family:serif;
+}
+
+structure:before
+{
+  content:"STRUCTURE fileref=" attr(fileref) " entityref=" attr(entityref) ":";
+  color:green;
+}
+
+
+/* CAPTIONS (figure and media objects) */
+
+caption
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:7pt;
+  font-style:italic;
+}
+
+/* END NOTES (figure and media objects, formal and informal tables) */
+
+endnotes
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:7pt;
+}
+
+endnote
+{
+  display:block;
+  margin-top:2mm;
+  margin-bottom:2mm;
+  font-size:7pt;
+}
+
+
+/* MEDIA */
+
+
+videoobject, audioobject, simulationobject
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+}
+
+videodata:before
+{
+  color:green;
+  content:"[Video Data]"
+}
+
+audiodata:before
+{
+  color:green;
+  content:"[Audio Data]"
+}
+
+simulationdata:before
+{
+  color:green;
+  content:"[Simulation Data]"
+}
+
+videodata, audiodata, simulationdata
+{
+  display:block;
+  text-align:center;
+  margin-top:2mm;
+  margin-bottom:2mm;
+}
+
+
+/* REFERENCES */
+
+
+address-text:before
+{
+  content:"[";
+  color:green;
+}
+
+address-text:after
+{
+  content:"]";
+  color:green;
+}
+
+
+middlename:before
+{
+  content:"[";
+  color:green;
+}
+
+middlename:after
+{
+  content:"]";
+  color:green;
+}
+
+etal:before
+{
+  content:"[etal]";
+  color:green;
+}
+
+
+ref-book:before
+{
+  content:"<BOOK[";
+  color:green;
+}
+
+ref-periodic:before
+{
+  content:"<PERIODIC[";
+  color:green;
+}
+
+ref-govpub:before
+{
+  content:"<GOV. PUBL.[";
+  color:green;
+}
+
+ref-patent:before
+{
+  content:"<PATENT[";
+  color:green;
+}
+
+ref-conf:before
+{
+  content:"<CONFERENCE[";
+  color:green;
+}
+
+ref-web:before
+{
+  content:"<WEB SITE[";
+  color:green;
+}
+
+ref-book:after, ref-periodic:after, ref-govpub:after, ref-patent:after, ref-conf:after, ref-web:after
+{
+  content:"]>";
+  color:green;
+}
+
+ref-book, ref-periodic, ref-govpub, ref-patent, ref-conf, ref-web
+{
+  display:block;
+  margin-bottom:2mm;
+  margin-left:5mm;
+}
+
+ref-book-text:before, ref-periodic-text:before, ref-govpub-text:before, ref-patent-text:before, ref-conf-text:before, ref-web-text:before
+{
+  content:"[";
+  color:green;
+}
+
+ref-book-text:after, ref-periodic-text:after, ref-govpub-text:after, ref-patent-text:after, ref-conf-text:after, ref-web-text:after
+{
+  content:"]";
+  color:green;
+}
+
+author-ref-text:before, editor-ref-text:before, publicationfield-text:before, patentowner-ref-text:before
+{
+  content:"[";
+  color:green;
+}
+
+author-ref-text:after, editor-ref-text:after, publicationfield-text:after, patentowner-ref-text:after
+{
+  content:"]";
+  color:green;
+}
+
+journaltitle:before, articletitle:before, volume:before, issue:before, month:before, year:before, firstpage:before, lastpage:before, corporate:before
+{
+  content:"[";
+  color:green;
+}
+
+journaltitle:after, articletitle:after, volume:after, issue:after, month:after, year:after, firstpage:after, lastpage:after, corporate:after
+{
+  content:"]";
+  color:green;
+}
+
+booktitle:before, chaptitle:before
+{
+  content:"[";
+  color:green;
+}
+
+booktitle:after, chaptitle:after
+{
+  content:"]";
+  color:green;
+}
+
+abstractnum:before, pubname:before
+{
+  content:"[";
+  color:green;
+}
+
+abstractnum:after, pubname:after
+{
+  content:"]";
+  color:green;
+}
+
+meetingname:before, presentationtitle:before, day:before, collectworktitle:before
+{
+  content:"[";
+  color:green;
+}
+
+meetingname:after, presentationtitle:after, day:after, collectworktitle:after
+{
+  content:"]";
+  color:green;
+}
+
+docpubtitle:before, pubnum:before, pubfield:before, pubnum:before
+{
+  content:"[";
+  color:green;
+}
+
+docpubtitle:after, pubnum:after, pubfield:after, pubnum:after
+{
+  content:"]";
+  color:green;
+}
+
+patentnum:before, patenttitle:before, date:before
+{
+  content:"[";
+  color:green;
+}
+
+patentnum:after, patenttitle:after, date:after
+{
+  content:"]";
+  color:green;
+}
+
+
+/* FORMATTING INLINE OBJECTS */
+
+
+br:before
+{
+  content:"[break]";
+  color:green;
+}
+
+br
+{
+  display:block;
+}
+
+sup
+{
+  font-size:8pt;
+  vertical-align:super;
+}
+
+sub
+{
+  font-size:8pt;
+  vertical-align:sub;
+}
+
+strikethrough
+{
+  text-decoration:line-through;
+}
+
+overline
+{
+  text-decoration:overline;
+}
+
+i
+{
+  font-style:italic;
+}
+
+b
+{
+  font-weight:bold;
+}
+
+tt
+{
+  font-family:monospace;
+}
+
+script
+{
+  font-family:cursive;
+}
+
+roman
+{
+  font-family:serif;
+}
+
+box
+{
+  text-decoration:underline;
+  text-decoration:overline;
+}
+
+u
+{
+  text-decoration:underline;
+}
+
+smallcaps
+{
+  text-transform:uppercase;
+  font-size:7pt;
+}
+
+newpage:before
+{
+  content:"[page " attr(pagenumber) "]";
+  color:green;
+}
+
+computertext
+{
+  font-family:monospace;  
+}
+
+
+/* GENERIC INLINE OBJECTS */
+
+
+famousname:before
+{
+  content:"[famous[";
+  color:green;
+}
+
+companyname:before
+{
+  content:"[company[";
+  color:green;
+}
+
+trademark:before
+{
+  content:"[trademark[";
+  color:green;
+}
+
+acronym:before
+{
+  content:"[acronym[";
+  color:green;
+}
+
+term:before
+{
+  content:"[term[";
+  color:green;
+}
+
+terminology:before
+{
+  content:"[term[";
+  color:green;
+}
+
+
+famousname:after, companyname:after, trademark:after, acronym:after, term:after
+{
+  content:"]]";
+  color:green;
+}
+
+famousname, companyname, trademark, acronym, term, terminology
+{
+  font-weight:bold;
+}
+
+enunciationref, chemeqnref, chemformref, chemstructureref, citationref, endnoteref, figureref, footnoteref, listitemref, listref, matheqnref, tableref, textref, xref, webaddress, email
+{
+  color:blue;
+}
+
+
+/* END END END */
